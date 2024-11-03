@@ -7,9 +7,9 @@ module.exports = {
     extend: {
       colors: {
         light: {
-          background: '#ffffff',
+          background: '#E3DAC9',
           text: '#000000',
-          card: '#f3f4f6',
+          card: '#E3DAC3',
         },
         dark: {
           background: '#1a202c',
@@ -18,6 +18,9 @@ module.exports = {
         },
       },
     },
+  },
+  variants: {
+    extend: {},
   },
   plugins: [],
 }

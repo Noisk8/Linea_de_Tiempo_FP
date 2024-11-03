@@ -1,9 +1,9 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Futbol y presidentes en Colombia",
+  "name": "Futbol y presidentes en Colombia",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "Soccer.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
