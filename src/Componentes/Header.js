@@ -20,6 +20,7 @@ const Header = () => {
           <Route path="/" element={<Layout />}>
             <Route path="timeline" element={<Timeline />} />
             <Route path="notas" element={<Notas />} />
+         
           </Route>
         </Routes>
       </div>

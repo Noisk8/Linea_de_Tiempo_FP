@@ -5,6 +5,7 @@ const Layout = () => {
     <div>
       <nav>
         <ul>
+     
           <li>
             <Link to="./Notas">Notas</Link>
           </li>
