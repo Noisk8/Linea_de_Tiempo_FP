@@ -8,7 +8,7 @@ import Notas from "../Paginas/Notas";
 const Header = () => {
   return (
     <div>
-      <div className="flex justify-between items-center w-full max-w-4xl mx-auto">
+      <div className="flex justify-between items-center w-full max-w-4xl mx-auto pt-16 ">
         <h1 className="text-3xl font-bold mb-4 text-center w-full p-8">
           ⚽ Futbol y Presidentes en Colombia ⚽
         </h1>
@@ -18,7 +18,7 @@ const Header = () => {
       <div>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route path="timeline" element={<Timeline />} />
+            <Route  path="timeline" element={<Timeline />} />
             <Route path="notas" element={<Notas />} />
          
           </Route>

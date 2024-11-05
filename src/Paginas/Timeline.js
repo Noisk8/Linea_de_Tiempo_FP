@@ -22,7 +22,7 @@ const Timeline = () => {
   };
 
   return (
-    <div className="timeline relative flex flex-col items-center px-4">
+    <div className="timeline relative flex flex-col items-center px-4 pt-8">
 
   
       <div className="absolute w-1 bg-gray-300 dark:bg-gray-600 h-full left-1/2 transform -translate-x-1/2"></div>
