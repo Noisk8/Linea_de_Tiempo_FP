@@ -1,0 +1,11 @@
+.timeline-content {
+   
+    background-size: cover;
+    background-position: center;
+    transition: width 0.3s ease;
+ 
+}
+
+.timeline-content.open {
+    width: 500px; /* Ancho al abrir la información */
+}

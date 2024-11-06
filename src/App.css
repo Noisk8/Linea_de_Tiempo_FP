@@ -1,25 +1,6 @@
 .App {
   text-align: center;
+  background-image: url('https://raw.githubusercontent.com/Noisk8/noisk8/refs/heads/master/img/Regalito.png');
 }
 
-.parallax-element {
-  transition: transform 0.2s ease-in-out;
-}
 
-.timeline {
-  position: relative;
-}
-
-.timeline-item {
-  position: relative;
-}
-
-.parallax-background {
-  width: 100%;
-  height: 100%;
-}
-
-.timeline-content {
-  background-size: cover;
-  background-position: center;
-}
