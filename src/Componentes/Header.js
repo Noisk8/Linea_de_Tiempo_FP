@@ -24,10 +24,10 @@ const Header = () => {
           <Route path="/" element={<Layout />}>
             <Route path="timeline" element={<Timeline />} />
             <Route path="notas" element={<Notas />} />
-            <Route path="linea1" element={<Linea1 />} />
-            <Route path="linea2" element={<Linea2 />} />
-            <Route path="linea3" element={<Linea3 />} />
-            <Route path="linea4" element={<Linea4 />} />
+            <Route path="/linea1" element={<Linea1 />} />
+            <Route path="/linea2" element={<Linea2 />} />
+            <Route path="/linea3" element={<Linea3 />} />
+            <Route path="/linea4" element={<Linea4 />} />
           </Route>
         </Routes>
       </div>
