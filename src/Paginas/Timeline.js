@@ -150,7 +150,7 @@ const Timeline = () => {
                     rel="noopener noreferrer"
                   >
                     <Link to={event.link}> </Link>
-                    <button className="m-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-300">
+                    <button className="m-2 px-4 py-2 bg-gray-800 dark:bg-light-card text-white dark:text-black rounded hover:bg-light-card dark:hover:bg-dark-card transition duration-300">
                       Ver más
                     </button>
                   </a>
@@ -158,8 +158,6 @@ const Timeline = () => {
               )}
             </div>
           </div>
-     
-
         </div>
       ))}
     </div>
