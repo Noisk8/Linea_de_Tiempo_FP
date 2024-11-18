@@ -7,9 +7,11 @@ const Tarjeta = ({ titulo, imagen, parrafos, imagenesAdicionales = [] }) => {
             <img src={imagen} alt={titulo} className="w-1/2 h-1/2 mx-auto" />
             <div className="p-6">
                 {parrafos.map((parrafo, index) => (
-                    <p key={index} className="text-gray-700 dark:text-gray-300 mb-2 text-xl">
-                        {parrafo}
-                    </p>
+                    <p 
+                        key={index} 
+                        className="text-gray-700 dark:text-gray-300 mb-2 text-2xl"
+                        dangerouslySetInnerHTML={{ __html: parrafo }}
+                    />
                 ))}
                 {imagenesAdicionales.length > 0 && (
                     <div className="mt-4">

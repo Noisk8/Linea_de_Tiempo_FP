@@ -15,7 +15,7 @@ const Timeline = () => {
       title: "Miguel Antonio Caro",
       subtitle: "Primer partido de futból en Colombia",
       description:
-        "Este presidente creo  las escuelas militares, en Junio de 1892, hace el primer partido del que se data en Colombia, creo  <br />  <br /> las escuelas militares,  en Junio de 1892  hace el primer partido del que se data en Colombia, creo  las escuelas militares, en Junio de 1892, hace el primer partido del que se data en Colombia ",
+        "El 22 de junio de 1892, en Bogotá, se llevó a cabo el primer encuentro futbolístico registrado en Colombia. <br />  <br /> las escuelas militares,  en Junio de 1892  hace el primer partido del que se data en Colombia, creo  las escuelas militares, en Junio de 1892, hace el primer partido del que se data en Colombia ",
       image:
         "https://upload.wikimedia.org/wikipedia/commons/5/5c/Miguel_Antonio_Caro_2.jpg",
       link: "/Linea1",
