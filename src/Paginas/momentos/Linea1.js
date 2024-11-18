@@ -1,8 +1,7 @@
 import Tarjeta from "../../Componentes/Tarjeta";
-import imagenEjemplo from "../../imagenes/logo512.png";
 
-   
 
+  
 
 const Linea1 = () => {
   return (
