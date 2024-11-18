@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import Layout from "./Layout";
 import Timeline from "../Paginas/Timeline";
 import Notas from "../Paginas/Notas";
-import Linea1 from "../Paginas/momentos/Linea1";
+import Linea1 from "../Paginas/Linea1";
 import Linea2 from "../Paginas/momentos/Linea2";
 import Linea3 from "../Paginas/momentos/Linea3";
 import Linea4 from "../Paginas/momentos/Linea4";

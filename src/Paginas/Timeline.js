@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom"; 
 import './Timeline.css';
 import { Routes, Route } from "react-router-dom";
-import Linea1 from "./momentos/Linea1";
+import Linea1 from "./Linea1";
 import Linea2 from "./momentos/Linea2"; 
 import Linea3 from "./momentos/Linea3";
 import Linea4 from "./momentos/Linea4";
@@ -22,7 +22,7 @@ const Timeline = () => {
         "Este presidente creo  las escuelas militares, en Junio de 1892, hace el primer partido del que se data en Colombia, creo  <br />  <br /> las escuelas militares,  en Junio de 1892  hace el primer partido del que se data en Colombia, creo  las escuelas militares, en Junio de 1892, hace el primer partido del que se data en Colombia ",
       image:
         "https://upload.wikimedia.org/wikipedia/commons/5/5c/Miguel_Antonio_Caro_2.jpg",
-      link: "/momentos/Linea1",
+      link: "/Linea1",
     },
     {
       date: "⚽ 1904",
