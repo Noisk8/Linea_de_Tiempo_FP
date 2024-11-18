@@ -22,7 +22,7 @@ const Timeline = () => {
         "Este presidente creo  las escuelas militares, en Junio de 1892, hace el primer partido del que se data en Colombia, creo  <br />  <br /> las escuelas militares,  en Junio de 1892  hace el primer partido del que se data en Colombia, creo  las escuelas militares, en Junio de 1892, hace el primer partido del que se data en Colombia ",
       image:
         "https://upload.wikimedia.org/wikipedia/commons/5/5c/Miguel_Antonio_Caro_2.jpg",
-      link: "/Linea1",
+      link: "/momentos/Linea1",
     },
     {
       date: "⚽ 1904",
