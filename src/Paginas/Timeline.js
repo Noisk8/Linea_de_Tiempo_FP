@@ -104,13 +104,11 @@ const Timeline = () => {
 
   return (
     <div className="timeline relative flex flex-col items-center px-4 pt-8">
-      
-   
       <div className="absolute w-1 bg-gray-300 dark:bg-gray-600 h-full left-1/2 transform -translate-x-1/2"></div>
       {events.map((event, index) => (
-        <div key={index} className="max-w-xl   ">
+        <div key={index} className="max-w-2xl w-full">
           <div
-            className={`timeline-item flex flex-col items-center mb-16 w-full max-w-md ${
+            className={`timeline-item flex flex-col items-center mb-16 w-full ${
               index % 2 === 0 ? "items-start" : "items-end"
             }`}
           >
@@ -122,7 +120,7 @@ const Timeline = () => {
               {event.date}
             </button>
             <div
-              className={`timeline-content bg-light-card dark:bg-dark-card text-light-text dark:text-dark-text p-4 rounded-lg shadow-md relative hover:shadow-lg transition-shadow duration-300 max-w-xs`}
+              className={`timeline-content bg-light-card dark:bg-dark-card text-light-text dark:text-dark-text p-4 rounded-lg shadow-md relative hover:shadow-lg transition-shadow duration-300 w-full`}
             >
               <h3 className="text-4xl font-bold mb-2 text-center pb-4 pt-4 text-yellow-700 ">
                 {event.title}
@@ -149,15 +147,11 @@ const Timeline = () => {
                     href={event.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    
                   >
-                   
-                      <Link to={event.link} > Link  </Link>
-                     
-                    <button className="m-2 px-4 py-2  bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-300">
+                    <Link to={event.link}> </Link>
+                    <button className="m-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-300">
                       Ver más
                     </button>
-                 
                   </a>
                 </div>
               )}
