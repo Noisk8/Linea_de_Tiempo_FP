@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom"; 
-import './Timeline.css'
+import './Timeline.css';
+import { Routes, Route } from "react-router-dom";
+import Linea1 from "./momentos/Linea1";
+import Linea2 from "./momentos/Linea2"; 
+import Linea3 from "./momentos/Linea3";
+import Linea4 from "./momentos/Linea4";
 
 const Timeline = () => {
 
@@ -157,6 +162,13 @@ const Timeline = () => {
               )}
             </div>
           </div>
+          <Routes>
+         <Route path="linea1" element={<Linea1 />} />
+            <Route path="linea2" element={<Linea2 />} />
+            <Route path="linea3" element={<Linea3 />} />
+            <Route path="linea4" element={<Linea4 />} />
+        </Routes>
+
         </div>
       ))}
     </div>
