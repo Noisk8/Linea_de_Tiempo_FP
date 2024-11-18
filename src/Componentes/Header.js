@@ -4,6 +4,9 @@ import { Route, Routes } from "react-router-dom";
 import Layout from "./Layout";
 import Timeline from "../Paginas/Timeline";
 import Notas from "../Paginas/Notas";
+import Linea1 from "../Paginas/Linea1";
+import Linea2 from "../Paginas/Linea2";
+import Linea3 from "../Paginas/Linea3";
 
 const Header = () => {
   return (
@@ -20,6 +23,9 @@ const Header = () => {
           <Route path="/" element={<Layout />}>
             <Route  path="timeline" element={<Timeline />} />
             <Route path="notas" element={<Notas />} />
+            <Route path="linea1" element={<Linea1 />} />
+            <Route path="linea2" element={<Linea2 />} />
+            <Route path="linea3" element={<Linea3 />} />
          
           </Route>
         </Routes>

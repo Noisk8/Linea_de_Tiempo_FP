@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import { Link, Outlet } from "react-router-dom";  
+import { Link } from "react-router-dom"; 
 import './Timeline.css'
 
 const Timeline = () => {
+
+
+
   const [expandedIndex, setExpandedIndex] = useState(null);
 
   const events = [
@@ -14,7 +17,7 @@ const Timeline = () => {
         "Este presidente creo  las escuelas militares, en Junio de 1892, hace el primer partido del que se data en Colombia, creo  <br />  <br /> las escuelas militares,  en Junio de 1892  hace el primer partido del que se data en Colombia, creo  las escuelas militares, en Junio de 1892, hace el primer partido del que se data en Colombia ",
       image:
         "https://upload.wikimedia.org/wikipedia/commons/5/5c/Miguel_Antonio_Caro_2.jpg",
-      link: ".../Linea1",
+      link: "/Linea1",
     },
     {
       date: "⚽ 1904",
@@ -24,7 +27,7 @@ const Timeline = () => {
         "Crea el decreto 419/3, a partir de esto apareci el concepto de Educación Fisica",
       image:
         "https://upload.wikimedia.org/wikipedia/commons/f/f2/Jos%C3%A9_Manuel_Marroqu%C3%ADn.jpg",
-      link: "/Linea1",
+      link: "/Linea2",
     },
     {
       date: "1912 ⚽",
@@ -34,7 +37,7 @@ const Timeline = () => {
         "Aplica el decreto 419, empieza a organizar  campeonatos deportivos, El primer campeonato de futbol del pais lo creo El y se llamo la Copa Carlos E Restrepo",
       image:
         "https://upload.wikimedia.org/wikipedia/commons/2/2d/Carlos_Eugenio_Restrepo%2C_1918.jpg",
-      link: "https://www.youtube.com/watch?v=ytvR7Y5d_lY",
+      link: "/Linea3",
     },
     {
       date: "⚽ 1925",
@@ -44,6 +47,7 @@ const Timeline = () => {
         "Definio las comiciones nacionales de educación fisica, lo que años después pasaría a ser Coldeportes y despues el Ministerio de Deporte .",
       image:
         "https://upload.wikimedia.org/wikipedia/commons/2/25/Gen._Pedro_Nel_Ospina%2C_Pres._Colombia_%28LOC%29.jpg",
+        link: "/Linea4",
     },
     {
       date: "⚽ 1926",
@@ -53,7 +57,7 @@ const Timeline = () => {
         "Presiente de las masacres bananeras, Se dieron las primeras Olimpiadas que gano el Magdalena, habian reclamos  de los jugadores del equipo porqué habian familiares de ellos que fueron victimas de la masacre",
       image:
         "https://upload.wikimedia.org/wikipedia/commons/f/f6/Miguel_Abad%C3%ADa_M%C3%A9ndez.jpg",
-      link: "https://www.youtube.com/watch?v=ytvR7Y5d_lY",
+        link: "/Linea1",
     },
     {
       date: "⚽ 1930",
@@ -63,7 +67,7 @@ const Timeline = () => {
         "Es esta epoca se da la construcción de varios estadios en el pais, En la Epoca de EL FUTBÓL MARRON, una epoca de futbol descentralizado",
       image:
         "https://upload.wikimedia.org/wikipedia/commons/7/7d/Enrique_Olaya_Herrera_by_Benjam%C3%ADn_de_la_Calle_%281910%29.jpg",
-      link: "https://www.youtube.com/watch?v=ytvR7Y5d_lY",
+        link: "/Linea1",
     },
     {
       date: "⚽ 1946",
@@ -72,7 +76,7 @@ const Timeline = () => {
       description:
         "Descripción larga del Evento 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       image: "https://via.placeholder.com/150",
-      link: "https://www.youtube.com/watch?v=ytvR7Y5d_lY",
+      link: "/Linea1",
     },
     {
       date: "⚽ 1962",
@@ -100,6 +104,8 @@ const Timeline = () => {
 
   return (
     <div className="timeline relative flex flex-col items-center px-4 pt-8">
+      
+   
       <div className="absolute w-1 bg-gray-300 dark:bg-gray-600 h-full left-1/2 transform -translate-x-1/2"></div>
       {events.map((event, index) => (
         <div key={index} className="max-w-xl   ">
@@ -147,7 +153,7 @@ const Timeline = () => {
                   >
                    
                       <Link to={event.link} > Link  </Link>
-                      <Outlet />
+                     
                     <button className="m-2 px-4 py-2  bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-300">
                       Ver más
                     </button>
