@@ -17,7 +17,7 @@ const Linea1 = () => {
           "La elección de la Escuela Militar como escenario no fue casual. Lemly, conocedor del fútbol, introdujo este deporte en la institución y estableció un reglamento basado en las normas inglesas. Caro, al asistir al partido, no solo respaldaba esta iniciativa, sino que también se mostraba interesado en las nuevas tendencias deportivas que llegaban al país.",
           "La <strong>hegemonia conservadora</strong> 1886 - 1930"
         ]}
-        imagenesAdicionales={["https://elmalpensante.com/sites/default/files/images/articulos/Primer_partido_nuevas_voces_el_malpensante.png"]}
+        imagenesAdicionales={["https://elmalpensante.com/sites/default/files/images/articulos/Primer_partido_nuevas_voces_el_malpensante.png", "https://elmalpensante.com/sites/default/files/images/articulos/Primer_partido_nuevas_voces_el_malpensante.png"]}
         descripcionesAdicionales={["Primer partido de futból en Colombia"]}
         links={["https://elmalpensante.com/articulo/4005/el-primer-partido-de-futbol-en-colombia"]}
         />
