@@ -1,6 +1,6 @@
 import React from "react";
 
-const Tarjeta = ({ titulo, imagen, parrafos, imagenesAdicionales = [] }) => {
+const Tarjeta = ({ titulo, imagen, parrafos, imagenesAdicionales = [], descripcionesAdicionales = [] , links = []}) => {
     return (
         <div className="bg-light-card dark:bg-gray-800 shadow-md rounded-lg overflow-hidden max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100 text-center">{titulo}</h2>
@@ -16,7 +16,18 @@ const Tarjeta = ({ titulo, imagen, parrafos, imagenesAdicionales = [] }) => {
                 {imagenesAdicionales.length > 0 && (
                     <div className="mt-4">
                         {imagenesAdicionales.map((img, index) => (
-                            <img key={index} src={img} alt={`${titulo} adicional ${index + 1}`} className="w-1/2 h-1/2 mx-auto mb-4" />
+                            <div key={index} className="mb-4">
+                                <img src={img} alt={`${titulo} adicional ${index + 1}`} className="w-1/2 h-1/2 mx-auto" />
+                                {descripcionesAdicionales[index] && (
+                                    <p className="text-gray-600 dark:text-gray-400 text-center mt-2 text-sm">
+                                        <a href={links[index]}  className="text-blue-500 hover:underline" target="_blank">
+                                            {descripcionesAdicionales[index]}
+                                        </a>
+                                    </p>
+
+                                
+                                )}
+                            </div>
                         ))}
                     </div>
                 )}
