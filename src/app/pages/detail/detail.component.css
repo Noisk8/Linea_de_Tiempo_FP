@@ -43,3 +43,28 @@
   line-height: 1.75;
   color: var(--text);
 }
+
+.detail-sources {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.detail-sources h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+}
+
+.detail-sources ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.detail-sources a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
