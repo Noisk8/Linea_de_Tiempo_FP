@@ -97,8 +97,8 @@
 }
 
 .timeline-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 24px 40px rgba(0, 0, 0, 0.12);
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 30px 55px rgba(0, 0, 0, 0.18);
 }
 
 .card-link {
@@ -118,6 +118,7 @@
   width: 100%;
   height: 260px;
   object-fit: cover;
+  object-position: center 20%;
   display: block;
 }
 

@@ -1,6 +1,47 @@
 # Linea de Tiempo: Presidentes y Futbol en Colombia
 
 Aplicacion web en Angular que presenta una linea de tiempo sobre presidentes de Colombia y su relacion con el futbol. El contenido se construye a partir de fuentes historicas y notas de referencia en `datos_referencias/`.
+                    | Initial total |  74.01 kB
+
+Application bundle generation complete. [0.007 seconds] - 2026-01-08T10:35:03.335Z
+
+Page reload sent to client(s).
+Application bundle generation failed. [0.303 seconds] - 2026-01-08T10:41:33.460Z
+
+✘ [ERROR] TS2307: Cannot find module '@angular/animations' or its corresponding type declarations. [plugin angular-compiler]
+
+    src/app/pages/home/home.component.ts:3:52:
+      3 │ ...{ trigger, transition, style, animate } from '@angular/animations';
+        ╵                                                 ~~~~~~~~~~~~~~~~~~~~~
+
+
+Application bundle generation failed. [0.183 seconds] - 2026-01-08T10:42:32.367Z
+
+✘ [ERROR] TS2307: Cannot find module '@angular/animations' or its corresponding type declarations. [plugin angular-compiler]
+
+    src/app/pages/home/home.component.ts:3:52:
+      3 │ ...{ trigger, transition, style, animate } from '@angular/animations';
+        ╵                                                 ~~~~~~~~~~~~~~~~~~~~~
+
+
+Application bundle generation failed. [0.154 seconds] - 2026-01-08T10:43:20.042Z
+
+✘ [ERROR] TS2307: Cannot find module '@angular/animations' or its corresponding type declarations. [plugin angular-compiler]
+
+    src/app/pages/home/home.component.ts:3:52:
+      3 │ ...{ trigger, transition, style, animate } from '@angular/animations';
+        ╵                                                 ~~~~~~~~~~~~~~~~~~~~~
+
+
+Application bundle generation failed. [0.368 seconds] - 2026-01-08T10:43:33.286Z
+
+✘ [ERROR] TS2307: Cannot find module '@angular/animations' or its corresponding type declarations. [plugin angular-compiler]
+
+    src/app/pages/home/home.component.ts:3:52:
+      3 │ ...{ trigger, transition, style, animate } from '@angular/animations';
+        ╵                                                 ~~~~~~~~~~~~~~~~~~~~~
+
+
 
 ## Contenido
 

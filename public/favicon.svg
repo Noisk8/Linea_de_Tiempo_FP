@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <clipPath id="clip">
+      <circle cx="128" cy="128" r="108" />
+    </clipPath>
+  </defs>
+  <rect width="256" height="256" fill="#f7f0e6" />
+  <g clip-path="url(#clip)">
+    <rect x="0" y="0" width="256" height="256" fill="#f8d34f" />
+    <rect x="0" y="128" width="256" height="48" fill="#1b3a8a" />
+    <rect x="0" y="176" width="256" height="80" fill="#b5301c" />
+  </g>
+  <circle cx="128" cy="128" r="108" fill="none" stroke="#231f20" stroke-width="10" />
+  <polygon points="128,86 155,104 146,136 110,136 101,104" fill="#231f20" />
+  <circle cx="128" cy="128" r="22" fill="none" stroke="#231f20" stroke-width="6" />
+</svg>
