@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish = "dist/linea-de-tiempo-fp/browser/browser"
+  publish = "dist/linea-de-tiempo-fp/browser"
 
 [build.environment]
   NODE_VERSION = "20.19.0"
