@@ -1,0 +1,142 @@
+.timeline {
+  width: min(1100px, 92vw);
+  margin: 0 auto 4rem;
+}
+
+.timeline-header h2 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  margin: 0 0 0.5rem;
+}
+
+.timeline-header p {
+  margin: 0 0 2rem;
+  color: var(--muted);
+}
+
+.timeline-shell {
+  position: relative;
+  padding: 2rem 0 4.5rem;
+  overflow: hidden;
+}
+
+.timeline-line {
+  position: absolute;
+  bottom: 46px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.15) 10%, rgba(0, 0, 0, 0.15) 90%, transparent 100%);
+}
+
+.timeline-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(240px, 320px);
+  gap: 1.75rem;
+  padding: 0 1rem 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+  scrollbar-color: var(--accent) transparent;
+}
+
+.timeline-track::-webkit-scrollbar {
+  height: 8px;
+}
+
+.timeline-track::-webkit-scrollbar-thumb {
+  background: rgba(183, 59, 36, 0.6);
+  border-radius: 999px;
+}
+
+.timeline-card {
+  background: var(--card);
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  scroll-snap-align: center;
+  min-height: 440px;
+  position: relative;
+}
+
+.card-date {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 1.4rem 1.4rem;
+}
+
+.date-dot {
+  width: 12px;
+  height: 12px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px rgba(183, 59, 36, 0.2);
+  position: relative;
+  top: 1px;
+}
+
+.date-label {
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.card-link {
+  height: 100%;
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 40px rgba(0, 0, 0, 0.12);
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-media {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-media img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-body {
+  padding: 1.25rem 1.4rem 1.6rem;
+}
+
+.card-body h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.2rem;
+}
+
+.card-body p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.card-body .cta {
+  font-weight: 600;
+  color: var(--accent);
+}

@@ -1,0 +1,23 @@
+<section class="detail" *ngIf="entry; else notFound">
+  <div class="detail-header">
+    <span class="year">{{ entry.year }}</span>
+    <h2>{{ entry.name }}</h2>
+    <p>{{ entry.shortDescription }}</p>
+  </div>
+
+  <div class="detail-body">
+    <img [src]="entry.image" [alt]="entry.name" />
+    <div class="detail-text">
+      @for (paragraph of entry.paragraphs; track paragraph) {
+        <p>{{ paragraph }}</p>
+      }
+    </div>
+  </div>
+</section>
+
+<ng-template #notFound>
+  <section class="detail">
+    <h2>Detalle no encontrado</h2>
+    <p>No existe una entrada para este presidente.</p>
+  </section>
+</ng-template>

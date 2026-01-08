@@ -1,67 +1,59 @@
-# Linea de Tiempo Presidentes y Futból en Colmbia
+# LineaDeTiempoFp
 
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.4.
 
-Este proyecto está basado en un video de Alejandro Calad Pino. En él, se presenta una línea de tiempo que relaciona los presidentes de Colombia con eventos importantes en la historia del fútbol colombiano.
+## Development server
 
-## Linea de tiempo 
+To start a local development server, run:
 
-# 1892 
+```bash
+ng serve
+```
 
-**Miguel Antonio Caro**
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-Este presidente creo las escuelas militares, en Junio de 1892, hace el primer partido del que se data en Colombia, creo las escuelas militares
+## Code scaffolding
 
-# 1904
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
-**Jose Manuel Marroquin**
+```bash
+ng generate component component-name
+```
 
-Este presidente creo las escuelas militares, en Junio de 1892, hace el primer partido del que se data en Colombia, creo las escuelas militares
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-# 1912
+```bash
+ng generate --help
+```
 
-**Carlos E Restrepo**
+## Building
 
-Este presidente creo las escuelas militares, en Junio de 1892, hace el primer partido del que se data en Colombia, creo las escuelas militares
+To build the project run:
 
-# 1925
+```bash
+ng build
+```
 
-**Pedro Nel Ospina**
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-Este presidente creo las escuelas militares, en Junio de 1892, hace el primer partido del que se data en Colombia, creo las escuelas militares
+## Running unit tests
 
-# 1926
+To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
 
-**Miguel Abadia Mendez**
+```bash
+ng test
+```
 
-Este presidente creo las escuelas militares, en Junio de 1892, hace el primer partido del que se data en Colombia, creo las escuelas militares
+## Running end-to-end tests
 
+For end-to-end (e2e) testing, run:
 
-# 1930
+```bash
+ng e2e
+```
 
-**Enrique Olaya Herrera**
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-Este presidente creo las escuelas militares, en Junio de 1892, hace el primer partido del que se data en Colombia, creo las escuelas militares
+## Additional Resources
 
-# 1946
-
-**Mariano Ospina**
-
-Este presidente creo las escuelas militares, en Junio de 1892, hace el primer partido del que se data en Colombia, creo las escuelas militares
-
-# 1962
-
-**Alberto Lleras Camargo**
-
-Este presidente creo las escuelas militares, en Junio de 1892, hace el primer partido del que se data en Colombia, creo las escuelas militares
-
-# 1968 
-
-**Carlos Lleras Restrepo**
-
-Este presidente creo las escuelas militares, en Junio de 1892, hace el primer partido del que se data en Colombia, creo las escuelas militares
-
-
-
-
-
-![Henry](https://github.com/user-attachments/assets/18a70429-2163-4fc6-b0d1-7aac72a9384a)
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

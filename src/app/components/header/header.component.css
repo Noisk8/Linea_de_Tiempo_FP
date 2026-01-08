@@ -1,0 +1,64 @@
+.site-header {
+  width: min(1100px, 92vw);
+  margin: 3rem auto 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand-mark {
+  font-size: 2.5rem;
+}
+
+.brand-text h1 {
+  margin: 0;
+  font-size: clamp(1.6rem, 2vw + 1rem, 2.6rem);
+  letter-spacing: -0.03em;
+}
+
+.brand-text p {
+  margin: 0.35rem 0 0;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+.nav {
+  display: flex;
+  gap: 1.25rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text);
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.nav a.active,
+.nav a:hover {
+  border-color: var(--accent);
+}
+
+@media (max-width: 850px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    gap: 0.75rem 1.2rem;
+  }
+}

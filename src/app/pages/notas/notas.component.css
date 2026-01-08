@@ -1,0 +1,14 @@
+.page {
+  width: min(900px, 92vw);
+  margin: 0 auto 4rem;
+}
+
+.page h2 {
+  margin-bottom: 0.8rem;
+}
+
+.page p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  line-height: 1.7;
+}

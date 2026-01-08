@@ -1,0 +1,8 @@
+.site-footer {
+  width: min(1100px, 92vw);
+  margin: 3rem auto 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  color: var(--muted);
+  font-size: 0.9rem;
+}

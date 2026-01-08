@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@300;400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  --background: #f3efe7;
+  --card: #ffffff;
+  --text: #1d1a16;
+  --muted: #6a6258;
+  --accent: #b73b24;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top, #fffaf1 0%, #efe6d9 55%, #e7ddcf 100%);
+}
+
+h1, h2, h3 {
+  font-family: 'Newsreader', serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}

@@ -1,0 +1,22 @@
+.page {
+  width: min(900px, 92vw);
+  margin: 0 auto 4rem;
+}
+
+.page h2 {
+  margin-bottom: 1rem;
+}
+
+.page ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.page a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+}

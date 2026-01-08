@@ -1,0 +1,30 @@
+<section class="timeline">
+  <div class="timeline-header">
+    <h2>Linea de tiempo</h2>
+    <p>Foto, anio y contexto. Haz clic para abrir cada historia en una nueva pagina.</p>
+  </div>
+
+  <div class="timeline-shell">
+    <div class="timeline-line"></div>
+    <div class="timeline-track" #scrollTrack>
+      @for (entry of entries; track entry.id) {
+        <article class="timeline-card">
+          <a class="card-link" [attr.href]="'/presidentes/' + entry.id" target="_blank" rel="noopener">
+            <div class="card-media">
+              <img [src]="entry.image" [alt]="entry.name" />
+            </div>
+            <div class="card-body">
+              <h3>{{ entry.name }}</h3>
+              <p>{{ entry.shortDescription }}</p>
+              <span class="cta">Abrir detalle</span>
+            </div>
+            <div class="card-date">
+              <span class="date-dot"></span>
+              <span class="date-label">{{ entry.year }}</span>
+            </div>
+          </a>
+        </article>
+      }
+    </div>
+  </div>
+</section>
