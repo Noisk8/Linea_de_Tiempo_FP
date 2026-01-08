@@ -1,10 +1,20 @@
 <section class="page">
   <h2>Referencias</h2>
-  <ul>
-    @for (link of links; track link.url) {
-      <li>
-        <a [href]="link.url" target="_blank" rel="noopener">{{ link.label }}</a>
-      </li>
+  <div class="reference-groups">
+    @for (group of referencesByPresident; track group.name) {
+      <div class="reference-card">
+        <div class="reference-header">
+          <span class="year">{{ group.year }}</span>
+          <h3>{{ group.name }}</h3>
+        </div>
+        <ul>
+          @for (source of group.sources; track source.url) {
+            <li>
+              <a [href]="source.url" target="_blank" rel="noopener">{{ source.label }}</a>
+            </li>
+          }
+        </ul>
+      </div>
     }
-  </ul>
+  </div>
 </section>

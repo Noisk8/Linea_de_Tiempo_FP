@@ -11,12 +11,47 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  display: grid;
-  gap: 0.75rem;
 }
 
 .page a {
   text-decoration: none;
   color: var(--accent);
   font-weight: 600;
+}
+
+.reference-groups {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.reference-card {
+  background: #fffaf1;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 1.2rem;
+  padding: 1.2rem 1.4rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.reference-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.reference-header .year {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.reference-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.reference-card ul {
+  display: grid;
+  gap: 0.6rem;
 }

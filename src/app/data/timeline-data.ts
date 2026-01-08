@@ -10,6 +10,12 @@ export type TimelineEntry = {
   shortDescription: string;
   image: string;
   paragraphs: string[];
+  editorialImage?: {
+    url: string;
+    caption: string;
+    credit?: string;
+  };
+  editorialImageAfterIndex?: number;
   sources: TimelineSource[];
 };
 
@@ -18,43 +24,43 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     id: 'rafael-nunez-1886',
     year: '1886',
     name: 'Rafael Nunez',
-    shortDescription: 'Constitucion de 1886 y centralizacion del Estado.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/6/6b/Rafael_Nunez.jpg',
+    shortDescription: 'Regeneracion, Constitucion de 1886 y beisbol en Cartagena.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Rafael_N%C3%BA%C3%B1ez%2C_ca.1885.jpg/640px-Rafael_N%C3%BA%C3%B1ez%2C_ca.1885.jpg',
     paragraphs: [
-      'En 1886 se promulga la Constitucion que inaugura la Republica de Colombia y consolida el proyecto de la Regeneracion.',
-      'El nuevo orden reduce la autonomia regional y fortalece el poder politico en Bogota, con efectos sobre la distribucion de recursos.',
-      'Lectura critica: la centralizacion favorece a elites conservadoras y urbanas, mientras periferias y clases populares quedan con menor capacidad de decision.'
+      'Este apartado no es estrictamente de futbol: sirve como antesala para entender las primeras instancias del deporte organizado en el pais.',
+      'Poeta frustrado, ultimo presidente de los Estados Unidos de Colombia y primer presidente de la Republica de Colombia.',
+      'En la revolucion de 1885 se le volteo a los liberales y termino gobernando con el Partido Conservador, marcando el inicio de la Regeneracion y la Constitucion de 1886.',
+      'Se le atribuye la letra del Himno Nacional, como gesto cultural del nuevo orden politico.',
+      'En El Cabrero, frente a su casa en Cartagena, se registra un hito del beisbol: el 20 de julio de 1897 se juega por primera vez en la ciudad, segun Raul Porto Cabrales.',
+      'Porto menciona un antecedente no confirmado: en 1874 el cubano Francisco Balmaceda habria instalado un ingenio azucarero cerca de Marialabaja con un campo de beisbol para sus trabajadores.',
+      'Lectura critica: la centralizacion politica favorece elites y deja periferias con menor poder de decision, mientras los deportes llegan primero a circuitos urbanos y de intercambio internacional.'
     ],
+    editorialImage: {
+      url: 'https://primertiempo.co/wp-content/uploads/2021/07/Historia-del-beisbol.jpg',
+      caption: 'La prensa local recuerda el primer partido de beisbol en Cartagena, 1897.',
+      credit: 'primertiempo.co'
+    },
+    editorialImageAfterIndex: 5,
     sources: [
+      {
+        label: 'Rafael Nunez (Wikipedia)',
+        url: 'https://es.wikipedia.org/wiki/Rafael_N%C3%BA%C3%B1ez'
+      },
       {
         label: 'Constitucion de 1886 (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Constituci%C3%B3n_de_1886'
       },
       {
-        label: 'Rafael Nunez (Wikipedia)',
-        url: 'https://es.wikipedia.org/wiki/Rafael_N%C3%BA%C3%B1ez'
-      }
-    ]
-  },
-  {
-    id: 'rafael-nunez-beisbol-1890s',
-    year: '1890s',
-    name: 'Rafael Nunez y el beisbol',
-    shortDescription: 'Registro temprano de beisbol en Cartagena.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/6/6b/Rafael_Nunez.jpg',
-    paragraphs: [
-      'El programa menciona un registro temprano de beisbol en la decada de 1890 frente a la casa de Nunez en Cartagena.',
-      'El dato ubica al beisbol como antecedente deportivo previo a la masificacion del futbol.',
-      'Lectura critica: los deportes llegan primero a circuitos urbanos y de elite, ligados a puertos, comercio y presencia extranjera.'
-    ],
-    sources: [
-      {
         label: 'Baseball in Colombia (Wikipedia)',
         url: 'https://en.wikipedia.org/wiki/Baseball_in_Colombia'
       },
       {
-        label: 'Rafael Nunez (Wikipedia)',
-        url: 'https://es.wikipedia.org/wiki/Rafael_N%C3%BA%C3%B1ez'
+        label: 'Hace 124 anos se jugo beisbol en Cartagena (El Universal)',
+        url: 'https://www.eluniversal.com.co/cartagena/2021/07/20/hace-124-anos-se-jugo-por-primera-vez-beisbol-en-cartagena/'
+      },
+      {
+        label: 'Memoria historica del beisbol de Bolivar y Cartagena (Scribd)',
+        url: 'https://es.scribd.com/document/517296226/historia-del-beisbol'
       }
     ]
   },
@@ -62,12 +68,16 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     id: 'miguel-antonio-caro-1892',
     year: '1892',
     name: 'Miguel Antonio Caro',
-    shortDescription: 'Primer partido de futbol registrado en Colombia.',
+    shortDescription: 'Primer partido registrado y origen disciplinario del futbol.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/5/5c/Miguel_Antonio_Caro_2.jpg',
     paragraphs: [
-      'En junio de 1892 se organiza el primer partido de futbol del que hay registro en Colombia.',
-      'El vicepresidente Miguel Antonio Caro presencia la exhibicion organizada por Henry Rowan Lemly en la Escuela Militar.',
-      'Lectura critica: el futbol nace en espacios militares y de elite, como parte de una pedagogia disciplinaria y no como practica popular.'
+      'Dijo una frase: Colombia solo puede ser catolica porque de lo contrario caeria en la barbarie. Es la hegemonia conservadora en su forma mas dura.',
+      'Por este senor se realizo el primer partido de futbol del que hay registro en Colombia. Henry Rowan Lemly era un coronel gringo y estaba obsesionado con los metodos de entrenamiento de las universidades britanicas.',
+      'En esas universidades nacieron los deportes modernos: los reglamentos del rugby, del futbol, del tenis, del criquet. Un fenomeno del siglo XIX: organizar, normalizar, civilizar los enfrentamientos.',
+      'En esa reorganizacion de la nacion se crea la escuela militar. Lemly se trajo los reglamentos del futbol de Inglaterra y los aplico aca.',
+      'Lo unico que tenia de futbol era que era 11 contra 11. El tipo trajo futbol, trajo gimnasia, trajo tenis. O sea, es basicamente el padre de los deportes en Colombia, una linea rarisima.',
+      'Seguramente hubo unos antes. Yo soy de los que defienden la tesis de que en Puerto Colombia o en Cartagena, marinos britanicos se bajaron, inflaron una tripa de un animal, empezaron a patear la pelota y los estibadores del puerto los vieron y dijeron: ¿que es esta monda? Y asi empezo el futbol, yo estoy seguro que asi paso, pero el registro historico es ese.',
+      'Junio de 1892: el vicepresidente de la republica, presidente de verdad, fue testigo de ese partido y de esa exhibicion de moderno entrenamiento. El futbol nacio oficialmente en Colombia para un presidente.'
     ],
     sources: [
       {
@@ -82,17 +92,22 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
         label: 'Henry Rowan Lemly, el pionero (El Espectador)',
         url: 'https://www.elespectador.com/deportes/henry-rowan-lemly-el-pionero/'
       }
-    ]
+    ],
+    editorialImage: {
+      url: 'https://elmalpensante.com/sites/default/files/images/articulos/Primer_partido_nuevas_voces_el_malpensante.png',
+      caption: 'El primer partido registrado en Colombia, segun el relato de El Malpensante.',
+      credit: 'elmalpensante.com'
+    }
   },
   {
     id: 'jose-manuel-marroquin-1904',
     year: '1904',
     name: 'Jose Manuel Marroquin',
-    shortDescription: 'Formalizacion de la educacion fisica en Colombia.',
+    shortDescription: 'Educacion fisica como politica estatal.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/f/f2/Jos%C3%A9_Manuel_Marroqu%C3%ADn.jpg',
     paragraphs: [
       'El programa ubica en 1904 un decreto que reglamenta la ley de educacion y formaliza el termino educacion fisica.',
-      'Se instala un marco estatal para la formacion corporal en escuelas y colegios, ligado al proyecto de nacion.',
+      'Se instala un marco estatal para la formacion corporal en escuelas y colegios.',
       'Lectura critica: la educacion fisica opera como tecnologia de disciplina social y control de cuerpos subalternos.'
     ],
     sources: [
@@ -110,7 +125,7 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     id: 'carlos-e-restrepo-1912',
     year: '1912',
     name: 'Carlos Eugenio Restrepo',
-    shortDescription: 'Primera Copa de futbol organizada por el Estado.',
+    shortDescription: 'Primer campeonato: Copa Carlos E. Restrepo.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Carlos_Eugenio_Restrepo%2C_1918.jpg',
     paragraphs: [
       'Se organiza el primer campeonato de futbol del pais: la Copa Carlos E. Restrepo.',
@@ -130,14 +145,15 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
   },
   {
     id: 'pedro-nel-ospina-1920s',
-    year: 'Anios 20',
+    year: '1922',
     name: 'Pedro Nel Ospina',
-    shortDescription: 'Fotografias con equipos de elite en canchas privadas.',
+    shortDescription: 'Ley 80 y futbol de elites en canchas privadas.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/2/25/Gen._Pedro_Nel_Ospina%2C_Pres._Colombia_%28LOC%29.jpg',
     paragraphs: [
-      'El programa menciona fotografias del presidente posando con equipos de futbol de alta sociedad.',
+      'El programa menciona fotografias del presidente posando con equipos de futbol de la alta sociedad.',
       'Se alude a escenarios como La Merced y San Bartolome de La Merced en Bogota.',
-      'Lectura critica: el deporte funciona como capital simbolico de las elites y excluye a sectores populares.'
+      'En 1925 se expide la Ley 80 que crea comisiones nacionales de educacion fisica, antecedente de Coldeportes.',
+      'Lectura critica: la institucionalizacion del deporte se concentra en elites urbanas y no en acceso popular.'
     ],
     sources: [
       {
@@ -145,43 +161,22 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
         url: 'https://es.wikipedia.org/wiki/Pedro_Nel_Ospina'
       },
       {
-        label: 'Futbol en Colombia (Wikipedia)',
-        url: 'https://es.wikipedia.org/wiki/F%C3%BAtbol_en_Colombia'
-      }
-    ]
-  },
-  {
-    id: 'ley-80-1925',
-    year: '1925',
-    name: 'Ley 80 y educacion fisica',
-    shortDescription: 'Comisiones nacionales y antecedente institucional del deporte.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/2/25/Gen._Pedro_Nel_Ospina%2C_Pres._Colombia_%28LOC%29.jpg',
-    paragraphs: [
-      'La Ley 80 de 1925 define comisiones nacionales de educacion fisica, segun el relato del programa.',
-      'Se asocia esta medida con el camino hacia Coldeportes y el actual Ministerio del Deporte.',
-      'Lectura critica: la institucionalizacion del deporte se concentra en el nivel central y no resuelve desigualdades regionales.'
-    ],
-    sources: [
-      {
         label: 'Instituto Colombiano del Deporte (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Instituto_Colombiano_del_Deporte'
-      },
-      {
-        label: 'Ministerio del Deporte (Wikipedia)',
-        url: 'https://es.wikipedia.org/wiki/Ministerio_del_Deporte_(Colombia)'
       }
     ]
   },
   {
     id: 'miguel-abadia-1926',
-    year: '1926-1930',
+    year: '1926',
     name: 'Miguel Abadia Mendez',
-    shortDescription: 'Masacre de las bananeras y contexto de conflicto social.',
+    shortDescription: 'Masacre de las bananeras y Juegos Nacionales.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/f/f6/Miguel_Abad%C3%ADa_M%C3%A9ndez.jpg',
     paragraphs: [
-      'El gobierno de Abadia Mendez queda asociado a la masacre de las bananeras en 1928.',
-      'El conflicto revela tensiones entre trabajadores, empresas extranjeras y el Estado.',
-      'Lectura critica: el poder estatal responde con violencia a demandas laborales en plena expansion agroexportadora.'
+      'Su gobierno queda asociado a la masacre de las bananeras en 1928 y al conflicto social con empresas extranjeras.',
+      'Entre 1928 y 1929 se realizan en Cali las primeras Olimpiadas Colombianas, luego Juegos Nacionales.',
+      'El programa senala que el futbol lo gana el equipo del Magdalena y se pide un minuto de silencio por las victimas.',
+      'Lectura critica: el deporte nacional emerge en medio de violencia estatal contra el movimiento obrero.'
     ],
     sources: [
       {
@@ -191,28 +186,10 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       {
         label: 'Masacre de las bananeras (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Masacre_de_las_bananeras'
-      }
-    ]
-  },
-  {
-    id: 'olimpiadas-1928',
-    year: '1928-1929',
-    name: 'Primeras Olimpiadas Colombianas',
-    shortDescription: 'Juegos en Cali y triunfo de Magdalena en futbol.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/4/4e/Estadio_Olimpico_Pascual_Guerrero.jpg',
-    paragraphs: [
-      'Entre diciembre de 1928 y enero de 1929 se realizan en Cali las primeras Olimpiadas Colombianas.',
-      'El futbol lo gana el equipo que representa al Magdalena, segun el programa.',
-      'Lectura critica: los juegos buscan cohesion nacional, pero se disputan en medio de violencia y desigualdad regional.'
-    ],
-    sources: [
-      {
-        label: 'Juegos Deportivos Nacionales de Colombia (Wikipedia)',
-        url: 'https://es.wikipedia.org/wiki/Juegos_Deportivos_Nacionales_de_Colombia'
       },
       {
-        label: 'Estadio Pascual Guerrero (Wikipedia)',
-        url: 'https://es.wikipedia.org/wiki/Estadio_Ol%C3%ADmpico_Pascual_Guerrero'
+        label: 'Juegos Deportivos Nacionales (Wikipedia)',
+        url: 'https://es.wikipedia.org/wiki/Juegos_Deportivos_Nacionales_de_Colombia'
       }
     ]
   },
@@ -220,12 +197,13 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     id: 'enrique-olaya-1930',
     year: '1930',
     name: 'Enrique Olaya Herrera',
-    shortDescription: 'Republica Liberal e inicio de masificacion de estadios.',
+    shortDescription: 'Republica Liberal y masificacion de estadios.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/7/7d/Enrique_Olaya_Herrera_by_Benjam%C3%ADn_de_la_Calle_%281910%29.jpg',
     paragraphs: [
       'Con la Republica Liberal se impulsa infraestructura urbana y deportiva.',
-      'El narrador vincula este periodo con el futbol marron y la consolidacion de clubes.',
-      'Lectura critica: la inversion prioriza capitales regionales y deja periferias rurales con baja cobertura deportiva.'
+      'Se construyen estadios emblematicos: Romelio Martinez (1934), Pascual Guerrero (1937), El Campin (1948) y Atanasio Girardot (1949).',
+      'El narrador vincula este ciclo con el futbol marron y la consolidacion de clubes en los anos cuarenta.',
+      'Lectura critica: la inversion deportiva se concentra en capitales regionales, profundizando desigualdad territorial.'
     ],
     sources: [
       {
@@ -235,49 +213,24 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       {
         label: 'Republica Liberal (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Rep%C3%BAblica_Liberal_(Colombia)'
-      }
-    ]
-  },
-  {
-    id: 'estadios-1934-1949',
-    year: '1934-1949',
-    name: 'Estadios clave',
-    shortDescription: 'Romelio Martinez, Pascual Guerrero, El Campin y Atanasio.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/1/14/Estadio_El_Camp%C3%ADn_Bogot%C3%A1.jpg',
-    paragraphs: [
-      'Se construyen estadios emblematicos: Romelio Martinez (1934), Pascual Guerrero (1937), El Campin (1948) y Atanasio Girardot (1949).',
-      'El Estadio Alfonso Lopez de la Nacional se ubica en esta misma fase de obras.',
-      'Lectura critica: la infraestructura deportiva se concentra en grandes ciudades y profundiza el centralismo urbano.'
-    ],
-    sources: [
-      {
-        label: 'Estadio Romelio Martinez (Wikipedia)',
-        url: 'https://es.wikipedia.org/wiki/Estadio_Romelio_Mart%C3%ADnez'
-      },
-      {
-        label: 'Estadio Pascual Guerrero (Wikipedia)',
-        url: 'https://es.wikipedia.org/wiki/Estadio_Ol%C3%ADmpico_Pascual_Guerrero'
       },
       {
         label: 'Estadio El Campin (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Estadio_El_Camp%C3%ADn'
-      },
-      {
-        label: 'Estadio Atanasio Girardot (Wikipedia)',
-        url: 'https://es.wikipedia.org/wiki/Estadio_Atanasio_Girardot'
       }
     ]
   },
   {
     id: 'mariano-ospina-1948',
-    year: '1948',
+    year: '1946',
     name: 'Mariano Ospina Perez',
-    shortDescription: 'Bogotazo, restricciones y auge del futbol profesional.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/7/7a/Mariano_Ospina_P%C3%A9rez.jpg',
+    shortDescription: 'Bogotazo, Dimayor y futbol profesional.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Mariano_Ospina_P%C3%A9rez.jpg/640px-Mariano_Ospina_P%C3%A9rez.jpg',
     paragraphs: [
       'Tras el Bogotazo del 9 de abril de 1948 se imponen restricciones a la reunion social.',
       'El cine y el futbol quedan como espacios permitidos, en una lectura de pan y circo.',
-      'Lectura critica: el futbol opera como valvula social en medio de violencia politica y control estatal.'
+      'En junio de 1948 se funda la Dimayor y en agosto inicia el campeonato profesional.',
+      'Lectura critica: el futbol opera como valvula social y como nuevo mercado en medio de violencia politica.'
     ],
     sources: [
       {
@@ -287,21 +240,7 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       {
         label: 'Bogotazo (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Bogotazo'
-      }
-    ]
-  },
-  {
-    id: 'dimayor-1948',
-    year: '1948',
-    name: 'Dimayor y campeonato profesional',
-    shortDescription: 'Fundacion de la liga profesional y primer torneo.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/1/14/Estadio_El_Camp%C3%ADn_Bogot%C3%A1.jpg',
-    paragraphs: [
-      'En junio de 1948 se funda la Dimayor como entidad organizadora del futbol profesional.',
-      'El campeonato se planea para el 7 de agosto y se inaugura el 15 de agosto de 1948.',
-      'Lectura critica: la profesionalizacion abre mercado, pero tambien mercantiliza la pasion popular.'
-    ],
-    sources: [
+      },
       {
         label: 'Dimayor (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Divisi%C3%B3n_Mayor_del_F%C3%BAtbol_Colombiano'
@@ -310,14 +249,15 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
   },
   {
     id: 'laureano-gomez-1950',
-    year: '1950-1953',
+    year: '1950',
     name: 'Laureano Gomez',
     shortDescription: 'El Dorado y futbol como espectaculo politico.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/1/16/Laureano_G%C3%B3mez.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Laureano_G%C3%B3mez_%28c._1925-1926%29.jpg/640px-Laureano_G%C3%B3mez_%28c._1925-1926%29.jpg',
     paragraphs: [
       'Durante su gobierno se vive la era de El Dorado, con la llegada de figuras extranjeras.',
       'El futbol concentra la atencion publica mientras el pais enfrenta violencia politica.',
-      'Lectura critica: el espectaculo deportivo funciona como cortina de humo frente a la desigualdad y el conflicto.'
+      'El narrador destaca la ironia de 1953: Laureano cae y Di Stefano se va a Espana.',
+      'Lectura critica: el espectaculo deportivo funciona como cortina de humo frente a conflictos de clase.'
     ],
     sources: [
       {
@@ -335,7 +275,7 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     year: '1962',
     name: 'Alberto Lleras Camargo',
     shortDescription: 'Primer Mundial y disputa simbolica en la Guerra Fria.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Alberto_Lleras_Camargo.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Alberto_Lleras_Camargo%2C_Presidente_da_Col%C3%B4mbia.tif/lossy-page1-640px-Alberto_Lleras_Camargo%2C_Presidente_da_Col%C3%B4mbia.tif.jpg',
     paragraphs: [
       'Colombia clasifica por primera vez a un Mundial en 1962 con Pedernera como tecnico.',
       'El empate 4-4 con la URSS se interpreta como un simbolo politico en plena Guerra Fria.',
@@ -356,12 +296,13 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     id: 'carlos-lleras-1968',
     year: '1968',
     name: 'Carlos Lleras Restrepo',
-    shortDescription: 'Creacion de Coldeportes y Panamericanos 1971.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/5/5c/Carlos_Lleras_Restrepo.jpg',
+    shortDescription: 'Coldeportes y ciclo Panamericanos.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Carlos_L._Restrepo.jpg/640px-Carlos_L._Restrepo.jpg',
     paragraphs: [
       'En 1968 se crea Coldeportes para organizar la politica deportiva nacional.',
       'El objetivo inmediato es preparar la sede de los Panamericanos de 1971 en Cali.',
-      'Lectura critica: el Estado invierte en megaeventos mientras la infraestructura barrial sigue rezagada.'
+      'El programa vincula este ciclo con el uniforme naranja conocido como zapote mecanico (1971-1979).',
+      'Lectura critica: la identidad deportiva se construye desde el marketing estatal mas que desde el bienestar social.'
     ],
     sources: [
       {
@@ -373,43 +314,22 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
         url: 'https://es.wikipedia.org/wiki/Instituto_Colombiano_del_Deporte'
       },
       {
-        label: 'Juegos Panamericanos de 1971 (Wikipedia)',
+        label: 'Juegos Panamericanos 1971 (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Juegos_Panamericanos_de_1971'
       }
     ]
   },
   {
-    id: 'zapote-mecanico-1971',
-    year: '1971-1979',
-    name: 'Zapote mecanico',
-    shortDescription: 'Uniforme naranja ligado al ciclo Panamericanos.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/4/4e/Estadio_Olimpico_Pascual_Guerrero.jpg',
-    paragraphs: [
-      'La Seleccion Colombia usa el uniforme naranja conocido como zapote mecanico.',
-      'El programa lo asocia a la politica deportiva de Coldeportes y el branding de los Panamericanos.',
-      'Lectura critica: la identidad nacional se estetiza desde el marketing deportivo y no desde el bienestar social.'
-    ],
-    sources: [
-      {
-        label: 'Seleccion de futbol de Colombia (Wikipedia)',
-        url: 'https://es.wikipedia.org/wiki/Selecci%C3%B3n_de_f%C3%BAtbol_de_Colombia'
-      },
-      {
-        label: 'Juegos Panamericanos de 1971 (Wikipedia)',
-        url: 'https://es.wikipedia.org/wiki/Juegos_Panamericanos_de_1971'
-      }
-    ]
-  },
-  {
-    id: 'belisario-1983',
+    id: 'belisario-betancur-1983',
     year: '1983',
     name: 'Belisario Betancur',
-    shortDescription: 'Rechazo de la sede del Mundial 1986.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/3/35/Belisario_Betancur_2010.jpg',
+    shortDescription: 'Mundial 1986, narco y cambio de uniforme.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Belisario_Betancur_2012.jpg/640px-Belisario_Betancur_2012.jpg',
     paragraphs: [
       'Colombia habia ganado la sede del Mundial 1986, pero Betancur la rechaza en 1983.',
-      'La justificacion apunta a exigencias de la FIFA y sus socios corporativos.',
-      'Lectura critica: el conflicto revela choque entre necesidades sociales y el negocio global del futbol.'
+      'El programa relata denuncias del ministro Rodrigo Lara Bonilla sobre clubes ligados al narcotrafico.',
+      'En 1985 una comision de notables presenta el uniforme tricolor de la Seleccion.',
+      'Lectura critica: el Estado oscila entre control moral y uso simbolico del futbol.'
     ],
     sources: [
       {
@@ -417,52 +337,16 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
         url: 'https://es.wikipedia.org/wiki/Belisario_Betancur'
       },
       {
-        label: 'Copa Mundial de Futbol 1986 (Wikipedia)',
+        label: 'Copa Mundial 1986 (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Copa_Mundial_de_F%C3%BAtbol_de_1986'
-      }
-    ]
-  },
-  {
-    id: 'belisario-narco-1983',
-    year: '1983',
-    name: 'Narcotrafico y futbol',
-    shortDescription: 'Denuncias de Rodrigo Lara Bonilla.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/3/35/Belisario_Betancur_2010.jpg',
-    paragraphs: [
-      'El ministro Rodrigo Lara Bonilla denuncia la infiltracion del narcotrafico en clubes de futbol.',
-      'Segun el programa, seis meses despues fue asesinado, mostrando el alcance de ese poder.',
-      'Lectura critica: la captura criminal de instituciones deportivas refleja la crisis del Estado y la desigualdad social.'
-    ],
-    sources: [
+      },
       {
         label: 'Rodrigo Lara Bonilla (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Rodrigo_Lara_Bonilla'
       },
       {
-        label: 'Cartel de Cali (Wikipedia)',
-        url: 'https://es.wikipedia.org/wiki/Cartel_de_Cali'
-      }
-    ]
-  },
-  {
-    id: 'uniforme-1985',
-    year: '1985',
-    name: 'Nuevo uniforme de la Seleccion',
-    shortDescription: 'Comision de notables y debut del tricolor.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/0/06/Amparo_Grisales_2015.jpg',
-    paragraphs: [
-      'El gobierno organiza una comision de notables para cambiar el uniforme de la Seleccion.',
-      'El 8 de febrero de 1985 se presentan los uniformes titular y suplente.',
-      'Lectura critica: la identidad nacional se construye desde elites culturales y mediaticas.'
-    ],
-    sources: [
-      {
         label: 'Seleccion de futbol de Colombia (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Selecci%C3%B3n_de_f%C3%BAtbol_de_Colombia'
-      },
-      {
-        label: 'Amparo Grisales (Wikipedia)',
-        url: 'https://es.wikipedia.org/wiki/Amparo_Grisales'
       }
     ]
   },
@@ -470,12 +354,12 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     id: 'virgilio-barco-1986',
     year: '1986',
     name: 'Virgilio Barco',
-    shortDescription: 'Transicion de gobierno y ascenso de Cesar Gaviria.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/0/0f/Virgilio_Barco.jpg',
+    shortDescription: 'Transicion politica y ascenso de Cesar Gaviria.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Virgilio_Barco_Vargas.jpg/640px-Virgilio_Barco_Vargas.jpg',
     paragraphs: [
       'Virgilio Barco asume la presidencia en un contexto de crisis y violencia politica.',
-      'El programa subraya el protagonismo del ministro de gobierno Cesar Gaviria en la gestion del Estado.',
-      'Lectura critica: las transiciones se dan en un pais desigual donde el poder sigue concentrado en pocos grupos.'
+      'El programa destaca el rol de Cesar Gaviria como ministro de gobierno en esta transicion.',
+      'Lectura critica: la continuidad de elites politicas limita reformas de fondo sobre deporte y desigualdad.'
     ],
     sources: [
       {
@@ -490,13 +374,13 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
   },
   {
     id: 'cesar-gaviria-1993',
-    year: '1993',
+    year: '1990',
     name: 'Cesar Gaviria',
-    shortDescription: 'El 5-0 y las condecoraciones a la Seleccion.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/3/3d/Cesar_Gaviria_2011.jpg',
+    shortDescription: 'El 5-0 y condecoraciones a la Seleccion.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/C%C3%A9sar_Gaviria.jpg/640px-C%C3%A9sar_Gaviria.jpg',
     paragraphs: [
       'Tras el 5-0 de 1993, Gaviria condecora a Pacho Maturana y a los jugadores.',
-      'El gesto se vuelve simbolo de un Estado que busca cohesion en medio de crisis sociales.',
+      'El gesto se vuelve simbolo de cohesion en medio de crisis sociales y violencia.',
       'Lectura critica: la gloria deportiva se usa para legitimar gobiernos y desplazar debates estructurales.'
     ],
     sources: [
@@ -512,10 +396,10 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
   },
   {
     id: 'ernesto-samper-1994',
-    year: '1994-1995',
+    year: '1994',
     name: 'Ernesto Samper',
     shortDescription: 'Proceso 8000 y federacion bajo presion del narco.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/5/54/Ernesto_Samper_Pizano_2018.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Ernesto_Samper.jpg/640px-Ernesto_Samper.jpg',
     paragraphs: [
       'Samper llega al poder en 1994 en medio del Proceso 8000.',
       'El programa afirma que la Federacion estaba bajo influencia del cartel de Cali.',
@@ -529,15 +413,19 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       {
         label: 'Proceso 8000 (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Proceso_8000'
+      },
+      {
+        label: 'Cartel de Cali (Wikipedia)',
+        url: 'https://es.wikipedia.org/wiki/Cartel_de_Cali'
       }
     ]
   },
   {
     id: 'andres-pastrana-2001',
-    year: '1998-2001',
+    year: '1998',
     name: 'Andres Pastrana',
     shortDescription: 'Copa America 2001 como proyecto politico.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/7/77/Andres_Pastrana_2002.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Andr%C3%A9s_Pastrana%2C_2009.jpg/640px-Andr%C3%A9s_Pastrana%2C_2009.jpg',
     paragraphs: [
       'Pastrana llega en 1998 con el objetivo politico de la paz.',
       'Impulsa la Copa America 2001 en medio de violencia y logra la sede para Colombia.',
@@ -556,14 +444,14 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
   },
   {
     id: 'alvaro-uribe-2002',
-    year: '2002-2010',
+    year: '2002',
     name: 'Alvaro Uribe Velez',
-    shortDescription: 'Eventos deportivos y proyeccion internacional.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/3/3b/Alvaro_Uribe_Velez.jpg',
+    shortDescription: 'Eventos deportivos y diplomacia futbolera.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/%C3%81lvaro_Uribe_V%C3%A9lez.png/640px-%C3%81lvaro_Uribe_V%C3%A9lez.png',
     paragraphs: [
       'Durante su gestion se realizan los Juegos Bolivarianos 2005, Centroamericanos 2006 y Suramericanos 2010.',
-      'El futbol se usa como vitrina de orden y modernizacion en un contexto de seguridad democratica.',
-      'Lectura critica: la inversion en espectaculo convive con brechas sociales y territoriales persistentes.'
+      'El programa vincula la imagen del Real Madrid con negocios de infraestructura de ACS en Colombia.',
+      'Lectura critica: el futbol opera como vitrina internacional mientras persisten brechas sociales internas.'
     ],
     sources: [
       {
@@ -575,27 +463,13 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
         url: 'https://es.wikipedia.org/wiki/Juegos_Bolivarianos_de_2005'
       },
       {
-        label: 'Juegos Centroamericanos y del Caribe 2006 (Wikipedia)',
+        label: 'Juegos Centroamericanos 2006 (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Juegos_Centroamericanos_y_del_Caribe_de_2006'
       },
       {
         label: 'Juegos Suramericanos 2010 (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Juegos_Suramericanos_de_2010'
-      }
-    ]
-  },
-  {
-    id: 'florentino-2013',
-    year: '2013',
-    name: 'Florentino Perez y ACS',
-    shortDescription: 'Negocios de infraestructura y diplomacia futbolera.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/5/5b/Florentino_Perez_2016.jpg',
-    paragraphs: [
-      'El programa relaciona la imagen del Real Madrid con negocios de infraestructura en Colombia.',
-      'ACS, empresa de Florentino Perez, aparece vinculada a grandes concesiones viales.',
-      'Lectura critica: el futbol opera como lenguaje de negocios y acceso a contratos publicos.'
-    ],
-    sources: [
+      },
       {
         label: 'Florentino Perez (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Florentino_P%C3%A9rez'
@@ -608,10 +482,10 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
   },
   {
     id: 'juan-manuel-santos-2011',
-    year: '2011',
+    year: '2010',
     name: 'Juan Manuel Santos',
     shortDescription: 'Mundial Sub-20 y llegada de Pekerman.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/4/4f/Juan_Manuel_Santos_in_2013.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Juan_Manuel_Santos_and_Lula_%28cropped%29.jpg/640px-Juan_Manuel_Santos_and_Lula_%28cropped%29.jpg',
     paragraphs: [
       'Colombia es anfitriona del Mundial Sub-20 en 2011, con actos oficiales en El Campin.',
       'Tras la crisis deportiva y el escandalo del Bolillo, Santos impulsa la llegada de Pekerman.',
@@ -637,7 +511,7 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     year: '2018',
     name: 'Ivan Duque',
     shortDescription: 'FIFA Gate, Ministerio del Deporte y disputa por control.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Ivan_Duque_2018.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/5/5d/Iv%C3%A1n_Duque%2C_oct_2021_1.1.jpg',
     paragraphs: [
       'En 2018 llega Ivan Duque y se abre el debate sobre control estatal del futbol tras el FIFA Gate.',
       'El Ministerio del Deporte surge en este ciclo como intento de reorganizar la gobernanza deportiva.',

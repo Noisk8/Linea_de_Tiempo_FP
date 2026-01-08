@@ -6,12 +6,25 @@
   </div>
 
   <div class="detail-body">
-    <img [src]="entry.image" [alt]="entry.name" />
+    <aside class="detail-portrait-wrap">
+      <img class="detail-portrait" [src]="entry.image" [alt]="entry.name" />
+    </aside>
     <div class="detail-text">
-      @for (paragraph of entry.paragraphs; track paragraph) {
+      @for (paragraph of entry.paragraphs; track paragraph; let i = $index) {
         <p>{{ paragraph }}</p>
       }
     </div>
+    @if (entry.editorialImage) {
+      <figure class="editorial-cutout">
+        <img [src]="entry.editorialImage.url" [alt]="entry.editorialImage.caption" />
+        <figcaption>
+          {{ entry.editorialImage.caption }}
+          @if (entry.editorialImage.credit) {
+            <span class="credit">Fuente: {{ entry.editorialImage.credit }}</span>
+          }
+        </figcaption>
+      </figure>
+    }
   </div>
 
   <div class="detail-sources" *ngIf="entry.sources.length">

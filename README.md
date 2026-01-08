@@ -1,59 +1,54 @@
-# LineaDeTiempoFp
+# Linea de Tiempo: Presidentes y Futbol en Colombia
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.4.
+Aplicacion web en Angular que presenta una linea de tiempo sobre presidentes de Colombia y su relacion con el futbol. El contenido se construye a partir de fuentes historicas y notas de referencia en `datos_referencias/`.
 
-## Development server
+## Contenido
 
-To start a local development server, run:
+- Linea de tiempo horizontal con tarjetas por presidente.
+- Pagina de detalle con texto ampliado, referencias y recortes editoriales.
+- Pagina de referencias organizada por presidente.
 
-```bash
-ng serve
-```
+## Estructura
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- `src/app/data/timeline-data.ts`: datos finales que se renderizan en la linea de tiempo.
+- `datos_referencias/`: base documental en Markdown y transcripciones.
+- `src/app/pages/timeline/`: vista principal de la linea de tiempo.
+- `src/app/pages/detail/`: vista de detalle por presidente.
+- `src/app/pages/referencias/`: listado de fuentes agrupadas.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Como correr en local
 
 ```bash
-ng generate --help
+npm install
+npm start
 ```
 
-## Building
+Abrir `http://localhost:4200/`.
 
-To build the project run:
+## Build
 
 ```bash
-ng build
+npm run build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Salida: `dist/linea-de-tiempo-fp/browser`.
 
-## Running unit tests
+## Despliegue en Netlify
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Este proyecto usa el plugin de Angular en Netlify y requiere:
 
-```bash
-ng test
-```
+- Node 20.19.0
+- Publish directory: `dist/linea-de-tiempo-fp/browser`
 
-## Running end-to-end tests
+La configuracion vive en `netlify.toml`.
 
-For end-to-end (e2e) testing, run:
+## Actualizar contenido
 
-```bash
-ng e2e
-```
+1. Edita o agrega notas en `datos_referencias/`.
+2. Traslada la informacion a `src/app/data/timeline-data.ts`.
+3. Verifica que las fuentes queden listadas en `sources`.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Notas
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Las imagenes se cargan desde Wikimedia/Wikipedia cuando es posible.
+- Los recortes editoriales se usan para contextualizar hitos no estrictamente futbolisticos.
