@@ -11,7 +11,7 @@
     </aside>
     <div class="detail-text">
       @for (paragraph of entry.paragraphs; track paragraph; let i = $index) {
-        <p>{{ paragraph }}</p>
+        <p [innerHTML]="paragraph"></p>
       }
     </div>
     @if (entry.editorialImage) {
