@@ -239,6 +239,10 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
         url: 'https://es.wikipedia.org/wiki/Masacre_de_las_bananeras'
       },
       {
+        label: 'Primeros Juegos Nacionales en Cali (Museo Nacional)',
+        url: 'https://www.museonacional.gov.co/noticias/Paginas/Olimpicos.aspx#:~:text=Entre%20el%2020%20de%20diciembre,75).'
+      },
+      {
         label: 'Juegos Deportivos Nacionales (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Juegos_Deportivos_Nacionales_de_Colombia'
       }
@@ -253,23 +257,31 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     shortDescription: 'Republica Liberal y masificacion de estadios.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/7/7d/Enrique_Olaya_Herrera_by_Benjam%C3%ADn_de_la_Calle_%281910%29.jpg',
     paragraphs: [
-      'Con la Republica Liberal se impulsa infraestructura urbana y deportiva.',
-      'Se construyen estadios emblematicos: Romelio Martinez (1934), Pascual Guerrero (1937), El Campin (1948) y Atanasio Girardot (1949).',
-      'El narrador vincula este ciclo con el futbol marron y la consolidacion de clubes en los anos cuarenta.',
-      'Lectura critica: la inversion deportiva se concentra en capitales regionales, profundizando desigualdad territorial.'
+      'Enrique Olaya Herrera fue el primer presidente de la <strong>Republica Liberal</strong> (1930-1945). Durante su gobierno se consolida la <strong>construccion de estadios</strong> en el pais.',
+      'Antes de 1930 solo existia un estadio en Colombia: el <strong>Julio Torres</strong>, luego <em>Estadio Moderno</em>, construido en Barranquilla en 1922. El resto de actividades deportivas se realizaban en canchas con tribunas improvisadas, con condiciones poco seguras para el publico. Con la Republica Liberal comienza la <strong>masificacion del deporte</strong>.',
+      'Bajo Olaya Herrera se levantan escenarios clave: el <strong>Romelio Martinez</strong> (1934), el <strong>Alfonso Lopez</strong> de la Universidad Nacional (1936) y el <strong>Pascual Guerrero</strong> (1937). Con esta infraestructura se abre la etapa del llamado <em>futbol marron</em>, aun sin profesionalismo ni campeonato unificado, pero con pagos informales y competiciones locales que dieron origen a muchos de los clubes tradicionales.'
     ],
+    editorialImage: {
+      url: '/C6.jpg',
+      caption: 'Infraestructura deportiva durante la Republica Liberal.',
+      credit: 'Archivo fotografico'
+    },
     sources: [
       {
         label: 'Enrique Olaya Herrera (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Enrique_Olaya_Herrera'
       },
       {
-        label: 'Republica Liberal (Wikipedia)',
-        url: 'https://es.wikipedia.org/wiki/Rep%C3%BAblica_Liberal_(Colombia)'
+        label: 'Estadio Romelio Martinez (Wikipedia)',
+        url: 'https://es.wikipedia.org/wiki/Estadio_Romelio_Mart%C3%ADnez'
       },
       {
-        label: 'Estadio El Campin (Wikipedia)',
-        url: 'https://es.wikipedia.org/wiki/Estadio_El_Camp%C3%ADn'
+        label: 'Estadio Alfonso Lopez (Bogota) (Wikipedia)',
+        url: 'https://es.wikipedia.org/wiki/Estadio_Alfonso_L%C3%B3pez_(Bogot%C3%A1)'
+      },
+      {
+        label: 'Estadio Pascual Guerrero (Wikipedia)',
+        url: 'https://es.wikipedia.org/wiki/Estadio_Pascual_Guerrero'
       }
     ]
   },
@@ -282,23 +294,32 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     shortDescription: 'Bogotazo, Dimayor y futbol profesional.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Mariano_Ospina_P%C3%A9rez.jpg/640px-Mariano_Ospina_P%C3%A9rez.jpg',
     paragraphs: [
-      'Tras el Bogotazo del 9 de abril de 1948 se imponen restricciones a la reunion social.',
-      'El cine y el futbol quedan como espacios permitidos, en una lectura de pan y circo.',
-      'En junio de 1948 se funda la Dimayor y en agosto inicia el campeonato profesional.',
-      'Lectura critica: el futbol opera como valvula social y como nuevo mercado en medio de violencia politica.'
+      'Mariano Ospina Perez llego al poder en <strong>1946</strong> tras vencer a <strong>Jorge Eliecer Gaitan</strong> en unas elecciones marcadas por la division liberal. Sumados, <em>Gaitan y Echandia</em> obtenian mas votos que Ospina, pero por separado el candidato conservador se impuso y el partido regreso al gobierno.',
+      'El asesinato de Gaitan en <strong>1948</strong> desato el <strong>Bogotazo</strong>. La violencia se extendio por el pais y en algunas regiones, como Barrancabermeja, los obreros tomaron el control por varias semanas. El episodio marco el inicio de un ciclo de venganzas y persecuciones politicas.',
+      'Tras el Bogotazo se impuso toque de queda y se prohibieron reuniones de mas de dos personas. Hubo dos excepciones oficiales: <strong>cine</strong> y <strong>futbol</strong>. En ese contexto, Alfonso Senior, dirigente de Millonarios, impulso la creacion de la <strong>Dimayor</strong> en junio y el inicio del campeonato profesional en agosto de 1948.',
+      'El futbol se consolido como espacio de reunion social en medio de la censura. La prensa, restringida por el <em>censor nacional</em>, encontro en el deporte un tema permitido para cubrir y comentar.'
     ],
+    editorialImage: {
+      url: '/mariano_gaitan.jpeg',
+      caption: 'Mariano Ospina Perez y Jorge Eliecer Gaitan en campana.',
+      credit: 'Archivo fotografico'
+    },
     sources: [
       {
         label: 'Mariano Ospina Perez (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Mariano_Ospina_P%C3%A9rez'
       },
       {
+        label: 'Jorge Eliecer Gaitan (Wikipedia)',
+        url: 'https://es.wikipedia.org/wiki/Jorge_Eli%C3%A9cer_Gait%C3%A1n'
+      },
+      {
         label: 'Bogotazo (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Bogotazo'
       },
       {
-        label: 'Dimayor (Wikipedia)',
-        url: 'https://es.wikipedia.org/wiki/Divisi%C3%B3n_Mayor_del_F%C3%BAtbol_Colombiano'
+        label: 'Campeonato Profesional Colombiano 1948 (Wikipedia)',
+        url: 'https://es.wikipedia.org/wiki/Campeonato_de_F%C3%BAtbol_Profesional_Colombiano_1948'
       }
     ]
   },
@@ -311,19 +332,37 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     shortDescription: 'El Dorado y futbol como espectaculo politico.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Laureano_G%C3%B3mez_%28c._1925-1926%29.jpg/640px-Laureano_G%C3%B3mez_%28c._1925-1926%29.jpg',
     paragraphs: [
-      'Durante su gobierno se vive la era de El Dorado, con la llegada de figuras extranjeras.',
-      'El futbol concentra la atencion publica mientras el pais enfrenta violencia politica.',
-      'El narrador destaca la ironia de 1953: Laureano cae y Di Stefano se va a Espana.',
-      'Lectura critica: el espectaculo deportivo funciona como cortina de humo frente a conflictos de clase.'
+      'Laureano Gomez fue un dirigente conservador de linea dura. Habia sido senador y canciller de Mariano Ospina antes de llegar a la presidencia en <strong>1950</strong>.',
+      'Su periodo coincide con la era de <em>El Dorado</em>, cuando el futbol colombiano vive una bonanza marcada por la llegada de figuras como <strong>Adolfo Pedernera</strong> y <strong>Alfredo Di Stefano</strong>. La atencion publica se desplaza hacia el espectaculo deportivo en un contexto de violencia politica.',
+      'El ciclo de El Dorado se explica por la ruptura institucional entre la <strong>Dimayor</strong> y la autoridad federativa (<strong>Adefutbol/FIFA</strong>), lo que permitio contratar estrellas sin el marco regular de transferencias internacionales. El resultado fue un campeonato de enorme convocatoria y una burbuja deportiva y economica.',
+      'La normalizacion internacional llega con el <strong>Pacto de Lima (1951)</strong>, que establecio condiciones para cerrar el ciclo y ordenar la devolucion de jugadores. Ese hito ocurre durante el periodo Laureano/Urdaneta.',
+      'En medio de <em>La Violencia</em>, el futbol funciono como <em>valvula de escape</em>. Archivos de la epoca resaltan la asistencia masiva a partidos mientras el orden publico se deterioraba, lo que refuerza la idea del deporte como termometro social.'
     ],
+    editorialImage: {
+      url: '/Millonarios-Campeon-en-1951.jpg',
+      caption: 'Millonarios campeon en 1951, simbolo de la era de El Dorado.',
+      credit: 'Archivo fotografico'
+    },
     sources: [
       {
         label: 'Laureano Gomez (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Laureano_G%C3%B3mez'
       },
       {
-        label: 'El Dorado (futbol) (Wikipedia)',
-        url: 'https://es.wikipedia.org/wiki/El_Dorado_(f%C3%BAtbol)'
+        label: 'Gobierno de Laureano Gomez (Wikipedia)',
+        url: 'https://es.wikipedia.org/wiki/Gobierno_de_Laureano_G%C3%B3mez'
+      },
+      {
+        label: 'Roberto Urdaneta (Senal Memoria)',
+        url: 'https://www.senalmemoria.co/articulos/roberto-urdaneta'
+      },
+      {
+        label: 'El Dorado y la prensa (El Tiempo)',
+        url: 'https://www.eltiempo.com/archivo/documento/mam-950339'
+      },
+      {
+        label: 'El Dorado y profesionalismo (UFPR)',
+        url: 'https://revistas.ufpr.br/alesde/article/download/20967/15144'
       }
     ]
   },

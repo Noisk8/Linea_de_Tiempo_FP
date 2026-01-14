@@ -9,3 +9,6 @@ Al regresar a Santa Marta, el equipo recibio un homenaje frente al gobernador mi
 La prensa de la epoca registro que algunos jugadores eran familiares de victimas, lo que volvio el gesto aun mas significativo.
 
 Ese clima social y politico acelero el fin de la hegemonia conservadora: los liberales regresaron al poder en <strong>1930</strong> con Enrique Olaya Herrera.
+
+
+https://www.museonacional.gov.co/noticias/Paginas/Olimpicos.aspx#:~:text=Entre%20el%2020%20de%20diciembre,75).
