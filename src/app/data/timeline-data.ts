@@ -367,6 +367,36 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     ]
   },
   {
+    id: 'gustavo-rojas-pinilla-1953',
+    year: '1953',
+    termStartYear: '1953',
+    termEndYear: '1957',
+    name: 'Gustavo Rojas Pinilla',
+    shortDescription: 'Golpe de Estado y futbol como vitrina popular.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Gurropin_tras_asumir_la_presidencia_con_un_golpe_de_estado.jpg',
+    paragraphs: [
+      'Gustavo Rojas Pinilla llego al poder tras el <strong>golpe de Estado</strong> del <strong>13 de junio de 1953</strong> y goberno hasta el <strong>10 de mayo de 1957</strong>.',
+      'Su gobierno busco legitimidad a traves de obras publicas, medios de comunicacion y espectaculos masivos. En ese contexto, el futbol funciono como <em>vitrina popular</em> y espacio de cohesion social.',
+      'El periodo coincide con la salida del ciclo de <em>El Dorado</em> y con intentos de normalizacion institucional del deporte profesional.',
+      'Lectura critica: el uso del espectaculo deportivo acompano un proyecto autoritario que buscaba control social y respaldo urbano.'
+    ],
+    editorialImage: {
+      url: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Gurropin_tras_asumir_la_presidencia_con_un_golpe_de_estado.jpg',
+      caption: 'Rojas Pinilla tras asumir la presidencia en 1953.',
+      credit: 'Wikimedia Commons'
+    },
+    sources: [
+      {
+        label: 'Gustavo Rojas Pinilla (Wikipedia)',
+        url: 'https://es.wikipedia.org/wiki/Gustavo_Rojas_Pinilla'
+      },
+      {
+        label: 'Golpe de Estado en Colombia (1953) (Wikipedia)',
+        url: 'https://es.wikipedia.org/wiki/Golpe_de_Estado_en_Colombia_de_1953'
+      }
+    ]
+  },
+  {
     id: 'alberto-lleras-1962',
     year: '1962',
     termStartYear: '1958',
@@ -375,10 +405,18 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     shortDescription: 'Primer Mundial y disputa simbolica en la Guerra Fria.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Alberto_Lleras_Camargo%2C_Presidente_da_Col%C3%B4mbia.tif/lossy-page1-640px-Alberto_Lleras_Camargo%2C_Presidente_da_Col%C3%B4mbia.tif.jpg',
     paragraphs: [
-      'Colombia clasifica por primera vez a un Mundial en 1962 con Pedernera como tecnico.',
-      'El empate 4-4 con la URSS se interpreta como un simbolo politico en plena Guerra Fria.',
-      'Lectura critica: el Estado se apropia de la hazana deportiva para legitimar su proyecto politico.'
+      'Colombia clasifica a su primer Mundial en 1962 con Adolfo Pedernera como tecnico y figura del Dorado.',
+      'En la eliminatoria vence a Peru y viaja a <strong>Arica</strong>, sede asignada al rival y ciudad fronteriza entre Chile y Peru.',
+      'El 4-4 frente a la URSS queda como hito: Colombia le marca cuatro a <em>Lev Yashin</em>, el mejor arquero del momento.',
+      'En plena Guerra Fria, la prensa convierte el partido en un relato ideologico de Colombia frente al comunismo.',
+      'Lectura critica: el Estado y el sistema mediatico se apropian del logro para legitimar su proyecto politico.'
     ],
+    editorialImage: {
+      url: '/lleras-urrsss.png',
+      caption: 'Caricatura sobre el 4-4 con la URSS y la lectura politica del partido.',
+      credit: 'Historias Secretas'
+    },
+    editorialImageAfterIndex: 2,
     sources: [
       {
         label: 'Alberto Lleras Camargo (Wikipedia)',
@@ -399,10 +437,10 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     shortDescription: 'Coldeportes y ciclo Panamericanos.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Carlos_L._Restrepo.jpg/640px-Carlos_L._Restrepo.jpg',
     paragraphs: [
-      'En 1968 se crea Coldeportes para organizar la politica deportiva nacional.',
-      'El objetivo inmediato es preparar la sede de los Panamericanos de 1971 en Cali.',
-      'El programa vincula este ciclo con el uniforme naranja conocido como zapote mecanico (1971-1979).',
-      'Lectura critica: la identidad deportiva se construye desde el marketing estatal mas que desde el bienestar social.'
+      'En 1968 nace <strong>Coldeportes</strong>, el Instituto Colombiano del Deporte y la Recreacion, dentro de una agenda de <strong>modernizacion estatal</strong>.',
+      'La prioridad es preparar a Colombia para la sede de los <strong>Juegos Panamericanos de Cali 1971</strong> y <strong>ordenar el sistema deportivo</strong>.',
+      'De este ciclo surge el uniforme naranja conocido como <em>zapote mecanico</em> (1971-1979), vinculado a la <strong>imagen institucional</strong> de Coldeportes.',
+      'Lectura critica: la <strong>identidad deportiva</strong> se construye desde la <strong>imagen</strong> y el <strong>evento</strong> mas que desde el <strong>bienestar social</strong> o la <strong>formacion de base</strong>.'
     ],
     sources: [
       {
@@ -428,10 +466,12 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     shortDescription: 'Mundial 1986, narco y cambio de uniforme.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Belisario_Betancur_2012.jpg/640px-Belisario_Betancur_2012.jpg',
     paragraphs: [
-      'Colombia habia ganado la sede del Mundial 1986, pero Betancur la rechaza en 1983.',
-      'El programa relata denuncias del ministro Rodrigo Lara Bonilla sobre clubes ligados al narcotrafico.',
-      'En 1985 una comision de notables presenta el uniforme tricolor de la Seleccion.',
-      'Lectura critica: el Estado oscila entre control moral y uso simbolico del futbol.'
+      'Colombia habia ganado la sede del <strong>Mundial 1986</strong>, pero en 1983 el gobierno de <strong>Betancur</strong> renuncia a organizarlo.',
+      'La decision se justifica por <strong>costos</strong> y <strong>exigencias de la FIFA</strong> y sus socios comerciales en un contexto economico <em>proteccionista</em>.',
+      'El ministro <strong>Rodrigo Lara Bonilla</strong> denuncia la relacion de varios clubes con el <strong>narcotrafico</strong>, abriendo un frente politico.',
+      'En 1985 una <em>comision de notables</em> define el uniforme tricolor; se mencionan nombres como <strong>Daniel Samper Pizano</strong>, <strong>Alberto Casas</strong> y <strong>Carlos Cure</strong>.',
+      'La presentacion oficial ocurre el <strong>8 de febrero de 1985</strong> y queda asociada a <strong>Amparo Grisales</strong> como imagen del lanzamiento.',
+      'Lectura critica: el Estado oscila entre <strong>control moral</strong> del futbol y <strong>uso simbolico</strong> del deporte para construir <strong>identidad nacional</strong>.'
     ],
     sources: [
       {

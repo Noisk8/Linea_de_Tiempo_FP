@@ -1,30 +1,42 @@
 <section class="timeline">
   <div class="timeline-header">
-    <h2>Linea de tiempo</h2>
-    <p>Foto, anio y contexto. Haz clic para abrir cada historia en una nueva pagina.</p>
+    <p class="timeline-kicker">Linea de tiempo</p>
+    <h2>Presidentes y futbol en Colombia</h2>
+    <p class="timeline-intro">Recorre la historia con contexto, imagenes y enlaces de cada periodo.</p>
   </div>
 
-  <div class="timeline-shell">
-    <div class="timeline-line"></div>
-    <div class="timeline-track" #scrollTrack>
-      @for (entry of entries; track entry.id) {
-        <article class="timeline-card">
-          <a class="card-link" [attr.href]="'/presidentes/' + entry.id" target="_blank" rel="noopener">
-            <div class="card-media">
-              <img [src]="entry.image" [alt]="entry.name" />
-            </div>
-            <div class="card-body">
-              <h3>{{ entry.name }}</h3>
-              <p>{{ entry.shortDescription }}</p>
-              <span class="cta">Abrir detalle</span>
-            </div>
-            <div class="card-date">
-              <span class="date-dot"></span>
-              <span class="date-label">{{ entry.termStartYear }} - {{ entry.termEndYear }}</span>
-            </div>
-          </a>
-        </article>
-      }
-    </div>
+  <div class="timeline-wrapper" [style.--timeline-progress]="progressPercent + '%'">
+    <div class="timeline-progress"></div>
+    <p-timeline [value]="entries" align="alternate" styleClass="timeline-prime">
+      <ng-template pTemplate="opposite" let-entry>
+        <span class="timeline-year">{{ entry.termStartYear }}-{{ entry.termEndYear }}</span>
+      </ng-template>
+
+      <ng-template pTemplate="content" let-entry>
+        <a
+          #timelineCard
+          class="timeline-card"
+          [class.is-loading]="!imageLoaded[entry.id]"
+          [attr.href]="'/presidentes/' + entry.id"
+          target="_blank"
+          rel="noopener"
+        >
+          <div class="timeline-media">
+            <img
+              [src]="entry.image"
+              [alt]="entry.name"
+              loading="lazy"
+              decoding="async"
+              (load)="onImageLoad(entry.id)"
+            />
+          </div>
+          <div class="timeline-body">
+            <h3>{{ entry.name }}</h3>
+            <p [innerHTML]="entry.paragraphs[0]"></p>
+            <span class="cta">Abrir detalle</span>
+          </div>
+        </a>
+      </ng-template>
+    </p-timeline>
   </div>
 </section>

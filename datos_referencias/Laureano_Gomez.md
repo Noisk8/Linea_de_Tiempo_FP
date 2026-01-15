@@ -8,6 +8,9 @@ La normalizacion internacional llega con el <strong>Pacto de Lima (1951)</strong
 
 En medio de <em>La Violencia</em>, el futbol funciono como <em>valvula de escape</em>. Archivos de la epoca resaltan la asistencia masiva a partidos mientras el orden publico se deterioraba, lo que refuerza la idea del deporte como termometro social.
 
+aureano cae en 1953 lo tumba rojas pinilla y en 1953 el la superestrella del circo y Estéfano se va para España.
+
+
 Imagen sugerida: Millonarios-Campeon-en-1951.jpg
 
 Referencias:
