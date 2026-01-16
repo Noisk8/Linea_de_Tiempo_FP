@@ -13,3 +13,6 @@ Y ustedes saben que ese fuera petro sale por televisión y lo va a ver todo el m
 Es la primera vez que los dirigentes no tienen a un gobierno de su lado.
 
 Tal vez el único que no había estado de su lado era Belisario, que terminó estando de su lado de todas formas.
+
+
+

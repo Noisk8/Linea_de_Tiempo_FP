@@ -9,3 +9,32 @@ En ese contexto, **Miguel Rodriguez Orejuela** convoca a la Seleccion a su finca
 Bellini es detenido en **1995** por sus vinculos con el cartel de Cali y por **lavado de activos**. Tras salir de la carcel, vuelve como asesor en el futbol y mantiene influencia en clubes y directivos.
 
 Lectura critica: la politica deportiva queda atravesada por flujos ilegales de dinero y poder, con efectos duraderos en la institucionalidad del futbol.
+
+
+
+Imagenes 
+
+→ IEVVZXSYLZEPLP3GVRO6OTWMSY.jpg
+
+→ 7G5LUER3FND3VNQKIU3JDHGEHU.avif
+
+→ 5b70bcda4d169.jpeg
+
+→ juan-jose-belliini1.jpg
+
+
+
+
+Referencias 
+
+https://www.comisiondelaverdad.co/el-proceso-8000
+
+
+https://www.eltiempo.com/noticias/proceso-8000/2
+
+https://es.wikipedia.org/wiki/Influencia_del_narcotr%C3%A1fico_en_el_f%C3%BAtbol_colombiano
+
+
+https://www.futbolred.com/futbol-colombiano/liga-aguila/el-narcotrafico-en-la-historia-del-futbol-profesional-colombiano-87039
+
+https://www.las2orillas.co/el-regreso-de-juan-jose-bellini-el-exitoso-dirigente-que-termino-enredado-con-el-cartel-de-cali/

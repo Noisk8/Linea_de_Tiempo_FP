@@ -7,7 +7,13 @@
 
   <div class="detail-body">
     <aside class="detail-portrait-wrap">
-      <img class="detail-portrait" [src]="entry.image" [alt]="entry.name" />
+      <button
+        class="image-button"
+        type="button"
+        (click)="openImage(entry.image, entry.name, undefined, entry.name)"
+      >
+        <img class="detail-portrait" [src]="entry.image" [alt]="entry.name" />
+      </button>
     </aside>
     <div class="detail-text">
       @for (paragraph of entry.paragraphs; track paragraph; let i = $index) {
@@ -16,7 +22,19 @@
     </div>
     @if (entry.editorialImage) {
       <figure class="editorial-cutout">
-        <img [src]="entry.editorialImage.url" [alt]="entry.editorialImage.caption" />
+        <button
+          class="image-button"
+          type="button"
+          (click)="
+            openImage(
+              entry.editorialImage.url,
+              entry.editorialImage.caption,
+              entry.editorialImage.credit
+            )
+          "
+        >
+          <img [src]="entry.editorialImage.url" [alt]="entry.editorialImage.caption" />
+        </button>
         <figcaption>
           {{ entry.editorialImage.caption }}
           @if (entry.editorialImage.credit) {
@@ -29,7 +47,13 @@
       <div class="editorial-gallery">
         @for (item of entry.editorialGallery; track item.url) {
           <figure>
-            <img [src]="item.url" [alt]="item.caption" />
+            <button
+              class="image-button"
+              type="button"
+              (click)="openImage(item.url, item.caption, item.credit)"
+            >
+              <img [src]="item.url" [alt]="item.caption" />
+            </button>
             <figcaption>
               {{ item.caption }}
               @if (item.credit) {
@@ -40,6 +64,29 @@
         }
       </div>
     }
+  </div>
+
+  <div
+    class="image-lightbox"
+    *ngIf="selectedImage"
+    (click)="closeImage()"
+    (keydown.escape)="closeImage()"
+    tabindex="0"
+  >
+    <figure class="image-lightbox-content" (click)="$event.stopPropagation()">
+      <button class="image-lightbox-close" type="button" (click)="closeImage()">
+        Cerrar
+      </button>
+      <img [src]="selectedImage.url" [alt]="selectedImage.alt" />
+      @if (selectedImage.caption || selectedImage.credit) {
+        <figcaption>
+          {{ selectedImage.caption }}
+          @if (selectedImage.credit) {
+            <span class="credit">Fuente: {{ selectedImage.credit }}</span>
+          }
+        </figcaption>
+      }
+    </figure>
   </div>
 
   <div class="detail-sources" *ngIf="entry.sources.length">

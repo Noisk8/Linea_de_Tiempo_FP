@@ -34,3 +34,9 @@ Santos fue en últimas el que presionó y convenció para que Pekerman llegara a
 
 Incluso Santos tuvo mucho que ver en molestias y en presiones porque después cuando Bedoya se va y Yesurum quería sacar a Pekerman y termina sacándolo después del Santos no quería que Pekerman se fuera, pero pues es que llegó el 2018 y en el 2018 se acabó el gobierno Santos y llegó el gobierno de el mejor cabeceador de veintiunas que se ha sentado en la casa de Nariño
 
+
+
+referencias 
+
+https://www.las2orillas.co/los-millonarios-contratos-colombia-emperador-llamado-florentino-perez/
+

@@ -472,6 +472,23 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       'De ese ciclo surge el uniforme naranja conocido como <strong>zapote mecanico (1971-1979)</strong>. El color se asocia al <strong>logo de Coldeportes</strong> y se extiende a diferentes disciplinas deportivas de la decada.',
       'En esa narrativa, el Estado construye <strong>identidad deportiva</strong> desde la <strong>imagen</strong> y el <strong>evento</strong>, mas que desde el <strong>bienestar social</strong> o la <strong>formacion de base</strong>.'
     ],
+    editorialGallery: [
+      {
+        url: '/1971_Pan_American_Games_logo.svg',
+        caption: 'Logo de los Juegos Panamericanos de Cali 1971.',
+        credit: 'Archivo'
+      },
+      {
+        url: '/colombiazapote2.jpg',
+        caption: 'Uniforme zapote asociado al ciclo Coldeportes.',
+        credit: 'Archivo'
+      },
+      {
+        url: '/periodico1971.jpg',
+        caption: 'Registro de prensa sobre los Panamericanos de 1971.',
+        credit: 'Archivo'
+      }
+    ],
     sources: [
       {
         label: 'Carlos Lleras Restrepo (Wikipedia)',
@@ -484,6 +501,14 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       {
         label: 'Juegos Panamericanos 1971 (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Juegos_Panamericanos_de_1971'
+      },
+      {
+        label: 'La camiseta zapote de Colombia (En una baldosa)',
+        url: 'https://enunabaldosa.com/2014/02/19/en-el-placard-la-camiseta-zapote-de-colombia-1971-1984/'
+      },
+      {
+        label: 'Cuando Colombia organizo los Panamericanos de 1971 (Senal Colombia)',
+        url: 'https://www.senalcolombia.tv/deportes/cuando-colombia-organizo-los-panamericanos-en-1971'
       }
     ]
   },
@@ -577,6 +602,28 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       'Tras el 5-0, el presidente otorga la <strong>Cruz de Boyaca</strong> a <strong>Pacho Maturana</strong> y a los jugadores, gesto que se vuelve simbolo de cohesion nacional aunque se trata de una condecoracion por un partido y no por un titulo.',
       'Gaviria tambien interviene mediaticamente: llama a tecnicos y jugadores y sus conversaciones salen al aire en radio, y la gloria deportiva se usa para <strong>legitimar gobiernos</strong> y desplazar debates estructurales.'
     ],
+    editorialGallery: [
+      {
+        url: '/cafe-italia-90-7859805091-3314993185.jpg',
+        caption: 'Italia 90 como momento de auge de la Seleccion.',
+        credit: 'Archivo'
+      },
+      {
+        url: '/5d405abc41280.jpeg',
+        caption: 'Registro visual del contexto del 5-0.',
+        credit: 'Archivo'
+      },
+      {
+        url: '/655a1927480401d5270cce9f25b4821c.jpg',
+        caption: 'Homenajes y simbolos posteriores a la victoria.',
+        credit: 'Archivo'
+      },
+      {
+        url: '/17207325130120.jpg',
+        caption: 'Imagen adicional del ciclo 1993-1994.',
+        credit: 'Archivo'
+      }
+    ],
     sources: [
       {
         label: 'Cesar Gaviria (Wikipedia)',
@@ -593,6 +640,14 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       {
         label: 'Se cumplen 26 anos del 5-0 (El Tiempo)',
         url: 'https://www.eltiempo.com/deportes/futbol-internacional/se-cumplen-26-anos-del-5-0-de-colombia-a-argentina-409110'
+      },
+      {
+        label: 'La Cruz de Boyaca y deportistas condecorados (El Tiempo)',
+        url: 'https://www.eltiempo.com/deportes/otros-deportes/los-deportistas-que-recibieron-la-cruz-de-boyaca-ahora-la-recibira-egan-bernal-395012'
+      },
+      {
+        label: 'Colombia vs Argentina 5-0 (Vavel)',
+        url: 'https://www.vavel.com/colombia/futbol-colombiano/2014/06/11/358535.html'
       }
     ]
   },
@@ -611,6 +666,23 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       'Bellini es detenido en <strong>1995</strong> por sus vinculos con el cartel de Cali y por <strong>lavado de activos</strong>. Tras salir de la carcel, vuelve como asesor en el futbol y mantiene influencia en clubes y directivos.',
       'La politica deportiva queda atravesada por flujos ilegales de dinero y poder, con efectos duraderos en la institucionalidad del futbol.'
     ],
+    editorialGallery: [
+      {
+        url: '/7G5LUER3FND3VNQKIU3JDHGEHU.avif',
+        caption: 'Registro visual asociado al Proceso 8000.',
+        credit: 'Archivo'
+      },
+      {
+        url: '/5b70bcda4d169.jpeg',
+        caption: 'Imagen del contexto politico y futbolero de 1994.',
+        credit: 'Archivo'
+      },
+      {
+        url: '/juan-jose-belliini1.jpg',
+        caption: 'Juan Jose Bellini y el entorno dirigencial.',
+        credit: 'Archivo'
+      }
+    ],
     sources: [
       {
         label: 'Ernesto Samper (Wikipedia)',
@@ -623,6 +695,26 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       {
         label: 'Cartel de Cali (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Cartel_de_Cali'
+      },
+      {
+        label: 'El Proceso 8000 (Comision de la Verdad)',
+        url: 'https://www.comisiondelaverdad.co/el-proceso-8000'
+      },
+      {
+        label: 'Proceso 8000 (El Tiempo)',
+        url: 'https://www.eltiempo.com/noticias/proceso-8000/2'
+      },
+      {
+        label: 'Influencia del narcotrafico en el futbol colombiano (Wikipedia)',
+        url: 'https://es.wikipedia.org/wiki/Influencia_del_narcotr%C3%A1fico_en_el_f%C3%BAtbol_colombiano'
+      },
+      {
+        label: 'El narcotrafico en el futbol profesional colombiano (Futbolred)',
+        url: 'https://www.futbolred.com/futbol-colombiano/liga-aguila/el-narcotrafico-en-la-historia-del-futbol-profesional-colombiano-87039'
+      },
+      {
+        label: 'El regreso de Juan Jose Bellini (Las2orillas)',
+        url: 'https://www.las2orillas.co/el-regreso-de-juan-jose-bellini-el-exitoso-dirigente-que-termino-enredado-con-el-cartel-de-cali/'
       }
     ]
   },
@@ -644,6 +736,33 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       'La final se resuelve ante <strong>Mexico</strong> <strong>1-0</strong> con gol de <strong>Ivan Ramiro Cordoba</strong>, y la celebracion deja escenas ya clasicas: Pastrana con camiseta que dice <strong>Andres Pastrana</strong>, como si no lo reconocieran, recibiendo medalla junto a <strong>Antanas Mockus</strong>, alcalde de <strong>Bogota</strong>.',
       'La imagen mas recordada es <strong>Pastrana</strong> levantando el <strong>trofeo</strong> que le pasa <strong>Ivan Ramiro Cordoba</strong>; el triunfo deportivo se convierte en el mayor logro simbolico del gobierno y en un intento por cambiar su imagen.'
     ],
+    editorialGallery: [
+      {
+        url: '/pastrana1.jpg',
+        caption: 'Pastrana en el entorno de la Copa America 2001.',
+        credit: 'Archivo'
+      },
+      {
+        url: '/pastrana2.jpg',
+        caption: 'Celebracion y simbolos del titulo continental.',
+        credit: 'Archivo'
+      },
+      {
+        url: '/PASTRANA3.webp',
+        caption: 'Pastrana y la Seleccion en el contexto del 2001.',
+        credit: 'Archivo'
+      },
+      {
+        url: '/COPAMERICA1.avif',
+        caption: 'Registro de la Copa America 2001.',
+        credit: 'Archivo'
+      },
+      {
+        url: '/pastrana5.jpg',
+        caption: 'Imagen adicional del ciclo Pastrana.',
+        credit: 'Archivo'
+      }
+    ],
     sources: [
       {
         label: 'Andres Pastrana (Wikipedia)',
@@ -652,6 +771,18 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       {
         label: 'Copa America 2001 (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Copa_Am%C3%A9rica_2001'
+      },
+      {
+        label: 'Copa de la Paz y Copa America 2001 (Vavel)',
+        url: 'https://www.vavel.com/colombia/futbol-colombiano/2015/07/29/519048-colombia-logro-ganar-la-copa-de-la-paz-pero-no-la-paz.html'
+      },
+      {
+        label: 'Conmebol cancela la Copa America 2001 (Infobae)',
+        url: 'https://www.infobae.com/america/colombia/2021/05/20/la-vez-que-la-conmebol-cancelo-la-copa-america-de-2001-en-colombia-organizada-por-andres-pastrana/'
+      },
+      {
+        label: 'Archivo El Tiempo sobre Copa America 2001',
+        url: 'https://www.eltiempo.com/archivo/documento/mam-434658'
       }
     ]
   },
@@ -672,7 +803,7 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       'Desde <strong>1997</strong>, cuando Uribe era gobernador de <strong>Antioquia</strong>, Florentino Perez empezo a invertir en infraestructura en el pais.',
       'Para <strong>2013</strong>, tenia una licitacion de <strong>setenta millones de euros</strong> para construir la doble calzada <strong>Conexion Pacifico Medellin-Bolombolo</strong>, la ruta <strong>Medellin-Buenaventura</strong>, una concesion por <strong>25 anos</strong> y una bolsa de <strong>mil millones de pesos</strong>.',
       'Por eso aun se ve a Uribe visitando constantemente y no solamente Uribe, tambien <strong>Pastrana</strong> y <strong>Santos</strong>; despues de Uribe vino Santos, y no es por hinchas del <strong>Real Madrid</strong> ni por corazon blanco.',
-      'La razon es que <strong>Florentino Perez</strong> tiene plata en Colombia: esta metido en muchas concesiones y su empresa hace parte de un consorcio que se llama <strong>CONSA</strong> con <strong>WM</strong>, para que no lo confundan con el CONSA espanol, responsable de buena parte de las dobles calzadas del pais.',
+      'La razon es que <strong>Florentino Perez</strong> tiene plata en Colombia: esta metido en muchas concesiones y su empresa hace parte de un consorcio que se llama <strong>COMSA</strong> con <strong>WM</strong>, para que no lo confundan con el COMSA espanol, responsable de buena parte de las dobles calzadas del pais.',
       'En esa logica, el futbol funciona como vitrina de <strong>poder economico</strong> y relaciones, mas que como politica deportiva de base.'
     ],
     sources: [

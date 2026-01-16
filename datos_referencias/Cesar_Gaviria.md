@@ -11,6 +11,18 @@ Gaviria tambien interviene mediaticamente: llama a tecnicos y jugadores y sus co
 Lectura critica: la gloria deportiva se usa para **legitimar gobiernos** y desplazar debates estructurales.
 
 
+
+Imagenes → cafe-italia-90-7859805091-3314993185.jpg
+
+→ 5d405abc41280.jpeg
+
+→ 655a1927480401d5270cce9f25b4821c.jpg
+
+
+→ 17207325130120.jpg
+
+
+
 rEFEREMNCIAS 
 
 https://panoramacultural.com.co/ocio-y-sociedad/8829/la-historica-goleada-de-colombia-a-argentina-el-5-0-que-nadie-olvida
@@ -19,3 +31,7 @@ https://www.youtube.com/watch?v=F4Lj7CShT0E&t=119s
 
 
 https://www.eltiempo.com/deportes/futbol-internacional/se-cumplen-26-anos-del-5-0-de-colombia-a-argentina-409110
+
+https://www.eltiempo.com/deportes/otros-deportes/los-deportistas-que-recibieron-la-cruz-de-boyaca-ahora-la-recibira-egan-bernal-395012
+
+https://www.vavel.com/colombia/futbol-colombiano/2014/06/11/358535.html

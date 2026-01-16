@@ -12,9 +12,28 @@ import { TIMELINE_ENTRIES, TimelineEntry } from '../../data/timeline-data';
 })
 export class DetailComponent {
   entry?: TimelineEntry;
+  selectedImage?: {
+    url: string;
+    caption?: string;
+    credit?: string;
+    alt?: string;
+  };
 
   constructor(private route: ActivatedRoute) {
     const id = this.route.snapshot.paramMap.get('id');
     this.entry = TIMELINE_ENTRIES.find((item) => item.id === id);
+  }
+
+  openImage(url: string, caption?: string, credit?: string, alt?: string) {
+    this.selectedImage = {
+      url,
+      caption,
+      credit,
+      alt: alt || caption || 'Imagen ampliada'
+    };
+  }
+
+  closeImage() {
+    this.selectedImage = undefined;
   }
 }

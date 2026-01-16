@@ -44,10 +44,16 @@ Es porque ese señor de gafitas llamado Florentino Pérez tiene plata en Colombi
 
 El tipo está metido en muchas, muchas concesiones.
 
-Su empresa hace parte de un consorcio que se llama CONSA con WM para que no lo confundan con el CONSA español.
+Su empresa hace parte de un consorcio que se llama COMSA con WM para que no lo confundan con el COMSA español.
 
 
-CONSA que es responsable de buena parte de las dobles calzadas de este país.
+COMSA que es responsable de buena parte de las dobles calzadas de este país.
 
+Imagenes
 
+alvaro-uribe-sorprende-al-referirse-al-real-madrid-y-su-decimoquinta-champions-league.jpg
+
+Rerencias 
+
+https://canal1.com.co/entretenimiento/virales/alvaro-uribe-sorprende-al-referirse-al-real-madrid-y-su-decimoquinta-champions-league/
 
