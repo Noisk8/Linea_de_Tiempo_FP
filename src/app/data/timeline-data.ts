@@ -708,11 +708,17 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termStartYear: '2010',
     termEndYear: '2018',
     name: 'Juan Manuel Santos',
-    shortDescription: 'Foto con Ramon Calderon y el poder de Florentino.',
+    shortDescription: 'Mundial Sub-20, crisis del Bolillo y llegada de Pekerman.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Juan_Manuel_Santos_and_Lula_%28cropped%29.jpg/640px-Juan_Manuel_Santos_and_Lula_%28cropped%29.jpg',
     paragraphs: [
-      'La foto fue con Ramon Calderon, y el relato lo precisa con claridad.',
-      'El punto editorial es que el socio mayoritario ya era Florentino.'
+      'La foto fue con <strong>Ramon Calderon</strong>, pero el relato subraya que el socio mayoritario ya era <strong>Florentino Perez</strong>.',
+      'El proceso entre <strong>Santos</strong> y el futbol se describe como especialmente revelador, mas alla de la correlacion con los negocios de Florentino.',
+      'En <strong>2011</strong>, con Santos en la presidencia, Colombia fue anfitriona del <strong>Mundial Juvenil Sub-20</strong>; la foto de ese ano muestra a Santos junto a <strong>Seth Blatter</strong> y <strong>Luis Bedoya</strong>, protagonistas del <strong>FIFA Gate</strong>.',
+      'Ese encuentro fue en <strong>El Campin</strong> y en ese Mundial Colombia se quedo pronto.',
+      'El 2011 deja otra crisis: la eliminacion del Sub-20 y el escandalo de violencia de genero del <strong>Bolillo</strong>.',
+      'Tras ese episodio, Santos llama a <strong>Luis Bedoya</strong> y plantea la necesidad de un tecnico serio; mueve fichas politicas y billetera para traer a <strong>Nestor Pekerman</strong>, con recursos que llegan a las federaciones y no solo al futbol.',
+      'La era <strong>Pekerman</strong> se atribuye a Santos: presiona y convence para su llegada y luego intenta mantenerlo cuando <strong>Yesurum</strong> busca sacarlo tras la salida de Bedoya.',
+      'Ese pulso termina con el cierre del gobierno Santos en <strong>2018</strong>, cuando llega el gobierno de <strong>Ivan Duque</strong>, el mejor cabeceador de veintiuna que se ha sentado en la Casa de Narino.'
     ],
     sources: [
     ]
@@ -723,12 +729,22 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termStartYear: '2018',
     termEndYear: '2022',
     name: 'Ivan Duque',
-    shortDescription: 'FIFA Gate, Ministerio del Deporte y disputa por control.',
+    shortDescription: 'Cabecitas, FIFA Gate y un cierre de investigaciones.',
     image: 'https://static01.nyt.com/images/2021/08/30/world/30colombia-duque-1-esp-1/30colombia-duque-1-superJumbo.jpg',
     paragraphs: [
-      'En 2018 llega Ivan Duque y se abre el debate sobre control estatal del futbol tras el FIFA Gate.',
-      'El Ministerio del Deporte surge en este ciclo como intento de reorganizar la gobernanza deportiva.',
-      'Las reformas quedan limitadas por alianzas con elites federativas y economicas.'
+      'La imagen publica de <strong>Ivan Duque</strong> se puebla de cabecitas: fotos con el <strong>Real Madrid</strong>, con <strong>Suso el Pazpi</strong>, en una escuela o en cualquier escenario.',
+      'El relato insiste en que Duque no podia ver un balon sin mostrar que era capaz de dormirla en la cabeza, una obsesion rara en su puesta en escena.',
+      'Se le califica como un “imbarroquin” y se le disputa un lugar entre los peores presidentes; Marroquin aparece como antecedente, pero Duque, el aprendiz, queda como caso extremo.',
+      'Mas alla de las cabecitas, se afirma que desperdicio una posibilidad historica: el <strong>FIFA Gate</strong> de <strong>2015</strong> abrio la puerta para que los gobiernos intervinieran un futbol visto como corrupto.',
+      'Duque comenzo pretendiendo controlarlo con el <strong>Ministerio del Deporte</strong>, con <strong>Lucena</strong>, y pidiendo la cabeza de <strong>Ramon Yesurum</strong>, senalado como organizador de un cartel de reventa de loterias.',
+      'Hoy Duque hace parte de la Junta de la <strong>Fundacion FIFA</strong>.',
+      'En los ultimos veintiun dias de su gobierno, Duque recibe a <strong>Gianni Infantino</strong>, presidente de la FIFA.',
+      'La cercania se explica por <strong>Ramon Yesurum</strong>: habia colado una ficha en el comite de etica y el voto decisivo de <strong>Maria Clara Rojas</strong> evito la salida de Infantino; por eso, se dice, Infantino le debe el puesto y el sombrero.',
+      'Con Yesurum al borde, por el cartel de reventa de boleteria, el caso de <strong>Colfutpro</strong> en el <strong>Ministerio del Trabajo</strong> y procesos en la <strong>SIC</strong>, la visita de Infantino abre un giro.',
+      'Primero, la <strong>Superintendencia de Industria y Comercio</strong> deja quietas las investigaciones por vetos a futbolistas y cartelizacion de la Liga Femenina.',
+      'Segundo, el <strong>Ministerio del Trabajo</strong> cierra el caso sobre derechos laborales de futbolistas; el jefe directo del ministerio es el presidente.',
+      'Tercero, Duque entrega el poder y a los 15 dias termina con Infantino; hoy juega futbol con viejas glorias y hace sus cabecitas.',
+      'La conclusion editorial es clara: meterse con el futbol puede dar votos y poder, pero casi siempre termina alineando a los gobiernos del lado del futbol.'
     ],
     sources: [
       {
@@ -751,12 +767,15 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termStartYear: '2022',
     termEndYear: '2026',
     name: 'Gustavo Petro',
-    shortDescription: 'Nuevo ciclo politico y debate publico sobre futbol y Estado.',
+    shortDescription: 'Divorcio con los dirigentes y disputa en TV abierta.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/2/22/01_Gustavo_Petro.jpg',
     paragraphs: [
-      'En 2022 llega Gustavo Petro y se reabre la discusion sobre el rol del presidente en el futbol.',
-      'El deporte vuelve a aparecer como escenario simbolico de identidad y de disputa politica.',
-      'El futbol sigue siendo un campo util para mensajes y alineamientos publicos.'
+      'El relato sostiene que <strong>Petro</strong> es el unico que esta en divorcio con los dirigentes del futbol, una rareza en esta historia.',
+      'La columna afirma tener fuentes directas sobre un episodio en el <strong>Ministerio del Interior</strong>.',
+      'En esa reunion, los representantes del futbol le dicen al gobierno que no los aprieten tanto porque les organizan un “fuera Petro”.',
+      'Ese “fuera Petro” sale por television y lo ve todo el mundo porque la seleccion convoca a todo el pais.',
+      'Es la primera vez que los dirigentes no tienen a un gobierno de su lado.',
+      'Tal vez el unico que no habia estado de su lado era <strong>Belisario</strong>, que termino estando de su lado de todas formas.'
     ],
     sources: [
       {
