@@ -17,6 +17,11 @@ export type TimelineEntry = {
     caption: string;
     credit?: string;
   };
+  editorialGallery?: {
+    url: string;
+    caption: string;
+    credit?: string;
+  }[];
   editorialImageAfterIndex?: number;
   sources: TimelineSource[];
 };
@@ -31,13 +36,11 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     shortDescription: 'Regeneracion, Constitucion de 1886 y beisbol en Cartagena.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Rafael_N%C3%BA%C3%B1ez%2C_ca.1885.jpg/640px-Rafael_N%C3%BA%C3%B1ez%2C_ca.1885.jpg',
     paragraphs: [
-      '<em>Este apartado no es estrictamente de futbol</em>: funciona como antesala para entender las primeras instancias del deporte organizado en el pais.',
-      'Rafael Nunez fue el ultimo presidente de los Estados Unidos de Colombia y el primero de la Republica de Colombia. Su proyecto politico impulso la <strong>Regeneracion</strong>, que busco recentralizar el Estado y redefinir el pacto nacional.',
-      'Tras la guerra de 1885, el nuevo orden se consolido con la <strong>Constitucion de 1886</strong>, que fortalecio el poder ejecutivo y reoriento el sistema politico hacia un esquema centralista.',
-      'En el plano cultural, se le atribuye la letra del <strong>Himno Nacional</strong>, un gesto simbolico que acompano la idea de nacion unificada.',
-      'En El Cabrero, frente a su casa en Cartagena, se registra un hito del beisbol: el <strong>20 de julio de 1897</strong> se juega por primera vez en la ciudad, segun Raul Porto Cabrales.',
-      'Porto menciona un antecedente no confirmado: en 1874 el cubano Francisco Balmaceda habria instalado un ingenio azucarero cerca de Marialabaja con un campo de beisbol para sus trabajadores.',
-      'Lectura critica: la centralizacion politica favorecio a las elites y debilito las periferias, mientras los deportes organizados se expandieron primero en circuitos urbanos y de intercambio internacional.'
+      'El perfil lo presenta como poeta frustrado: Rafael Nunez fue el ultimo presidente de los Estados Unidos de Colombia y el primero de la Republica de Colombia; se le atribuye la letra del Himno Nacional.',
+      'En la revolucion de 1885 se le volteo a los liberales y termino gobernando con el Partido Conservador; ese giro marca el arranque de la Regeneracion y el impulso a la Constitucion de 1886.',
+      'En El Cabrero, frente a su casa en Cartagena, se registra un hito del beisbol: el <strong>20 de julio de 1897</strong> se juega por primera vez en la ciudad, segun el historiador y periodista Raul Porto Cabrales en su libro sobre la memoria historica del beisbol de Bolivar y Cartagena.',
+      'Porto cuenta que jovenes cartageneros observaron a estudiantes de Cuba y Panama, quienes trajeron los implementos y ensenaron el juego.',
+      'Tambien menciona un antecedente no confirmado: en 1874 el cubano Francisco Balmaceda habria instalado un ingenio azucarero cerca de Marialabaja con un campo de beisbol para sus trabajadores, lo que sugiere un contacto temprano con la pelota caliente.'
     ],
     editorialImage: {
       url: 'https://primertiempo.co/wp-content/uploads/2021/07/Historia-del-beisbol.jpg',
@@ -65,6 +68,14 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       {
         label: 'Memoria historica del beisbol de Bolivar y Cartagena (Scribd)',
         url: 'https://es.scribd.com/document/517296226/historia-del-beisbol'
+      },
+      {
+        label: '124 anos de beisbol en Cartagena (Primertiempo)',
+        url: 'https://primertiempo.co/beisbol/124-anos-de-beisbol-en-cartagena/'
+      },
+      {
+        label: 'Historia del beisbol en Colombia (FCF)',
+        url: 'https://fcb.com.co/historia.php'
       }
     ]
   },
@@ -77,13 +88,12 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     shortDescription: 'Primer partido registrado y origen disciplinario del futbol.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/5/5c/Miguel_Antonio_Caro_2.jpg',
     paragraphs: [
-      'Durante la hegemonia conservadora, Miguel Antonio Caro defendio una idea de nacion profundamente catolica; en sus discursos afirmo que Colombia solo podia ser catolica o caeria en la barbarie.',
-      'El registro historico del primer partido de futbol organizado en Colombia se ubica en <strong>junio de 1892</strong>, cuando Caro ejercia la presidencia. La exhibicion se vincula a la <strong>Escuela Militar</strong> y a la presencia del coronel estadounidense <strong>Henry Rowan Lemly</strong>.',
-      'Lemly adopto metodos de entrenamiento de universidades britanicas, donde en el siglo XIX se codificaron deportes como el rugby, el futbol, el tenis y el criquet. Esa codificacion buscaba regular la competencia y disciplinar los cuerpos.',
-      'En Colombia, esos reglamentos se introdujeron como parte de un proyecto de <strong>modernizacion militar y educativa</strong>. El juego practicado conservaba la idea de once contra once, pero estaba lejos de la estructura profesional posterior.',
-      'La institucion militar se convirtio en un canal de transferencia cultural y deportiva, lo que explica que el primer partido registrado aparezca asociado a un acto oficial.',
-      'Aunque existen hipotesis sobre juegos informales previos en puertos como Cartagena o Puerto Colombia, el registro documental que se conserva es el de 1892.',
-      'El episodio marca el <strong>nacimiento oficial del futbol</strong> en el pais dentro de un entorno estatal, en el que la disciplina y el orden eran parte del proyecto politico.'
+      'Miguel Antonio Caro dejo una frase: Colombia solo puede ser catolica porque de lo contrario caeria en la barbarie; la sentencia resume la hegemonia conservadora en su forma mas dura.',
+      'Durante su gobierno se realizo el primer partido de futbol del que hay registro en Colombia. Henry Rowan Lemly era un coronel gringo obsesionado con los metodos de entrenamiento de las universidades britanicas, donde nacieron los deportes modernos: reglamentos del rugby, del futbol, del tenis y del criquet.',
+      'Ese fenomeno del siglo XIX buscaba organizar, normalizar y civilizar los enfrentamientos, y en Colombia se tradujo en la reorganizacion de la nacion y la creacion de la escuela militar.',
+      'Lemly llevo los reglamentos del futbol de Inglaterra y los aplico en Colombia; lo unico que tenia de futbol era que era 11 contra 11. Llevo futbol, gimnasia y tenis, y queda como una linea rarisima en el origen de los deportes en el pais.',
+      'El relato sostiene que hubo precedentes: en Puerto Colombia o en Cartagena, marinos britanicos se bajaron, inflaron una tripa de un animal y los estibadores del puerto habrian dicho: ¿que es esta monda?, y asi habria empezado el futbol.',
+      'En junio de 1892, el vicepresidente de la republica, presidente de verdad, fue testigo de ese partido y de esa exhibicion de moderno entrenamiento. El futbol nacio oficialmente en Colombia para un presidente.'
     ],
     sources: [
       {
@@ -114,11 +124,10 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     shortDescription: 'Educacion fisica como politica estatal.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/f/f2/Jos%C3%A9_Manuel_Marroqu%C3%ADn.jpg',
     paragraphs: [
-      'Con Jose Manuel Marroquin se establecio por primera vez en la historia del pais el termino <strong>educacion fisica</strong>, en un contexto de <em>Regeneracion</em> que buscaba reorganizar la nacion.',
+      'Durante el gobierno de Jose Manuel Marroquin se establecio por primera vez en la historia del pais el termino <strong>educacion fisica</strong>, en un contexto de <em>Regeneracion</em> que buscaba reorganizar la nacion.',
       'En <strong>1904</strong> se expidio el <strong>Decreto 419 del 3 de julio</strong>, que reglamento la Ley 39 y la ensenanza en general. En su capitulo V, paragrafo 4, se definio formalmente la educacion fisica.',
       'Los articulos 60 a 63 ordenaron correccion en el vestido, aseo riguroso y postura natural durante las lecciones. La calistenia y la gimnasia se hicieron obligatorias, y cada dos semanas se destino medio dia a paseos higienicos y recreativos.',
-      'El modelo respondia al ideal de “mente sana en cuerpo sano” y miraba de cerca los referentes europeos, en especial Inglaterra.',
-      'La Regeneracion consolido un Estado centralista que abandono territorios como el Pacifico, mientras la educacion fisica funciono como tecnologia de control social sobre los cuerpos populares.'
+      'El modelo respondia al ideal de “mente sana en cuerpo sano” y tomaba como referencia las practicas europeas, en particular las britanicas, donde la educacion fisica se entendia como herramienta de orden social.'
     ],
     editorialImage: {
       url: '/leyley.png',
@@ -149,11 +158,11 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     shortDescription: 'Primer campeonato: Copa Carlos E. Restrepo.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Carlos_Eugenio_Restrepo%2C_1918.jpg',
     paragraphs: [
-      'Carlos Eugenio Restrepo impulso, desde la presidencia, la organizacion de campeonatos deportivos en un contexto donde el futbol era practicamente una actividad de clubes sociales.',
+      'Desde la presidencia, Carlos Eugenio Restrepo impulso la organizacion de campeonatos deportivos en un contexto donde el futbol era practicamente una actividad de clubes sociales.',
       'En <strong>1912</strong> se realizo el <strong>primer campeonato de futbol del pais</strong>, la <strong>Copa Carlos E. Restrepo</strong>, considerada la primera competencia estructurada del futbol colombiano.',
       'El torneo lo gano el <strong>Polo Club de Bogota</strong>, el primer equipo organizado del pais. Su sede estaba en el sector que luego dio nombre al barrio El Polo, donde funciono una de las primeras canchas de futbol de la ciudad.',
       'Durante varios anos el Polo Club domino la escena bogotana hasta ser desplazado por clubes emergentes como Bartolino y la Facultad de Medicina de la Universidad Nacional.',
-      'El episodio confirma que el futbol temprano fue un deporte de <em>elites urbanas</em>, articulado a clubes sociales antes de su expansion popular.'
+      'El episodio confirma que el futbol temprano fue un deporte de <em>elites urbanas</em>, articulado a clubes como el Polo Club y el Club Colombia, mientras surgian instituciones regionales que despues se convertirian en referentes del futbol nacional.'
     ],
     editorialImage: {
       url: '/polofc.jpg',
@@ -184,8 +193,8 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     shortDescription: 'Ley 80 y futbol de elites en canchas privadas.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/2/25/Gen._Pedro_Nel_Ospina%2C_Pres._Colombia_%28LOC%29.jpg',
     paragraphs: [
-      'Pedro Nel Ospina aparece retratado con equipos de futbol de la <em>alta sociedad</em>, posando en la cancha de <strong>La Merced</strong>, hoy <strong>San Bartolome de La Merced</strong>.',
-      'Las fotografias lo muestran con uniforme de gala y subrayan el caracter <em>elitista</em> del futbol temprano en Bogota.',
+      'Pedro Nel Ospina, presidente de la decada de 1920, aparece retratado con equipos de futbol de la epoca, con uniforme de gala, posando con clubes de la alta sociedad en la cancha de <strong>La Merced</strong>, hoy <strong>San Bartolome de La Merced</strong>.',
+      'Las fotografias evidencian el caracter <em>elitista</em> del futbol temprano y el interes politico por el estatus social que rodeaba estos escenarios.',
       'En <strong>1925</strong> se firma la <strong>Ley 80</strong>, que crea las <em>Comisiones Nacionales de Educacion Fisica</em>, antecedente de Coldeportes y del actual Ministerio del Deporte.',
       'El deporte organizado se movia en circuitos urbanos cerrados, con poca llegada a sectores populares.'
     ],
@@ -218,11 +227,11 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     shortDescription: 'Masacre de las bananeras y Juegos Nacionales.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/f/f6/Miguel_Abad%C3%ADa_M%C3%A9ndez.jpg',
     paragraphs: [
-      'Su gobierno queda asociado a la <strong>masacre de las bananeras</strong> de <strong>1928</strong> y al conflicto social con empresas extranjeras.',
-      'Entre <strong>diciembre de 1928</strong> y <strong>enero de 1929</strong> se realizan en Cali las primeras <strong>Olimpiadas Colombianas</strong>, luego <strong>Juegos Nacionales</strong>.',
-      'En futbol, el equipo que represento al <strong>Magdalena</strong> fue campeon y se le reconoce como el <em>primer campeon nacional</em> de estas competencias.',
-      'Al regresar a Santa Marta, el equipo pidio un minuto de silencio por las victimas frente al gobernador militar <strong>Cortes Vargas</strong>, quien habia negado la masacre.',
-      'El episodio marca como el deporte organizado surge en medio de tensiones sociales y politicas que desembocan en el regreso liberal de <strong>1930</strong>.'
+      'Las medidas de educacion fisica impulsaron las <strong>primeras Olimpiadas Colombianas</strong>, que despues se llamarian <strong>Juegos Nacionales</strong>.',
+      'Estas competencias se realizaron entre <strong>diciembre de 1928</strong> y <strong>enero de 1929</strong> en Cali, ciudad que se consolida como referente olimpico y, mas tarde, sede de los Panamericanos de 1971.',
+      'En futbol no existian selecciones departamentales ni ligas formales. El equipo que represento al <strong>Magdalena</strong> fue campeon y se le reconoce como el <em>primer campeon nacional</em> de este tipo de competencias.',
+      'Al regresar a Santa Marta, el equipo recibio un homenaje frente al gobernador militar <strong>Cortes Vargas</strong> y alli se pidio un minuto de silencio por las victimas de la <strong>masacre de las bananeras</strong>, un episodio que el propio Cortes Vargas habia negado.',
+      'La prensa de la epoca registro que algunos jugadores eran familiares de victimas, y ese clima social y politico acelero el fin de la hegemonia conservadora: los liberales regresaron al poder en <strong>1930</strong> con Enrique Olaya Herrera.'
     ],
     editorialImage: {
       url: '/abadia.jpeg',
@@ -257,8 +266,8 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     shortDescription: 'Republica Liberal y masificacion de estadios.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/7/7d/Enrique_Olaya_Herrera_by_Benjam%C3%ADn_de_la_Calle_%281910%29.jpg',
     paragraphs: [
-      'Enrique Olaya Herrera fue el primer presidente de la <strong>Republica Liberal</strong> (1930-1945). Durante su gobierno se consolida la <strong>construccion de estadios</strong> en el pais.',
-      'Antes de 1930 solo existia un estadio en Colombia: el <strong>Julio Torres</strong>, luego <em>Estadio Moderno</em>, construido en Barranquilla en 1922. El resto de actividades deportivas se realizaban en canchas con tribunas improvisadas, con condiciones poco seguras para el publico. Con la Republica Liberal comienza la <strong>masificacion del deporte</strong>.',
+      'Enrique Olaya Herrera encabeza la <strong>Republica Liberal</strong> (1930-1945). Durante su gobierno se consolida la <strong>construccion de estadios</strong> en el pais.',
+      'Antes de 1930 solo existia un estadio en Colombia: el <strong>Julio Torres</strong>, luego <em>Estadio Moderno</em>, construido en Barranquilla en 1922. El resto de actividades deportivas se realizaban en canchas con tribunas improvisadas y condiciones poco seguras para el publico. Con la Republica Liberal comienza la <strong>masificacion del deporte</strong>.',
       'Bajo Olaya Herrera se levantan escenarios clave: el <strong>Romelio Martinez</strong> (1934), el <strong>Alfonso Lopez</strong> de la Universidad Nacional (1936) y el <strong>Pascual Guerrero</strong> (1937). Con esta infraestructura se abre la etapa del llamado <em>futbol marron</em>, aun sin profesionalismo ni campeonato unificado, pero con pagos informales y competiciones locales que dieron origen a muchos de los clubes tradicionales.'
     ],
     editorialImage: {
@@ -282,6 +291,18 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       {
         label: 'Estadio Pascual Guerrero (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Estadio_Pascual_Guerrero'
+      },
+      {
+        label: 'Estadios de Colombia (Wikipedia)',
+        url: 'https://es.wikipedia.org/wiki/Anexo:Estadios_de_Colombia'
+      },
+      {
+        label: 'Archivo El Tiempo sobre estadios',
+        url: 'https://www.eltiempo.com/archivo/documento/cms-4432862'
+      },
+      {
+        label: 'Estadio Romelio Martinez (ArchDaily)',
+        url: 'https://www.archdaily.cl/cl/917321/estadio-romelio-martinez-el-equipo-mazzanti'
       }
     ]
   },
@@ -336,7 +357,7 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       'Su periodo coincide con la era de <em>El Dorado</em>, cuando el futbol colombiano vive una bonanza marcada por la llegada de figuras como <strong>Adolfo Pedernera</strong> y <strong>Alfredo Di Stefano</strong>. La atencion publica se desplaza hacia el espectaculo deportivo en un contexto de violencia politica.',
       'El ciclo de El Dorado se explica por la ruptura institucional entre la <strong>Dimayor</strong> y la autoridad federativa (<strong>Adefutbol/FIFA</strong>), lo que permitio contratar estrellas sin el marco regular de transferencias internacionales. El resultado fue un campeonato de enorme convocatoria y una burbuja deportiva y economica.',
       'La normalizacion internacional llega con el <strong>Pacto de Lima (1951)</strong>, que establecio condiciones para cerrar el ciclo y ordenar la devolucion de jugadores. Ese hito ocurre durante el periodo Laureano/Urdaneta.',
-      'En medio de <em>La Violencia</em>, el futbol funciono como <em>valvula de escape</em>. Archivos de la epoca resaltan la asistencia masiva a partidos mientras el orden publico se deterioraba, lo que refuerza la idea del deporte como termometro social.'
+      'En medio de <em>La Violencia</em>, el futbol funciono como <em>valvula de escape</em>. Archivos de la epoca resaltan la asistencia masiva a partidos mientras el orden publico se deterioraba; en 1953 Laureano cae, Rojas Pinilla lo tumba y la superestrella del circo, Di Stefano, se va para Espana.'
     ],
     editorialImage: {
       url: '/Millonarios-Campeon-en-1951.jpg',
@@ -375,10 +396,8 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     shortDescription: 'Golpe de Estado y futbol como vitrina popular.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Gurropin_tras_asumir_la_presidencia_con_un_golpe_de_estado.jpg',
     paragraphs: [
-      'Gustavo Rojas Pinilla llego al poder tras el <strong>golpe de Estado</strong> del <strong>13 de junio de 1953</strong> y goberno hasta el <strong>10 de mayo de 1957</strong>.',
-      'Su gobierno busco legitimidad a traves de obras publicas, medios de comunicacion y espectaculos masivos. En ese contexto, el futbol funciono como <em>vitrina popular</em> y espacio de cohesion social.',
-      'El periodo coincide con la salida del ciclo de <em>El Dorado</em> y con intentos de normalizacion institucional del deporte profesional.',
-      'Lectura critica: el uso del espectaculo deportivo acompano un proyecto autoritario que buscaba control social y respaldo urbano.'
+      'Tras la dictadura de Rojas Pinilla, llega el Frente Nacional y el futbol adquiere un nuevo significado.',
+      'El relato lo presenta como un presidente considerado entre los mejores de la historia del pais.'
     ],
     editorialImage: {
       url: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Gurropin_tras_asumir_la_presidencia_con_un_golpe_de_estado.jpg',
@@ -405,17 +424,28 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     shortDescription: 'Primer Mundial y disputa simbolica en la Guerra Fria.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Alberto_Lleras_Camargo%2C_Presidente_da_Col%C3%B4mbia.tif/lossy-page1-640px-Alberto_Lleras_Camargo%2C_Presidente_da_Col%C3%B4mbia.tif.jpg',
     paragraphs: [
-      'Colombia clasifica a su primer Mundial en 1962 con Adolfo Pedernera como tecnico y figura del Dorado.',
-      'En la eliminatoria vence a Peru y viaja a <strong>Arica</strong>, sede asignada al rival y ciudad fronteriza entre Chile y Peru.',
-      'El 4-4 frente a la URSS queda como hito: Colombia le marca cuatro a <em>Lev Yashin</em>, el mejor arquero del momento.',
-      'En plena Guerra Fria, la prensa convierte el partido en un relato ideologico de Colombia frente al comunismo.',
-      'Lectura critica: el Estado y el sistema mediatico se apropian del logro para legitimar su proyecto politico.'
+      'La <strong>Seleccion Colombia</strong> clasifica a su primer <strong>Mundial</strong> con <strong>Adolfo Pedernera</strong> como tecnico y figura del <em>Dorado</em>.',
+      'En la eliminatoria vence a <strong>Peru</strong> y viaja a <strong>Arica</strong>, sede inicialmente asignada al rival y ciudad fronteriza entre <strong>Chile</strong> y <strong>Peru</strong>.',
+      'El partido mas recordado es el <strong>4-4</strong> contra la <strong>URSS</strong>, campeon de Europa: Colombia le marca cuatro goles a <strong>Lev Yashin</strong>, el mejor arquero del momento.',
+      'En plena <strong>Guerra Fria</strong>, la prensa y las caricaturas convierten el encuentro en un <strong>relato politico</strong> de Colombia frente al comunismo, y el Estado se apropia de la hazana deportiva para reforzar su proyecto.'
     ],
     editorialImage: {
       url: '/lleras-urrsss.png',
       caption: 'Caricatura sobre el 4-4 con la URSS y la lectura politica del partido.',
       credit: 'Historias Secretas'
     },
+    editorialGallery: [
+      {
+        url: '/COL-VS-RUSIA.jpeg',
+        caption: 'Colombia vs. URSS en el Mundial de 1962.',
+        credit: 'Historias Secretas'
+      },
+      {
+        url: '/COL-VS-YUGO.jpeg',
+        caption: 'Colombia vs. Yugoslavia en el Mundial de 1962.',
+        credit: 'Historias Secretas'
+      }
+    ],
     editorialImageAfterIndex: 2,
     sources: [
       {
@@ -437,10 +467,10 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     shortDescription: 'Coldeportes y ciclo Panamericanos.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Carlos_L._Restrepo.jpg/640px-Carlos_L._Restrepo.jpg',
     paragraphs: [
-      'En 1968 nace <strong>Coldeportes</strong>, el Instituto Colombiano del Deporte y la Recreacion, dentro de una agenda de <strong>modernizacion estatal</strong>.',
-      'La prioridad es preparar a Colombia para la sede de los <strong>Juegos Panamericanos de Cali 1971</strong> y <strong>ordenar el sistema deportivo</strong>.',
-      'De este ciclo surge el uniforme naranja conocido como <em>zapote mecanico</em> (1971-1979), vinculado a la <strong>imagen institucional</strong> de Coldeportes.',
-      'Lectura critica: la <strong>identidad deportiva</strong> se construye desde la <strong>imagen</strong> y el <strong>evento</strong> mas que desde el <strong>bienestar social</strong> o la <strong>formacion de base</strong>.'
+      'En 1968, en el <strong>Frente Nacional</strong>, Carlos Lleras Restrepo impulsa la <strong>modernizacion del Estado</strong> y crea institutos; ese ano nace <strong>Coldeportes</strong>, el <em>Instituto Colombiano del Deporte y la Recreacion</em>.',
+      'La creacion de Coldeportes responde a una necesidad concreta: Colombia habia ganado la sede de los <strong>Juegos Panamericanos de Cali 1971</strong>, pero la organizacion deportiva seguia rezagada, y el instituto se plantea <strong>ordenar el sistema</strong> y preparar el pais para <strong>competir</strong> y <strong>organizar</strong>.',
+      'De ese ciclo surge el uniforme naranja conocido como <strong>zapote mecanico (1971-1979)</strong>. El color se asocia al <strong>logo de Coldeportes</strong> y se extiende a diferentes disciplinas deportivas de la decada.',
+      'En esa narrativa, el Estado construye <strong>identidad deportiva</strong> desde la <strong>imagen</strong> y el <strong>evento</strong>, mas que desde el <strong>bienestar social</strong> o la <strong>formacion de base</strong>.'
     ],
     sources: [
       {
@@ -466,12 +496,28 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     shortDescription: 'Mundial 1986, narco y cambio de uniforme.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Belisario_Betancur_2012.jpg/640px-Belisario_Betancur_2012.jpg',
     paragraphs: [
-      'Colombia habia ganado la sede del <strong>Mundial 1986</strong>, pero en 1983 el gobierno de <strong>Betancur</strong> renuncia a organizarlo.',
-      'La decision se justifica por <strong>costos</strong> y <strong>exigencias de la FIFA</strong> y sus socios comerciales en un contexto economico <em>proteccionista</em>.',
-      'El ministro <strong>Rodrigo Lara Bonilla</strong> denuncia la relacion de varios clubes con el <strong>narcotrafico</strong>, abriendo un frente politico.',
-      'En 1985 una <em>comision de notables</em> define el uniforme tricolor; se mencionan nombres como <strong>Daniel Samper Pizano</strong>, <strong>Alberto Casas</strong> y <strong>Carlos Cure</strong>.',
-      'La presentacion oficial ocurre el <strong>8 de febrero de 1985</strong> y queda asociada a <strong>Amparo Grisales</strong> como imagen del lanzamiento.',
-      'Lectura critica: el Estado oscila entre <strong>control moral</strong> del futbol y <strong>uso simbolico</strong> del deporte para construir <strong>identidad nacional</strong>.'
+      'Colombia habia ganado la sede del <strong>Mundial de 1986</strong>, pero en <strong>1983</strong> el gobierno de <strong>Belisario Betancur</strong> renuncia a organizarlo. En una <em>locucion presidencial</em> se justifica la decision por <strong>costos</strong> y <strong>exigencias de la FIFA</strong> y sus socios comerciales.',
+      'El episodio se convierte en un <strong>debate nacional</strong>: para muchos, Colombia fue el unico pais que <strong>rechazo un Mundial</strong>; para otros, fue una decision frente a <strong>prioridades internas</strong> en un contexto economico <em>proteccionista</em>.',
+      'Durante su gobierno el ministro de Justicia, <strong>Rodrigo Lara Bonilla</strong>, denuncia la relacion de varios clubes con el <strong>narcotrafico</strong>, abriendo un frente politico que expone la influencia criminal en el futbol.',
+      'En <strong>1985</strong> una <em>comision de notables</em> impulsa el cambio de uniforme de la <strong>Seleccion Colombia</strong>. Se mencionan nombres como <strong>Daniel Samper Pizano</strong>, <strong>Alberto Casas</strong> y <strong>Carlos Cure</strong>, y el <strong>tricolor amarillo, azul y rojo</strong> se presenta oficialmente el <strong>8 de febrero de 1985</strong> con fotos publicas.',
+      'El lanzamiento queda asociado a <strong>Amparo Grisales</strong>, recordada como la primera figura en posar con la nueva camiseta, y el diseno del uniforme fue de la disenadora Maria Elvira Pardo, en un contexto donde el gobierno oscila entre <strong>control moral</strong> del futbol y <strong>uso simbolico</strong> del deporte para construir <strong>identidad nacional</strong>.'
+    ],
+    editorialGallery: [
+      {
+        url: '/amparo1.jpeg',
+        caption: 'Amparo Grisales con el nuevo uniforme tricolor de la Seleccion.',
+        credit: 'Historias Secretas'
+      },
+      {
+        url: '/amparo2.jpeg',
+        caption: 'Imagen de lanzamiento del uniforme de 1985.',
+        credit: 'Historias Secretas'
+      },
+      {
+        url: '/col-1985.jpeg',
+        caption: 'Registro visual de la presentacion del uniforme en 1985.',
+        credit: 'Historias Secretas'
+      }
     ],
     sources: [
       {
@@ -501,9 +547,9 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     shortDescription: 'Transicion politica y ascenso de Cesar Gaviria.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Virgilio_Barco_Vargas.jpg/640px-Virgilio_Barco_Vargas.jpg',
     paragraphs: [
-      'Virgilio Barco asume la presidencia en un contexto de crisis y violencia politica.',
-      'El programa destaca el rol de Cesar Gaviria como ministro de gobierno en esta transicion.',
-      'Lectura critica: la continuidad de elites politicas limita reformas de fondo sobre deporte y desigualdad.'
+      'Virgilio Barco asume la presidencia en un contexto de <strong>crisis y violencia politica</strong>, y el relato lo presenta como un mandatario mayor, con un <strong>problema cerebrovascular</strong> que afecto su salud durante el gobierno.',
+      'La conduccion politica queda marcada por el protagonismo del <strong>ministro de gobierno</strong> (hoy Interior), y en esa transicion gana relevancia <strong>Cesar Gaviria</strong> como actor clave.',
+      'La <strong>continuidad de elites politicas</strong> limita reformas de fondo mientras el futbol se mantiene como escenario simbolico de cohesion.'
     ],
     sources: [
       {
@@ -525,9 +571,11 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     shortDescription: 'El 5-0 y condecoraciones a la Seleccion.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/C%C3%A9sar_Gaviria.jpg/640px-C%C3%A9sar_Gaviria.jpg',
     paragraphs: [
-      'Tras el 5-0 de 1993, Gaviria condecora a Pacho Maturana y a los jugadores.',
-      'El gesto se vuelve simbolo de cohesion en medio de crisis sociales y violencia.',
-      'Lectura critica: la gloria deportiva se usa para legitimar gobiernos y desplazar debates estructurales.'
+      'El asesinato de <strong>Luis Carlos Galan</strong> abre el camino politico que lleva a <strong>Cesar Gaviria</strong> a la presidencia.',
+      'Su gobierno impulsa la <strong>Constitucion de 1991</strong>, con un enfoque <strong>multicultural</strong> y <strong>neoliberal</strong>, pero aun <strong>centralista</strong>.',
+      'La relacion con el futbol es cercana y su mandato coincide con un momento de gloria de la Seleccion: <strong>Italia 90</strong> y, sobre todo, las eliminatorias de <strong>1993</strong> que culminan con el <strong>5-0</strong> en Buenos Aires. En Copa America 1993, Colombia llega a semifinales y cae con Argentina en penales.',
+      'Tras el 5-0, el presidente otorga la <strong>Cruz de Boyaca</strong> a <strong>Pacho Maturana</strong> y a los jugadores, gesto que se vuelve simbolo de cohesion nacional aunque se trata de una condecoracion por un partido y no por un titulo.',
+      'Gaviria tambien interviene mediaticamente: llama a tecnicos y jugadores y sus conversaciones salen al aire en radio, y la gloria deportiva se usa para <strong>legitimar gobiernos</strong> y desplazar debates estructurales.'
     ],
     sources: [
       {
@@ -535,8 +583,16 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
         url: 'https://es.wikipedia.org/wiki/C%C3%A9sar_Gaviria'
       },
       {
-        label: 'Argentina 0-5 Colombia (Wikipedia)',
-        url: 'https://es.wikipedia.org/wiki/Argentina_0-5_Colombia'
+        label: 'La historica goleada 5-0 (Panorama Cultural)',
+        url: 'https://panoramacultural.com.co/ocio-y-sociedad/8829/la-historica-goleada-de-colombia-a-argentina-el-5-0-que-nadie-olvida'
+      },
+      {
+        label: 'Video 5-0 Colombia vs Argentina (YouTube)',
+        url: 'https://www.youtube.com/watch?v=F4Lj7CShT0E&t=119s'
+      },
+      {
+        label: 'Se cumplen 26 anos del 5-0 (El Tiempo)',
+        url: 'https://www.eltiempo.com/deportes/futbol-internacional/se-cumplen-26-anos-del-5-0-de-colombia-a-argentina-409110'
       }
     ]
   },
@@ -549,9 +605,11 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     shortDescription: 'Proceso 8000 y federacion bajo presion del narco.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Ernesto_Samper.jpg/640px-Ernesto_Samper.jpg',
     paragraphs: [
-      'Samper llega al poder en 1994 en medio del Proceso 8000.',
-      'El programa afirma que la Federacion estaba bajo influencia del cartel de Cali.',
-      'Lectura critica: el futbol y la politica quedan atravesados por flujos ilegales de dinero y poder.'
+      'En <strong>1994</strong>, Ernesto Samper gana las elecciones frente a <strong>Andres Pastrana</strong>. La campana queda marcada por las denuncias de <strong>financiacion del cartel de Cali</strong>, lo que desemboca en el <strong>Proceso 8000</strong>.',
+      'El relato vincula esa crisis politica con el futbol: en 1994 Colombia fracasa en el Mundial y se reafirma la relacion entre seleccion, dirigencia y mafias. Se afirma que la <strong>Federacion Colombiana de Futbol</strong> estaba bajo la influencia del cartel.',
+      'En ese contexto, <strong>Miguel Rodriguez Orejuela</strong> convoca a la Seleccion a su finca y ofrece incentivos economicos. La influencia se explica porque el presidente de la Federacion era <strong>Juan Jose Bellini</strong>, senalado como testaferro del capo.',
+      'Bellini es detenido en <strong>1995</strong> por sus vinculos con el cartel de Cali y por <strong>lavado de activos</strong>. Tras salir de la carcel, vuelve como asesor en el futbol y mantiene influencia en clubes y directivos.',
+      'La politica deportiva queda atravesada por flujos ilegales de dinero y poder, con efectos duraderos en la institucionalidad del futbol.'
     ],
     sources: [
       {
@@ -577,9 +635,14 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     shortDescription: 'Copa America 2001 como proyecto politico.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Andr%C3%A9s_Pastrana%2C_2009.jpg/640px-Andr%C3%A9s_Pastrana%2C_2009.jpg',
     paragraphs: [
-      'Pastrana llega en 1998 con el objetivo politico de la paz.',
-      'Impulsa la Copa America 2001 en medio de violencia y logra la sede para Colombia.',
-      'Lectura critica: los megaeventos se usan para reconstruir legitimidad estatal y proyectar estabilidad.'
+      'El gobierno de <strong>Andres Pastrana</strong> llega en <strong>1998</strong> con la <strong>paz</strong> como objetivo central, marcado por el <strong>Caguan</strong>.',
+      'Para lograrla necesitaba un simbolo que conectara con la gente, y su gran proyecto de gobierno se llamo la <strong>Copa America 2001</strong>.',
+      'El relato insiste: la peleo y la lagartio; viajo a <strong>Paraguay</strong>, convencio a todo el mundo y solo no pudo convencer a los <strong>argentinos</strong> porque en ese momento el pais vivia una crisis de violencia y conflicto peor aun que la actual.',
+      'En ese contexto secuestraron al vicepresidente de la <strong>Federacion Colombiana de Futbol</strong> y hubo un <strong>atentado</strong>; <strong>Argentina</strong> dijo que no venia.',
+      'Finalmente se le otorgo a <strong>Colombia</strong> la <strong>Copa America</strong> y la gano: es la <strong>unica Copa America</strong> que ha ganado, aunque algunos la desdenan porque no estuvo <strong>Argentina</strong>.',
+      'El titulo se obtiene con <strong>Oscar Cordoba</strong> con el arco invicto y con <strong>Victor Hugo Aristizabal</strong> como goleador de la Copa America.',
+      'La final se resuelve ante <strong>Mexico</strong> <strong>1-0</strong> con gol de <strong>Ivan Ramiro Cordoba</strong>, y la celebracion deja escenas ya clasicas: Pastrana con camiseta que dice <strong>Andres Pastrana</strong>, como si no lo reconocieran, recibiendo medalla junto a <strong>Antanas Mockus</strong>, alcalde de <strong>Bogota</strong>.',
+      'La imagen mas recordada es <strong>Pastrana</strong> levantando el <strong>trofeo</strong> que le pasa <strong>Ivan Ramiro Cordoba</strong>; el triunfo deportivo se convierte en el mayor logro simbolico del gobierno y en un intento por cambiar su imagen.'
     ],
     sources: [
       {
@@ -601,9 +664,16 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     shortDescription: 'Eventos deportivos y diplomacia futbolera.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/%C3%81lvaro_Uribe_V%C3%A9lez.png/640px-%C3%81lvaro_Uribe_V%C3%A9lez.png',
     paragraphs: [
-      'Durante su gestion se realizan los Juegos Bolivarianos 2005, Centroamericanos 2006 y Suramericanos 2010.',
-      'El programa vincula la imagen del Real Madrid con negocios de infraestructura de ACS en Colombia.',
-      'Lectura critica: el futbol opera como vitrina internacional mientras persisten brechas sociales internas.'
+      'Se recuerdan menos imagenes de <strong>Uribe</strong> metiendose con el futbol que de <strong>Gaviria</strong>, <strong>Pastrana</strong> o <strong>Belisario</strong>, pero el relato subraya que <strong>Uribe</strong> si tuvo mucho que ver con el deporte.',
+      'Durante su gestion se hicieron los <strong>Juegos Bolivarianos 2005</strong>, los <strong>Centroamericanos y del Caribe 2006</strong> y los <strong>Suramericanos 2010</strong>, todos en <strong>Medellin</strong>, con balance exitoso; aun asi, parecia que Uribe no tenia nada que ver con el futbol.',
+      'La imagen clave es <strong>2010</strong>: el presidente Uribe recibiendo la camiseta del <strong>Real Madrid</strong>.',
+      'La escena sugiere que quien la entrega es <strong>Florentino Perez</strong> como presidente, cuando en ese momento era el <strong>maximo accionista</strong>.',
+      'El relato explica que <strong>Alvaro Uribe Velez</strong> abrio la puerta para que los negocios de la empresa <strong>Actividades de Construccion y Servicios (ACS)</strong> crecieran en Colombia; el dueno de ACS es <strong>Florentino Perez</strong>.',
+      'Desde <strong>1997</strong>, cuando Uribe era gobernador de <strong>Antioquia</strong>, Florentino Perez empezo a invertir en infraestructura en el pais.',
+      'Para <strong>2013</strong>, tenia una licitacion de <strong>setenta millones de euros</strong> para construir la doble calzada <strong>Conexion Pacifico Medellin-Bolombolo</strong>, la ruta <strong>Medellin-Buenaventura</strong>, una concesion por <strong>25 anos</strong> y una bolsa de <strong>mil millones de pesos</strong>.',
+      'Por eso aun se ve a Uribe visitando constantemente y no solamente Uribe, tambien <strong>Pastrana</strong> y <strong>Santos</strong>; despues de Uribe vino Santos, y no es por hinchas del <strong>Real Madrid</strong> ni por corazon blanco.',
+      'La razon es que <strong>Florentino Perez</strong> tiene plata en Colombia: esta metido en muchas concesiones y su empresa hace parte de un consorcio que se llama <strong>CONSA</strong> con <strong>WM</strong>, para que no lo confundan con el CONSA espanol, responsable de buena parte de las dobles calzadas del pais.',
+      'En esa logica, el futbol funciona como vitrina de <strong>poder economico</strong> y relaciones, mas que como politica deportiva de base.'
     ],
     sources: [
       {
@@ -638,26 +708,13 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termStartYear: '2010',
     termEndYear: '2018',
     name: 'Juan Manuel Santos',
-    shortDescription: 'Mundial Sub-20 y llegada de Pekerman.',
+    shortDescription: 'Foto con Ramon Calderon y el poder de Florentino.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Juan_Manuel_Santos_and_Lula_%28cropped%29.jpg/640px-Juan_Manuel_Santos_and_Lula_%28cropped%29.jpg',
     paragraphs: [
-      'Colombia es anfitriona del Mundial Sub-20 en 2011, con actos oficiales en El Campin.',
-      'Tras la crisis deportiva y el escandalo del Bolillo, Santos impulsa la llegada de Pekerman.',
-      'Lectura critica: la seleccion se convierte en herramienta de cohesion nacional y legitimidad politica.'
+      'La foto fue con Ramon Calderon, y el relato lo precisa con claridad.',
+      'El punto editorial es que el socio mayoritario ya era Florentino.'
     ],
     sources: [
-      {
-        label: 'Juan Manuel Santos (Wikipedia)',
-        url: 'https://es.wikipedia.org/wiki/Juan_Manuel_Santos'
-      },
-      {
-        label: 'Mundial Sub-20 2011 (Wikipedia)',
-        url: 'https://es.wikipedia.org/wiki/Copa_Mundial_de_F%C3%BAtbol_Sub-20_de_2011'
-      },
-      {
-        label: 'Jose Nestor Pekerman (Wikipedia)',
-        url: 'https://es.wikipedia.org/wiki/Jos%C3%A9_N%C3%A9stor_P%C3%A9kerman'
-      }
     ]
   },
   {
@@ -667,11 +724,11 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termEndYear: '2022',
     name: 'Ivan Duque',
     shortDescription: 'FIFA Gate, Ministerio del Deporte y disputa por control.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/5/5d/Iv%C3%A1n_Duque%2C_oct_2021_1.1.jpg',
+    image: 'https://static01.nyt.com/images/2021/08/30/world/30colombia-duque-1-esp-1/30colombia-duque-1-superJumbo.jpg',
     paragraphs: [
       'En 2018 llega Ivan Duque y se abre el debate sobre control estatal del futbol tras el FIFA Gate.',
       'El Ministerio del Deporte surge en este ciclo como intento de reorganizar la gobernanza deportiva.',
-      'Lectura critica: las reformas quedan limitadas por alianzas con elites federativas y economicas.'
+      'Las reformas quedan limitadas por alianzas con elites federativas y economicas.'
     ],
     sources: [
       {
@@ -685,6 +742,30 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       {
         label: 'Ministerio del Deporte (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Ministerio_del_Deporte_(Colombia)'
+      }
+    ]
+  },
+  {
+    id: 'gustavo-petro-2022',
+    year: '2022',
+    termStartYear: '2022',
+    termEndYear: '2026',
+    name: 'Gustavo Petro',
+    shortDescription: 'Nuevo ciclo politico y debate publico sobre futbol y Estado.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/2/22/01_Gustavo_Petro.jpg',
+    paragraphs: [
+      'En 2022 llega Gustavo Petro y se reabre la discusion sobre el rol del presidente en el futbol.',
+      'El deporte vuelve a aparecer como escenario simbolico de identidad y de disputa politica.',
+      'El futbol sigue siendo un campo util para mensajes y alineamientos publicos.'
+    ],
+    sources: [
+      {
+        label: 'Gustavo Petro (Wikipedia)',
+        url: 'https://es.wikipedia.org/wiki/Gustavo_Petro'
+      },
+      {
+        label: 'Presidencia de Gustavo Petro (Wikipedia)',
+        url: 'https://es.wikipedia.org/wiki/Presidencia_de_Gustavo_Petro'
       }
     ]
   }

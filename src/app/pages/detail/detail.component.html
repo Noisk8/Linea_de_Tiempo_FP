@@ -25,6 +25,21 @@
         </figcaption>
       </figure>
     }
+    @if (entry.editorialGallery?.length) {
+      <div class="editorial-gallery">
+        @for (item of entry.editorialGallery; track item.url) {
+          <figure>
+            <img [src]="item.url" [alt]="item.caption" />
+            <figcaption>
+              {{ item.caption }}
+              @if (item.credit) {
+                <span class="credit">Fuente: {{ item.credit }}</span>
+              }
+            </figcaption>
+          </figure>
+        }
+      </div>
+    }
   </div>
 
   <div class="detail-sources" *ngIf="entry.sources.length">
