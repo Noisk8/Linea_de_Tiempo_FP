@@ -2,6 +2,7 @@ import { AfterViewInit, Component, ElementRef, OnDestroy, QueryList, ViewChildre
 import { CommonModule } from '@angular/common';
 import { TimelineModule } from 'primeng/timeline';
 import { TIMELINE_ENTRIES } from '../../data/timeline-data';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-timeline',
@@ -12,6 +13,8 @@ import { TIMELINE_ENTRIES } from '../../data/timeline-data';
 })
 export class TimelineComponent implements AfterViewInit, OnDestroy {
   entries = TIMELINE_ENTRIES;
+  filteredEntries = TIMELINE_ENTRIES;
+  searchTerm = '';
   progressPercent = 0;
   imageLoaded: Record<string, boolean> = {};
   @ViewChildren('timelineCard', { read: ElementRef }) cardRefs?: QueryList<ElementRef<HTMLElement>>;
@@ -20,16 +23,30 @@ export class TimelineComponent implements AfterViewInit, OnDestroy {
   private scrollHandler?: () => void;
   private resizeHandler?: () => void;
   private lastActiveIndex = -1;
+  private cardRefsChangesSub?: Subscription;
 
   ngAfterViewInit(): void {
     this.setupObserver();
     this.setupParallax();
     this.updateProgress(0);
+
+    this.cardRefsChangesSub = this.cardRefs?.changes.subscribe(() => {
+      this.lastActiveIndex = -1;
+      window.requestAnimationFrame(() => {
+        this.setupObserver();
+        this.updateProgress(0);
+        this.scrollHandler?.();
+      });
+    });
   }
 
   ngOnDestroy(): void {
     if (this.observer) {
       this.observer.disconnect();
+    }
+
+    if (this.cardRefsChangesSub) {
+      this.cardRefsChangesSub.unsubscribe();
     }
 
     if (this.scrollHandler) {
@@ -42,6 +59,11 @@ export class TimelineComponent implements AfterViewInit, OnDestroy {
   }
 
   private setupObserver(): void {
+    if (this.observer) {
+      this.observer.disconnect();
+      this.observer = undefined;
+    }
+
     if (!this.cardRefs || this.cardRefs.length === 0) {
       return;
     }
@@ -108,5 +130,32 @@ export class TimelineComponent implements AfterViewInit, OnDestroy {
 
   onImageLoad(entryId: string): void {
     this.imageLoaded[entryId] = true;
+  }
+
+  onSearchChange(event: Event): void {
+    const target = event.target as HTMLInputElement;
+    this.searchTerm = target.value.toLowerCase();
+    this.filterEntries();
+  }
+
+  private filterEntries(): void {
+    if (!this.searchTerm || this.searchTerm.trim() === '') {
+      this.filteredEntries = [...this.entries];
+    } else {
+      this.filteredEntries = this.entries.filter(entry =>
+        entry.name.toLowerCase().includes(this.searchTerm) ||
+        entry.shortDescription.toLowerCase().includes(this.searchTerm)
+      );
+    }
+  }
+
+  highlightText(text: string): string {
+    if (!this.searchTerm.trim()) {
+      return text;
+    }
+
+    const escaped = this.searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`(${escaped})`, 'gi');
+    return text.replace(regex, '<mark>$1</mark>');
   }
 }

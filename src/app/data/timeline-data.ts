@@ -460,7 +460,7 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     paragraphs: [
       'La <strong>Seleccion Colombia</strong> clasifica a su primer <strong>Mundial</strong> con <strong>Adolfo Pedernera</strong> como tecnico y figura del <em>Dorado</em>.',
       'En la eliminatoria vence a <strong>Peru</strong> y viaja a <strong>Arica</strong>, sede inicialmente asignada al rival y ciudad fronteriza entre <strong>Chile</strong> y <strong>Peru</strong>.',
-      'El partido mas recordado es el <strong>4-4</strong> contra la <strong>URSS</strong>, campeon de Europa: Colombia le marca cuatro goles a <strong>Lev Yashin</strong>, el mejor arquero del momento.',
+      'El partido mas recordado es el <strong>4-4</strong> contra la <strong>URSS</strong>, campeon de Europa: Colombia le marca cuatro goles a <strong>Lev Yashin</strong>, el mejor arquero del momento. En una epoca en que la sigla <strong>CCCP</strong> (Union Sovietica) era leida popularmente como <em>Con Colombia Casi Perdemos</em>, la seleccion colombiana estuvo a punto de imponerse en un encuentro que trascendio lo deportivo. En el siguiente partido, <strong>Yugoslavia</strong>, tambien comunista, nos derrotaria <strong>5-0</strong>, cerrando una participacion marcada por el contraste entre la gesta frente a la URSS y la dura realidad contra otro bloque del Este.',
       'En plena <strong>Guerra Fria</strong>, la prensa y las caricaturas convierten el encuentro en un <strong>relato politico</strong> de Colombia frente al comunismo, y el Estado se apropia de la hazana deportiva para reforzar su proyecto.'
     ],
     editorialImage: {
@@ -610,6 +610,12 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       'La conduccion politica queda marcada por el protagonismo del <strong>ministro de gobierno</strong> (hoy Interior), y en esa transicion gana relevancia <strong>Cesar Gaviria</strong> como actor clave.',
       'La <strong>continuidad de elites politicas</strong> limita reformas de fondo mientras el futbol se mantiene como escenario simbolico de cohesion.'
     ],
+
+    editorialGallery: [{
+      url: 'https://futbolete.com/wp-content/uploads/2019/07/armstrong-y-gordon-santa-fe-america-en-el-estadio-el-campin.jpg',
+      caption: 'Armstrong y Gordon Santa Fe vs America en el Estadio El Campin',
+      credit: 'Futbolete'
+    }],
     sources: [
       {
         label: 'Virgilio Barco (Wikipedia)',
@@ -618,6 +624,14 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       {
         label: 'Cesar Gaviria (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/C%C3%A9sar_Gaviria'
+      },
+      {
+        label: 'Armstrong y Gordon Santa Fe vs America en el Estadio El Campin',
+        url: 'https://futbolete.com/wp-content/uploads/2019/07/armstrong-y-gordon-santa-fe-america-en-el-estadio-el-campin.jpg'
+      },
+      {
+        label: 'Armstrong y Gordon Santa Fe vs America en el Estadio El Campin',
+        url: ' https://canal1.com.co/noticias/uno-dos-tres/uno-la-relacion-que-existe-entre-el-futbol-colombiano-y-el-hombre-en-la-luna/'
       }
     ]
   },

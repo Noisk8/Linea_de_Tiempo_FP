@@ -3,11 +3,24 @@
     <p class="timeline-kicker">Linea de tiempo</p>
     <h2>Presidentes y futbol en Colombia</h2>
     <p class="timeline-intro">Recorre la historia con contexto, imagenes y enlaces de cada periodo.</p>
+    <div class="search-container">
+      <input 
+        type="text" 
+        placeholder="Buscar presidente..." 
+        class="search-input"
+        (input)="onSearchChange($event)"
+        [value]="searchTerm"
+      />
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <path d="m21 21-4.35-4.35"></path>
+      </svg>
+    </div>
   </div>
 
   <div class="timeline-wrapper" [style.--timeline-progress]="progressPercent + '%'">
     <div class="timeline-progress"></div>
-    <p-timeline [value]="entries" align="alternate" styleClass="timeline-prime">
+    <p-timeline [value]="filteredEntries" align="alternate" styleClass="timeline-prime">
       <ng-template pTemplate="opposite" let-entry>
         <span class="timeline-year">{{ entry.termStartYear }}-{{ entry.termEndYear }}</span>
       </ng-template>
@@ -31,8 +44,8 @@
             />
           </div>
           <div class="timeline-body">
-            <h3>{{ entry.name }}</h3>
-            <p [innerHTML]="entry.paragraphs[0]"></p>
+            <h3 [innerHTML]="highlightText(entry.name)"></h3>
+            <p [innerHTML]="highlightText(entry.paragraphs[0])"></p>
             <span class="cta">Abrir detalle</span>
           </div>
         </a>
