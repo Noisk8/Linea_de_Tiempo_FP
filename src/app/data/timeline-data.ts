@@ -88,12 +88,12 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     shortDescription: 'Primer partido registrado y origen disciplinario del futbol.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/5/5c/Miguel_Antonio_Caro_2.jpg',
     paragraphs: [
-      'Miguel Antonio Caro dejo una frase: Colombia solo puede ser catolica porque de lo contrario caeria en la barbarie; la sentencia resume la hegemonia conservadora en su forma mas dura.',
-      'Durante su gobierno se realizo el primer partido de futbol del que hay registro en Colombia. Henry Rowan Lemly era un coronel gringo obsesionado con los metodos de entrenamiento de las universidades britanicas, donde nacieron los deportes modernos: reglamentos del rugby, del futbol, del tenis y del criquet.',
-      'Ese fenomeno del siglo XIX buscaba organizar, normalizar y civilizar los enfrentamientos, y en Colombia se tradujo en la reorganizacion de la nacion y la creacion de la escuela militar.',
-      'Lemly llevo los reglamentos del futbol de Inglaterra y los aplico en Colombia; lo unico que tenia de futbol era que era 11 contra 11. Llevo futbol, gimnasia y tenis, y queda como una linea rarisima en el origen de los deportes en el pais.',
-      'El relato sostiene que hubo precedentes: en Puerto Colombia o en Cartagena, marinos britanicos se bajaron, inflaron una tripa de un animal y los estibadores del puerto habrian dicho: ¿que es esta monda?, y asi habria empezado el futbol.',
-      'En junio de 1892, el vicepresidente de la republica, presidente de verdad, fue testigo de ese partido y de esa exhibicion de moderno entrenamiento. El futbol nacio oficialmente en Colombia para un presidente.'
+      'Miguel Antonio Caro dejo una frase: <strong>Colombia solo puede ser catolica</strong> porque de lo contrario caeria en la barbarie; la sentencia resume la <strong>hegemonia conservadora</strong> en su forma mas dura.',
+      'Durante su gobierno se realizo el <strong>primer partido de futbol</strong> del que hay registro en Colombia. <strong>Henry Rowan Lemly</strong> era un coronel gringo obsesionado con los metodos de entrenamiento de las <strong>universidades britanicas</strong>, donde nacieron los deportes modernos: reglamentos del <strong>rugby</strong>, del <strong>futbol</strong>, del <strong>tenis</strong> y del <strong>criquet</strong>.',
+      'Ese fenomeno del siglo XIX buscaba organizar, normalizar y civilizar los enfrentamientos, y en Colombia se tradujo en la reorganizacion de la nacion y la creacion de la <strong>escuela militar</strong>.',
+      '<strong>Lemly</strong> llevo los reglamentos del futbol de <strong>Inglaterra</strong> y los aplico en Colombia; lo unico que tenia de futbol era que era <strong>11 contra 11</strong>. Llevo futbol, gimnasia y tenis, y queda como una linea rarisima en el origen de los deportes en el pais.',
+      'El relato sostiene que hubo precedentes: en <strong>Puerto Colombia</strong> o en <strong>Cartagena</strong>, marinos britanicos se bajaron, inflaron una tripa de un animal y los estibadores del puerto habrian dicho: ¿que es esta monda?, y asi habria empezado el futbol.',
+      'En <strong>junio de 1892</strong>, el vicepresidente de la republica, presidente de verdad, fue testigo de ese partido y de esa exhibicion de moderno entrenamiento. El futbol nacio oficialmente en Colombia para un presidente.'
     ],
     sources: [
       {
@@ -107,13 +107,29 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       {
         label: 'Henry Rowan Lemly, el pionero (El Espectador)',
         url: 'https://www.elespectador.com/deportes/henry-rowan-lemly-el-pionero/'
+      },
+      {
+        label: 'Registro visual Henry Rowan Lemly (Pinterest)',
+        url: 'https://kr.pinterest.com/pin/653373858440393548/'
       }
     ],
     editorialImage: {
       url: 'https://elmalpensante.com/sites/default/files/images/articulos/Primer_partido_nuevas_voces_el_malpensante.png',
       caption: 'El primer partido registrado en Colombia, segun el relato de El Malpensante.',
       credit: 'elmalpensante.com'
-    }
+    },
+    editorialGallery: [
+      {
+        url: '/Henry.avif',
+        caption: 'Henry Rowan Lemly y la llegada de los reglamentos.',
+        credit: 'Archivo'
+      },
+      {
+        url: '/46ec559c6a552125cea948e0537106ec.jpg',
+        caption: 'Registro visual asociado a los primeros partidos.',
+        credit: 'Archivo'
+      }
+    ],
   },
   {
     id: 'jose-manuel-marroquin-1904',
@@ -134,6 +150,13 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       caption: 'Decreto 419 (1904): educacion fisica como politica estatal.',
       credit: 'Ilustracion editorial'
     },
+    editorialGallery: [
+      {
+        url: '/imagesdv6pf38x.jpg',
+        caption: 'Registro visual asociado a la educacion fisica y su marco legal.',
+        credit: 'Archivo'
+      }
+    ],
     sources: [
       {
         label: 'Jose Manuel Marroquin (Wikipedia)',
@@ -146,6 +169,10 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       {
         label: 'Historia de la educacion fisica en Colombia (EFDeportes)',
         url: 'https://www.efdeportes.com/efd17/efcolom.htm'
+      },
+      {
+        label: 'Los primeros torneos de futbol en Colombia (Daniel Polania)',
+        url: 'https://danielpolania.wordpress.com/2018/12/03/los-primeros-torneos-de-futbol-en-colombia/'
       }
     ]
   },
@@ -169,6 +196,13 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       caption: 'Polo Club de Bogota, campeon de la Copa Carlos E. Restrepo (1912).',
       credit: 'Bogota Antigua · Gloria Botero · 28 de noviembre de 2024'
     },
+    editorialGallery: [
+      {
+        url: '/imagesdv6pf38x.jpg',
+        caption: 'Registro visual adicional del primer campeonato.',
+        credit: 'Archivo'
+      }
+    ],
     sources: [
       {
         label: 'Carlos Eugenio Restrepo (Wikipedia)',
@@ -805,6 +839,13 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       'Por eso aun se ve a Uribe visitando constantemente y no solamente Uribe, tambien <strong>Pastrana</strong> y <strong>Santos</strong>; despues de Uribe vino Santos, y no es por hinchas del <strong>Real Madrid</strong> ni por corazon blanco.',
       'La razon es que <strong>Florentino Perez</strong> tiene plata en Colombia: esta metido en muchas concesiones y su empresa hace parte de un consorcio que se llama <strong>COMSA</strong> con <strong>WM</strong>, para que no lo confundan con el COMSA espanol, responsable de buena parte de las dobles calzadas del pais.',
       'En esa logica, el futbol funciona como vitrina de <strong>poder economico</strong> y relaciones, mas que como politica deportiva de base.'
+    ],
+    editorialGallery:[
+       {
+        url: '/alvaro-uribe-sorprende-al-referirse-al-real-madrid-y-su-decimoquinta-champions-league.jpg',
+        caption: 'Florentino Perez entrega la camiseta del Real Madrid a Alvaro Uribe.',
+        credit: 'Archivo'
+      }
     ],
     sources: [
       {

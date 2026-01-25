@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { NgIf } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { TIMELINE_ENTRIES, TimelineEntry } from '../../data/timeline-data';
@@ -35,5 +35,12 @@ export class DetailComponent {
 
   closeImage() {
     this.selectedImage = undefined;
+  }
+
+  @HostListener('document:keydown.escape')
+  onEscapeKeydown() {
+    if (this.selectedImage) {
+      this.closeImage();
+    }
   }
 }

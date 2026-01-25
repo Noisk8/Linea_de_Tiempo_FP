@@ -7,3 +7,16 @@ En esa reorganizacion de la nacion se crea la escuela militar. Lemly se trajo lo
 Seguramente hubo unos antes. Yo soy de los que defienden la tesis de que en Puerto Colombia o en Cartagena, marinos britanicos se bajaron, inflaron una tripa de un animal, empezaron a patear la pelota y los estibadores del puerto los vieron y dijeron: ¿que es esta monda? Y asi empezo el futbol, yo estoy seguro que asi paso, pero el registro historico es ese.
 
 Junio de 1892: el vicepresidente de la republica, presidente de verdad, fue testigo de ese partido y de esa exhibicion de moderno entrenamiento. El futbol nacio oficialmente en Colombia para un presidente.
+
+
+Imagenes
+→ 46ec559c6a552125cea948e0537106ec.jpg
+
+→ Henry.avif
+
+Referencias 
+
+
+https://www.elespectador.com/deportes/henry-rowan-lemly-el-pionero/
+
+https://kr.pinterest.com/pin/653373858440393548/

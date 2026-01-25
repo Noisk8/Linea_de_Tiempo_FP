@@ -6,4 +6,9 @@ Los articulos 60 a 63 ordenaron correccion en el vestido y aseo riguroso para to
 
 El modelo respondia al ideal de “mente sana en cuerpo sano” y tomaba como referencia las practicas europeas, en particular las britanicas, donde la educacion fisica se entendia como herramienta de orden social.
 
-Referencia: https://www.efdeportes.com/efd17/efcolom.htm
+iMAGENES
+
+
+
+
+ReferenciaS: https://www.efdeportes.com/efd17/efcolom.htm

@@ -9,5 +9,7 @@ Durante varios anos el Polo Club domino el futbol bogotano, hasta ser desplazado
 El episodio confirma que el futbol temprano fue un deporte de elites, articulado a clubes como el Polo Club y el Club Colombia, mientras surgian instituciones regionales que despues se convertirian en referentes del futbol nacional.
 
 Imagen sugerida: polofc.jpg
+→ imagesdv6pf38x.jpg
 
 http://danielpolania.wordpress.com/2018/12/03/los-primeros-torneos-de-futbol-en-colombia/
+

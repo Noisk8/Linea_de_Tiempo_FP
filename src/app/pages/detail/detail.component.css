@@ -167,13 +167,18 @@
 .image-lightbox-content {
   margin: 0;
   width: min(1100px, 92vw);
+  max-height: 85vh;
   color: #f5f0e6;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 }
 
 .image-lightbox-content img {
   width: 100%;
-  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
   display: block;
   border-radius: 16px;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
