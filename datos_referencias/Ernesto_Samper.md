@@ -14,7 +14,7 @@ Lectura critica: la politica deportiva queda atravesada por flujos ilegales de d
 
 Imagenes 
 
-→ IEVVZXSYLZEPLP3GVRO6OTWMSY.jpg
+→ ernesto-samper-imagen.jpg
 
 → 7G5LUER3FND3VNQKIU3JDHGEHU.avif
 
