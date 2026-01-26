@@ -4,7 +4,7 @@
 }
 
 .page h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .page ul {
@@ -17,6 +17,17 @@
   text-decoration: none;
   color: var(--accent);
   font-weight: 600;
+}
+
+.general-references {
+  margin-bottom: 2rem;
+  border-left: 4px solid var(--accent);
+  background: linear-gradient(135deg, #fffaf1 0%, #fff5e6 100%);
+}
+
+.general-references .reference-header h3 {
+  color: var(--accent);
+  font-size: 1.2rem;
 }
 
 .reference-groups {

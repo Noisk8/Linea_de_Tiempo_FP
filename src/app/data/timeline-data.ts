@@ -150,13 +150,8 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       caption: 'Decreto 419 (1904): educacion fisica como politica estatal.',
       credit: 'Ilustracion editorial'
     },
-    editorialGallery: [
-      {
-        url: '/imagesdv6pf38x.jpg',
-        caption: 'Registro visual asociado a la educacion fisica y su marco legal.',
-        credit: 'Archivo'
-      }
-    ],
+  
+    
     sources: [
       {
         label: 'Jose Manuel Marroquin (Wikipedia)',
