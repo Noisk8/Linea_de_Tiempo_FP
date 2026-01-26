@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://presidentes-futbol-colombia.com/sitemap.xml
+Sitemap: https://presidentes-futbol.netlify.app/sitemap.xml
 
 # Block common non-content paths
 Disallow: /assets/

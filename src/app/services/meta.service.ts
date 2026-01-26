@@ -7,7 +7,7 @@ import { isPlatformBrowser } from '@angular/common';
   providedIn: 'root'
 })
 export class MetaService {
-  private defaultImage = '/assets/imagenes/aver.jpeg';
+  private defaultImage = 'https://presidentes-futbol.netlify.app/pwe.png';
   private siteName = 'Presidentes y Fútbol en Colombia';
   private siteUrl: string;
 
@@ -20,7 +20,7 @@ export class MetaService {
     if (isPlatformBrowser(this.platformId)) {
       this.siteUrl = window.location.origin;
     } else {
-      this.siteUrl = 'https://presidentes-futbol-colombia.com';
+      this.siteUrl = 'https://presidentes-futbol.netlify.app';
     }
   }
 
