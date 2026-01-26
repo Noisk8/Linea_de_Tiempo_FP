@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { MetaService } from '../../services/meta.service';
 
 @Component({
   selector: 'app-home',
@@ -41,6 +42,13 @@ import { trigger, transition, style, animate } from '@angular/animations';
     ])
   ]
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   imageUrl = 'pwe.png';
+
+  constructor(private metaService: MetaService) {}
+
+  ngOnInit(): void {
+    this.metaService.setDefaultMeta();
+    this.metaService.setStructuredData();
+  }
 }

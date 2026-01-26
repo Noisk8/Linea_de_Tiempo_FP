@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://presidentes-futbol-colombia.com/sitemap.xml
+
+# Block common non-content paths
+Disallow: /assets/
+Disallow: /*.json$
+Disallow: /*.xml$

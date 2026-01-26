@@ -32,11 +32,11 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     year: '1886',
     termStartYear: '1886',
     termEndYear: '1894',
-    name: 'Rafael Nunez',
+    name: 'Rafael Nuñez',
     shortDescription: 'Regeneracion, Constitucion de 1886 y beisbol en Cartagena.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Rafael_N%C3%BA%C3%B1ez%2C_ca.1885.jpg/640px-Rafael_N%C3%BA%C3%B1ez%2C_ca.1885.jpg',
     paragraphs: [
-      'El perfil lo presenta como poeta frustrado: Rafael Nunez fue el ultimo presidente de los Estados Unidos de Colombia y el primero de la Republica de Colombia; se le atribuye la letra del Himno Nacional.',
+      'El perfil lo presenta como poeta frustrado: Rafael nuñez fue el ultimo presidente de los Estados Unidos de Colombia y el primero de la Republica de Colombia; se le atribuye la letra del Himno Nacional.',
       'En la revolucion de 1885 se le volteo a los liberales y termino gobernando con el Partido Conservador; ese giro marca el arranque de la Regeneracion y el impulso a la Constitucion de 1886.',
       'En El Cabrero, frente a su casa en Cartagena, se registra un hito del beisbol: el <strong>20 de julio de 1897</strong> se juega por primera vez en la ciudad, segun el historiador y periodista Raul Porto Cabrales en su libro sobre la memoria historica del beisbol de Bolivar y Cartagena.',
       'Porto cuenta que jovenes cartageneros observaron a estudiantes de Cuba y Panama, quienes trajeron los implementos y ensenaron el juego.',
@@ -50,7 +50,7 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     editorialImageAfterIndex: 5,
     sources: [
       {
-        label: 'Rafael Nunez (Wikipedia)',
+        label: 'Rafael nuñez (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Rafael_N%C3%BA%C3%B1ez'
       },
       {
@@ -382,7 +382,7 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     id: 'laureano-gomez-1950',
     year: '1950',
     termStartYear: '1950',
-    termEndYear: '1951',
+    termEndYear: '1953',
     name: 'Laureano Gomez',
     shortDescription: 'El Dorado y futbol como espectaculo politico.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Laureano_G%C3%B3mez_%28c._1925-1926%29.jpg/640px-Laureano_G%C3%B3mez_%28c._1925-1926%29.jpg',
@@ -427,11 +427,15 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termStartYear: '1953',
     termEndYear: '1957',
     name: 'Gustavo Rojas Pinilla',
-    shortDescription: 'Golpe de Estado y futbol como vitrina popular.',
+    shortDescription: 'Fin del Dorado futbolístico y primer proceso de paz.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Gurropin_tras_asumir_la_presidencia_con_un_golpe_de_estado.jpg',
     paragraphs: [
-      'Tras la dictadura de Rojas Pinilla, llega el Frente Nacional y el futbol adquiere un nuevo significado.',
-      'El relato lo presenta como un presidente considerado entre los mejores de la historia del pais.'
+      'En <strong>1953</strong> el general Gustavo Rojas Pinilla alcanza el poder mediante golpe de Estado, poniendo fin al gobierno conservador de Laureano Gomez.',
+      'Ese mismo año termina la epoca conocida como <strong>"El Dorado"</strong> del futbol colombiano. A instancias de la FIFA se acuerda que los futbolistas que "piratearon" en Colombia regresaran a sus equipos de origen, o en su defecto, como sucedio con <strong>Alfredo Di Stefano</strong>, fueron transferidos a Europa.',
+      'El Dorado futbolístico (1949-1953) habia sido una epoca dorada donde el peso tenia casi el mismo poder adquisitivo que el dolar, y los equipos colombianos contrataron a estrellas sudamericanas como Adolfo Pedernera, Alfredo Di Stefano y Néstor Raúl Rossi, quienes conformaron el legendario "Ballet Azul" de Millonarios.',
+      'Rojas Pinilla firma el <strong>primer proceso de paz</strong> del pais, que concluyo con la desmovilizacion de <strong>3.500 guerrilleros</strong> que se alzaron en armas tras la muerte de Jorge Eliecer Gaitan en 1948.',
+      'Durante su dictadura, el futbol se convirtio en una <strong>vitrina popular</strong> y antídoto contra la violencia que habia estallado tras el Bogotazo. El Estado apoyo la construccion de estadios y el fortalecimiento del deporte como mecanismo de cohesion social.',
+      'El relato lo presenta como un presidente considerado entre los mejores de la historia del pais, quien supo usar el futbol como herramienta de unificacion nacional en tiempos de crisis.'
     ],
     editorialImage: {
       url: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Gurropin_tras_asumir_la_presidencia_con_un_golpe_de_estado.jpg',
@@ -446,6 +450,18 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       {
         label: 'Golpe de Estado en Colombia (1953) (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Golpe_de_Estado_en_Colombia_de_1953'
+      },
+      {
+        label: 'Polémica en Colombia por la relación entre el narco y el fútbol (Cosecha Roja)',
+        url: 'https://www.cosecharoja.org/polemica-en-colombia-por-la-relacion-entre-el-narco-y-el-futbol/'
+      },
+      {
+        label: 'El Dorado y profesionalismo (UFPR)',
+        url: 'https://revistas.ufpr.br/alesde/article/download/20967/15144'
+      },
+      {
+        label: 'Ballet Azul de Millonarios (Wikipedia)',
+        url: 'https://es.wikipedia.org/wiki/Ballet_Azul'
       }
     ]
   },
@@ -552,14 +568,16 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termStartYear: '1982',
     termEndYear: '1986',
     name: 'Belisario Betancur',
-    shortDescription: 'Mundial 1986, narco y cambio de uniforme.',
+    shortDescription: 'Mundial 1986, narcotráfico en el fútbol y cambio de uniforme.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Belisario_Betancur_2012.jpg/640px-Belisario_Betancur_2012.jpg',
     paragraphs: [
       'Colombia habia ganado la sede del <strong>Mundial de 1986</strong>, pero en <strong>1983</strong> el gobierno de <strong>Belisario Betancur</strong> renuncia a organizarlo. En una <em>locucion presidencial</em> se justifica la decision por <strong>costos</strong> y <strong>exigencias de la FIFA</strong> y sus socios comerciales.',
       'El episodio se convierte en un <strong>debate nacional</strong>: para muchos, Colombia fue el unico pais que <strong>rechazo un Mundial</strong>; para otros, fue una decision frente a <strong>prioridades internas</strong> en un contexto economico <em>proteccionista</em>.',
-      'Durante su gobierno el ministro de Justicia, <strong>Rodrigo Lara Bonilla</strong>, denuncia la relacion de varios clubes con el <strong>narcotrafico</strong>, abriendo un frente politico que expone la influencia criminal en el futbol.',
+      'Durante su gobierno el ministro de Justicia, <strong>Rodrigo Lara Bonilla</strong>, se atreve a denunciar lo que era <em>vox populi</em>: la presencia de dineros del <strong>narcotráfico</strong> en equipos del futbol colombiano. En una famosa conferencia de prensa, Lara acuso a <strong>Atlético Nacional, Millonarios, Santa Fe, Deportivo Independiente Medellín, América y Deportivo Pereira</strong> de tener dineros provenientes del narcotráfico.',
+      'Este fue el inicio del llamado <strong>"segundo Dorado"</strong> del futbol colombiano, una época en que los equipos pudieron contratar a jugadores de talla mundial gracias al dinero del narcotráfico. En 1983, <strong>Gonzalo Rodríguez Gacha</strong> aparecio en televisión admitiendo ser el tercer socio en el paquete accionario de Millonarios, aunque su fachada de ganadero se derrumbo cuando se comprobo que era miembro del Cartel de Medellín.',
+      'Posteriormente, decisiones judiciales sustentaron las denuncias de Lara. <strong>Hernán Botero</strong>, uno de los principales accionistas de Nacional, fue extraditado a Estados Unidos por lavado de dinero durante este gobierno.',
       'En <strong>1985</strong> una <em>comision de notables</em> impulsa el cambio de uniforme de la <strong>Seleccion Colombia</strong>. Se mencionan nombres como <strong>Daniel Samper Pizano</strong>, <strong>Alberto Casas</strong> y <strong>Carlos Cure</strong>, y el <strong>tricolor amarillo, azul y rojo</strong> se presenta oficialmente el <strong>8 de febrero de 1985</strong> con fotos publicas.',
-      'El lanzamiento queda asociado a <strong>Amparo Grisales</strong>, recordada como la primera figura en posar con la nueva camiseta, y el diseno del uniforme fue de la disenadora Maria Elvira Pardo, en un contexto donde el gobierno oscila entre <strong>control moral</strong> del futbol y <strong>uso simbolico</strong> del deporte para construir <strong>identidad nacional</strong>.'
+      'El lanzamiento queda asociado a <strong>Amparo Grisales</strong>, recordada como la primera figura en posar con la nueva camiseta, y el diseno del uniforme fue de la disenadora Maria Elvira Pardo, en un contexto donde el gobierno oscila entre <strong>control moral</strong> del futbol y <strong>uso simbolico</strong> del deporte para construir <strong>identidad nacional</strong>, mientras el narcotráfico comienza a permear las estructuras del futbol profesional.'
     ],
     editorialGallery: [
       {
@@ -592,6 +610,18 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
         url: 'https://es.wikipedia.org/wiki/Rodrigo_Lara_Bonilla'
       },
       {
+        label: 'Influencia del narcotráfico en el fútbol colombiano (Wikipedia)',
+        url: 'https://es.wikipedia.org/wiki/Influencia_del_narcotr%C3%A1fico_en_el_f%C3%BAtbol_colombiano'
+      },
+      {
+        label: 'Polémica en Colombia por la relación entre el narco y el fútbol (Cosecha Roja)',
+        url: 'https://www.cosecharoja.org/polemica-en-colombia-por-la-relacion-entre-el-narco-y-el-futbol/'
+      },
+      {
+        label: 'Gonzalo Rodríguez Gacha, "El Mexicano" (Noticias Caracol)',
+        url: 'https://www.noticiascaracol.com/golcaracol/gonzalo-rodriguez-gacha-el-mexicano-ese-fantasma-que-paso-por-millonarios'
+      },
+      {
         label: 'Seleccion de futbol de Colombia (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Selecci%C3%B3n_de_f%C3%BAtbol_de_Colombia'
       }
@@ -603,19 +633,30 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termStartYear: '1986',
     termEndYear: '1990',
     name: 'Virgilio Barco',
-    shortDescription: 'Transicion politica y ascenso de Cesar Gaviria.',
+    shortDescription: 'Narcoterrorismo, fútbol y gloria en medio de la violencia.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Virgilio_Barco_Vargas.jpg/640px-Virgilio_Barco_Vargas.jpg',
     paragraphs: [
       'Virgilio Barco asume la presidencia en un contexto de <strong>crisis y violencia politica</strong>, y el relato lo presenta como un mandatario mayor, con un <strong>problema cerebrovascular</strong> que afecto su salud durante el gobierno.',
       'La conduccion politica queda marcada por el protagonismo del <strong>ministro de gobierno</strong> (hoy Interior), y en esa transicion gana relevancia <strong>Cesar Gaviria</strong> como actor clave.',
-      'La <strong>continuidad de elites politicas</strong> limita reformas de fondo mientras el futbol se mantiene como escenario simbolico de cohesion.'
+      'Durante su gobierno, el pais vivio los momentos mas criticos del <strong>narcoterrorismo</strong> relacionados con el futbol. En <strong>1988</strong>, el arbitro antioqueño <strong>Armando Perez</strong> (quien llego a ser juez de linea en la final del mundial de Italia 90) fue <strong>secuestrado</strong> en plenas finales del año. El réferi aparecio dias despues portando un mensaje "si los arbitros siguen parcializados, seran borrados".',
+      'En <strong>diciembre de 1989</strong>, el arbitro <strong>Alvaro Ortega</strong> fue <strong>asesinado</strong> de nueve disparos en el pecho luego de oficiar como juez de linea en un partido en que <strong>Independiente Medellín</strong> y <strong>América</strong> empataron en el Atanasio Girardot.',
+      'El campeonato de 1989 inicio solo hasta marzo, luego que el Gobierno exigiera de la Superintendencia de Sociedades un informe sobre el manejo financiero de los equipos. Informe que revelo irregularidades, pero que no fue obstaculo para que la pelota no se detuviera.',
+      'A pesar de la violencia, esta fue la epoca de mayor gloria futbolistica: <strong>América de Cali</strong> obtuvo los títulos del 82 al 86 y tres subtítulos de Libertadores; <strong>Nacional</strong> la <strong>Copa Libertadores de América en 1989</strong>, y <strong>Millonarios</strong> las estrellas del <strong>87 y 88</strong>. Los hermanos <strong>Gilberto y Miguel Rodríguez Orejuela</strong>, fundadores del Cartel de Cali, figuraron como accionistas principales del América y fueron capturados en los años 90.',
+      'La <strong>continuidad de elites politicas</strong> limita reformas de fondo mientras el futbol se mantiene como escenario simbolico de cohesion, incluso en los momentos mas oscuros del narcoterrorismo.'
     ],
 
-    editorialGallery: [{
-      url: 'https://futbolete.com/wp-content/uploads/2019/07/armstrong-y-gordon-santa-fe-america-en-el-estadio-el-campin.jpg',
-      caption: 'Armstrong y Gordon Santa Fe vs America en el Estadio El Campin',
-      credit: 'Futbolete'
-    }],
+    editorialGallery: [
+      {
+        url: 'https://futbolete.com/wp-content/uploads/2019/07/armstrong-y-gordon-santa-fe-america-en-el-estadio-el-campin.jpg',
+        caption: 'Armstrong y Gordon Santa Fe vs America en el Estadio El Campin',
+        credit: 'Futbolete'
+      },
+      {
+        url: 'https://www.eltiempo.com/files/article_content/uploads/2019/11/15/5d4a6a4f5a225_0.jpeg',
+        caption: 'Álvaro Ortega, árbitro asesinado en diciembre de 1989',
+        credit: 'El Tiempo - Archivo'
+      }
+    ],
     sources: [
       {
         label: 'Virgilio Barco (Wikipedia)',
@@ -624,6 +665,22 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       {
         label: 'Cesar Gaviria (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/C%C3%A9sar_Gaviria'
+      },
+      {
+        label: 'Álvaro Ortega - Wikipedia',
+        url: 'https://es.wikipedia.org/wiki/%C3%81lvaro_Ortega'
+      },
+      {
+        label: 'Cuando el narcotráfico asesinó a un árbitro (Infobae)',
+        url: 'https://www.infobae.com/america/colombia/2020/09/30/cuando-el-narcotrafico-asesino-a-un-arbitro-y-dejo-sin-campeon-al-futbol-profesional-colombiano/'
+      },
+      {
+        label: 'Polémica en Colombia por la relación entre el narco y el fútbol (Cosecha Roja)',
+        url: 'https://www.cosecharoja.org/polemica-en-colombia-por-la-relacion-entre-el-narco-y-el-futbol/'
+      },
+      {
+        label: 'Influencia del narcotráfico en el fútbol colombiano (Wikipedia)',
+        url: 'https://es.wikipedia.org/wiki/Influencia_del_narcotr%C3%A1fico_en_el_f%C3%BAtbol_colombiano'
       },
       {
         label: 'Armstrong y Gordon Santa Fe vs America en el Estadio El Campin',

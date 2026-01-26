@@ -12,7 +12,13 @@
         type="button"
         (click)="openImage(entry.image, entry.name, undefined, entry.name)"
       >
-        <img class="detail-portrait" [src]="entry.image" [alt]="entry.name" />
+        <img 
+          class="detail-portrait" 
+          [src]="entry.image" 
+          [alt]="entry.name"
+          appLazyImage
+          [placeholder]="'/assets/imagenes/logo512.png'"
+        />
       </button>
     </aside>
     <div class="detail-text">
@@ -52,7 +58,15 @@
               type="button"
               (click)="openImage(item.url, item.caption, item.credit)"
             >
-              <img [src]="item.url" [alt]="item.caption" />
+              @if (!isImageLoaded(item.url)) {
+                <div class="skeleton skeleton-image"></div>
+              }
+              <img 
+                [src]="item.url" 
+                [alt]="item.caption"
+                [style.display]="isImageLoaded(item.url) ? 'block' : 'none'"
+                (load)="onImageLoad(item.url)"
+              />
             </button>
             <figcaption>
               {{ item.caption }}
