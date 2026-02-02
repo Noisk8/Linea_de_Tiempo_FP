@@ -761,8 +761,8 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Ernesto_Samper.jpg/640px-Ernesto_Samper.jpg',
     paragraphs: [
       'En <strong>1994</strong>, Ernesto Samper gana las elecciones frente a <strong>Andres Pastrana</strong>. La campana queda marcada por las denuncias de <strong>financiacion del cartel de Cali</strong>, lo que desemboca en el <strong>Proceso 8000</strong>.',
-      'El relato vincula esa crisis politica con el futbol: en 1994 Colombia fracasa en el Mundial y se reafirma la relacion entre seleccion, dirigencia y mafias. Se afirma que la <strong>Federacion Colombiana de Futbol</strong> estaba bajo la influencia del cartel.',
-      'En ese contexto, <strong>Miguel Rodriguez Orejuela</strong> convoca a la Seleccion a su finca y ofrece incentivos economicos. La influencia se explica porque el presidente de la Federacion era <strong>Juan Jose Bellini</strong>, senalado como testaferro del capo.',
+      'El relato vincula esa crisis politica con el futbol: en 1994 Colombia fracasa en el Mundial y se reafirma la relacion entre seleccion, dirigencia y mafias. Se afirma que la <strong>Federación Colombiana de Futbol</strong> estaba bajo la influencia del cartel.',
+      'En ese contexto, <strong>Miguel Rodriguez Orejuela</strong> convoca a la Seleccion a su finca y ofrece incentivos economicos. La influencia se explica porque el presidente de la Federación era <strong>Juan Jose Bellini</strong>, señalado como testaferro del capo.',
       'Bellini es detenido en <strong>1995</strong> por sus vinculos con el cartel de Cali y por <strong>lavado de activos</strong>. Tras salir de la carcel, vuelve como asesor en el futbol y mantiene influencia en clubes y directivos.',
       'La politica deportiva queda atravesada por flujos ilegales de dinero y poder, con efectos duraderos en la institucionalidad del futbol.'
     ],
@@ -950,16 +950,46 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Juan_Manuel_Santos_and_Lula_%28cropped%29.jpg/640px-Juan_Manuel_Santos_and_Lula_%28cropped%29.jpg',
     paragraphs: [
       'La foto fue con <strong>Ramon Calderon</strong>, pero el relato subraya que el socio mayoritario ya era <strong>Florentino Perez</strong>.',
-      'El proceso entre <strong>Santos</strong> y el futbol se describe como especialmente revelador, mas alla de la correlacion con los negocios de Florentino.',
-      'En <strong>2011</strong>, con Santos en la presidencia, Colombia fue anfitriona del <strong>Mundial Juvenil Sub-20</strong>; la foto de ese ano muestra a Santos junto a <strong>Seth Blatter</strong> y <strong>Luis Bedoya</strong>, protagonistas del <strong>FIFA Gate</strong>.',
+      'El proceso entre <strong>Santos</strong> y el futbol se describe como especialmente revelador, mas alla de la correlación con los negocios de Florentino.',
+      'En <strong>2011</strong>, con Santos en la presidencia, Colombia fue anfitriona del <strong>Mundial Juvenil Sub-20</strong>; la foto de ese año muestra a Santos junto a <strong>Seth Blatter</strong> y <strong>Luis Bedoya</strong>, protagonistas del <strong>FIFA Gate</strong>.',
       'Ese encuentro fue en <strong>El Campin</strong> y en ese Mundial Colombia se quedo pronto.',
-      'El 2011 deja otra crisis: la eliminacion del Sub-20 y el escandalo de violencia de genero del <strong>Bolillo</strong>.',
-      'Tras ese episodio, Santos llama a <strong>Luis Bedoya</strong> y plantea la necesidad de un tecnico serio; mueve fichas politicas y billetera para traer a <strong>Nestor Pekerman</strong>, con recursos que llegan a las federaciones y no solo al futbol.',
-      'La era <strong>Pekerman</strong> se atribuye a Santos: presiona y convence para su llegada y luego intenta mantenerlo cuando <strong>Yesurum</strong> busca sacarlo tras la salida de Bedoya.',
+      'El 2011 deja otra crisis: la eliminación del Sub-20 y el escandalo de violencia de genero del <strong>Bolillo</strong>.',
+      'Tras ese episodio, Santos llama a <strong>Luis Bedoya</strong> y plantea la necesidad de un tecnico serio; mueve fichas políticas y billetera para traer a <strong>Nestor Pekerman</strong>, con recursos que llegan a las federaciones y no solo al futbol.',
+      'La era <strong>Pekerman</strong> se atribuye a Santos: presiona y convence para su llegada y luego intenta mantenerlo cuando <strong>Jesurum</strong> busca sacarlo tras la salida de Bedoya.',
       'Ese pulso termina con el cierre del gobierno Santos en <strong>2018</strong>, cuando llega el gobierno de <strong>Ivan Duque</strong>, el mejor cabeceador de veintiuna que se ha sentado en la Casa de Narino.'
     ],
-    sources: [
-    ]
+    
+    editorialGallery:[ {
+      url: 'https://www.semana.com/resizer/v2/BNM7NXPEIFC7BKC6IWVQBCU4TM.jpg?smart=true&auth=382403f02a95e2467de929b1f49998c264ae6e24cff417e99e0206da945ff289&width=980&height=551',
+      caption: 'En julio de 2011, el presidente Juan Manuel Santos inauguró en el Estadio El Campín de Bogotá el mundial juvenil. En la imagen con el entonces presidente de la Fifa, Seph Blatter, y el de la Fedefútbol Luis Bedoya. Foto: Juan Carlos Sierra',
+      credit:'Semana'
+    }, {
+      url: 'https://media.gettyimages.com/id/121591179/es/foto/bogota-colombia-fifa-president-joseph-s-blatter-shakes-hands-with-colombian-president-juan.jpg?s=2048x2048&w=gi&k=20&c=pWAZS61wRej-Lcfecz8aJ2CqX3zAqL4hhayu8vHUQmY=',
+      caption: 'Juan Manuel Santos con Joseph Blatter',
+      credit:'Getty Images'
+      },
+      {
+        
+        url: 'http://media.cubadebate.cu/wp-content/uploads/2012/04/futbol-evo-santos5-580x453.jpg',
+        caption: 'Juan Manuel Santos con Joseph Blatter',
+        credit: 'Cuba Debate'
+      },
+    
+      {
+        url: 'https://www.eje21.com.co/site/wp-content/uploads/2018/05/Santos-condecora-a-Pekerman.jpg',
+        caption: 'La Selección Colombiana de Fútbol, con el ‘Profe’ José Pekerman a la cabeza, llegó este jueves a la Casa de Nariño para recibir el Tricolor Nacional de manos del Presidente Santos, antes de viajar al Mundial de Rusia 2018.',
+        credit:'Eje 21'
+      }],
+    
+    sources: [{
+      label: 'Semana -“Que no nos vuelva a suceder esa vergüenza”: Santos sobre Luis Bedoya ',
+      url:'https://www.semana.com/nacion/articulo/juan-manuel-santos-califica-de-verguenza-situacion-de-bedoya/472550/'
+    },
+      {
+        label: 'Santos condecora a Pekerman con la Cruz de Boyacá y abandera a Colombia',
+        url:'https://www.eje21.com.co/2018/05/santos-condecora-a-pekerman-con-la-cruz-de-boyaca-y-abandera-a-colombia/'
+      }
+]
   },
   {
     id: 'ivan-duque-2018',
@@ -974,16 +1004,27 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       'El relato insiste en que Duque no podia ver un balon sin mostrar que era capaz de dormirla en la cabeza, una obsesion rara en su puesta en escena.',
       'Se le califica como un “imbarroquin” y se le disputa un lugar entre los peores presidentes; Marroquin aparece como antecedente, pero Duque, el aprendiz, queda como caso extremo.',
       'Mas alla de las cabecitas, se afirma que desperdicio una posibilidad historica: el <strong>FIFA Gate</strong> de <strong>2015</strong> abrio la puerta para que los gobiernos intervinieran un futbol visto como corrupto.',
-      'Duque comenzo pretendiendo controlarlo con el <strong>Ministerio del Deporte</strong>, con <strong>Lucena</strong>, y pidiendo la cabeza de <strong>Ramon Yesurum</strong>, senalado como organizador de un cartel de reventa de loterias.',
+      'Duque comenzo pretendiendo controlarlo con el <strong>Ministerio del Deporte</strong>, con <strong>Lucena</strong>, y pidiendo la cabeza de <strong>Ramon Jesurum</strong>, senalado como organizador de un cartel de reventa de loterias.',
       'Hoy Duque hace parte de la Junta de la <strong>Fundacion FIFA</strong>.',
       'En los ultimos veintiun dias de su gobierno, Duque recibe a <strong>Gianni Infantino</strong>, presidente de la FIFA.',
-      'La cercania se explica por <strong>Ramon Yesurum</strong>: habia colado una ficha en el comite de etica y el voto decisivo de <strong>Maria Clara Rojas</strong> evito la salida de Infantino; por eso, se dice, Infantino le debe el puesto y el sombrero.',
-      'Con Yesurum al borde, por el cartel de reventa de boleteria, el caso de <strong>Colfutpro</strong> en el <strong>Ministerio del Trabajo</strong> y procesos en la <strong>SIC</strong>, la visita de Infantino abre un giro.',
+      'La cercania se explica por <strong>Ramon Jesurum</strong>: habia colado una ficha en el comite de etica y el voto decisivo de <strong>Maria Clara Rojas</strong> evito la salida de Infantino; por eso, se dice, Infantino le debe el puesto y el sombrero.',
+      'Con Jesurum al borde, por el cartel de reventa de boleteria, el caso de <strong>Acolfutpro</strong> en el <strong>Ministerio del Trabajo</strong> y procesos en la <strong>SIC</strong>, la visita de Infantino abre un giro.',
       'Primero, la <strong>Superintendencia de Industria y Comercio</strong> deja quietas las investigaciones por vetos a futbolistas y cartelizacion de la Liga Femenina.',
       'Segundo, el <strong>Ministerio del Trabajo</strong> cierra el caso sobre derechos laborales de futbolistas; el jefe directo del ministerio es el presidente.',
       'Tercero, Duque entrega el poder y a los 15 dias termina con Infantino; hoy juega futbol con viejas glorias y hace sus cabecitas.',
       'La conclusion editorial es clara: meterse con el futbol puede dar votos y poder, pero casi siempre termina alineando a los gobiernos del lado del futbol.'
     ],
+    
+    editorialGallery: [{
+      url: 'https://lachachara.org/wp-content/uploads/2019/06/20190405193048.jpg',
+      caption:'Ernesto Lucen, Iván Duque y Ramón Jesurum'
+    },
+      {
+        url: 'https://www.infobae.com/resizer/v2/BVINHWW6VFGVRIX7UVWYSCX53A.jpg?auth=5345ad33d7d4640839b876c8f0cf101320638876d736bd209a711fd533db473e&smart=true&width=992&height=558&quality=85',
+        caption: 'Presidente Iván Duque festejó el título del América y Rafael Pardo le respondió',
+        credit: 'Infobae'
+      }
+      ],
     sources: [
       {
         label: 'Ivan Duque (Wikipedia)',
@@ -996,7 +1037,15 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       {
         label: 'Ministerio del Deporte (Wikipedia)',
         url: 'https://es.wikipedia.org/wiki/Ministerio_del_Deporte_(Colombia)'
-      }
+      }, {
+        label: 'La final de la Copa América 2020 se disputará en Colombia',
+        url: 'https://lachachara.org/la-final-de-la-copa-america-2020-se-disputara-en-colombia/'
+      },
+      {
+        label: 'Ministerio del Trabajo reversa decisión del Gobierno Duque y ordena diálogo entre Dimayor, FCF y Acolfutpro',
+        url:'https://www.infobae.com/america/colombia/2022/10/31/ministerio-del-trabajo-reversa-decision-del-gobierno-duque-y-ordena-dialogo-entre-dimayor-fcf-y-acolfutpro/'
+      },
+   
     ]
   },
   {
