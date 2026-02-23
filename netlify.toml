@@ -1,6 +1,6 @@
 [build]
-  command = "npm run build"
+  command = "npm ci && npm run build"
   publish = "dist/linea-de-tiempo-fp/browser"
 
 [build.environment]
-  NODE_VERSION = "20.18.0"
+  NODE_VERSION = "22.16.0"
