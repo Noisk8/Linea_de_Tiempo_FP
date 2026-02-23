@@ -26,6 +26,7 @@ export class DetailComponent {
     alt?: string;
   };
   loadedImages: Set<string> = new Set();
+  highlightedSources: number[] = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -70,5 +71,33 @@ export class DetailComponent {
 
   isImageLoaded(url: string): boolean {
     return this.loadedImages.has(url);
+  }
+
+  onTextClick(event: MouseEvent) {
+    const target = event.target as HTMLElement;
+
+    if (target.tagName.toLowerCase() === 'sup') {
+      const text = target.textContent;
+      if (text) {
+        // Parse numbers from comma-separated string (e.g., "1", "3,4")
+        const sourceIndexes = text.split(',').map(n => parseInt(n.trim(), 10) - 1).filter(n => !isNaN(n) && n >= 0);
+        this.highlightedSources = sourceIndexes;
+
+        // Remove highlight after a few seconds
+        setTimeout(() => {
+          this.highlightedSources = [];
+        }, 3000);
+      }
+
+      // Scroll smoothly to the sources secton
+      const sourcesElement = document.getElementById('sources');
+      if (sourcesElement) {
+        sourcesElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  }
+
+  isHighlighted(index: number): boolean {
+    return this.highlightedSources.includes(index);
   }
 }

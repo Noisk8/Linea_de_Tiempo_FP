@@ -14,7 +14,7 @@
           [placeholder]="'/assets/imagenes/logo512.png'" />
       </button>
     </aside>
-    <div class="detail-text">
+    <div class="detail-text" (click)="onTextClick($event)">
       @for (paragraph of (i18nService.currentLang() === 'en' && entry.paragraphs_en ? entry.paragraphs_en :
       entry.paragraphs); track paragraph; let i = $index) {
       <p [innerHTML]="paragraph"></p>
@@ -83,11 +83,11 @@
     </figure>
   </div>
 
-  <div class="detail-sources" *ngIf="entry.sources.length">
+  <div class="detail-sources" *ngIf="entry.sources.length" id="sources">
     <h3>{{ 'DETAIL.SOURCES' | translate }}</h3>
     <ul>
-      @for (source of entry.sources; track source.url) {
-      <li>
+      @for (source of entry.sources; track source.url; let idx = $index) {
+      <li [class.highlighted]="isHighlighted(idx)">
         <a [href]="source.url" target="_blank" rel="noopener">{{ source.label }}</a>
       </li>
       }
