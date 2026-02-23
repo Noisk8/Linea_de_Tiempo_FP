@@ -21,7 +21,7 @@
         "OPEN_DETAIL": "Abrir detalle"
     },
     "ABOUT": {
-        "TITLE": "Acerca de este proyecto",
+        "TITLE": " Inspiración...",
         "P1": "Todo empezó después de ver un episodio de",
         "HISTORIAS_SECRETAS": "Historias Secretas: Los Presidentes y el Fútbol",
         "P1_CONT": "el programa de",
@@ -32,14 +32,18 @@
         "ACK_HISTORIAS": "Mi agradecimiento especial al equipo de",
         "ACK_HISTORIAS_END": "Su trabajo investigativo fue la semilla de este proyecto. Sin su rigor periodístico y su pasión por contar estas historias, esta línea de tiempo no existiría.",
         "ACK_FONT_PART1": "La tipografía utilizada es Montserrat, diseñada por",
-        "ACK_FONT_PART2": ", inspirada en la señalética del barrio Montserrat de Buenos Aires. Una fuente que le da carácter y legibilidad a todo el proyecto."
+        "ACK_FONT_PART2": ", inspirada en la señalética del barrio Montserrat de Buenos Aires. Una fuente que le da carácter y legibilidad a todo el proyecto.",
+        "ACK_JD_PART1": "Un agradecimiento especial a",
+        "ACK_JD_PART2": "por realizar el primer feedback del proyecto y ayudar a mejorarlo."
     },
     "REFERENCES": {
         "TITLE": "Referencias",
         "GENERAL": "Referencias Generales"
     },
     "FOOTER": {
-        "CREATOR_LABEL": "Creador",
+        "CREATOR_LABEL": "By",
+        "REPO_LABEL": "Código Fuente",
+        "REPO_LINK": "Ver en GitHub",
         "CONTACT_LABEL": "Contacto",
         "LICENSE_TEXT": "Licenciado bajo Creative Commons Atribución-CompartirIgual 4.0 Internacional."
     },

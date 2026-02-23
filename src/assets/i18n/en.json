@@ -32,7 +32,9 @@
         "ACK_HISTORIAS": "Special thanks to the team behind",
         "ACK_HISTORIAS_END": "Their investigative work was the seed of this project. Without their journalistic rigor and passion for telling these stories, this timeline would not exist.",
         "ACK_FONT_PART1": "The typeface used is Montserrat, designed by",
-        "ACK_FONT_PART2": ", inspired by the signage of the Montserrat neighborhood in Buenos Aires. A font that gives character and readability to the entire project."
+        "ACK_FONT_PART2": ", inspired by the signage of the Montserrat neighborhood in Buenos Aires. A font that gives character and readability to the entire project.",
+        "ACK_JD_PART1": "Special thanks to",
+        "ACK_JD_PART2": "for providing the first feedback of the project and helping improve it."
     },
     "REFERENCES": {
         "TITLE": "References",
@@ -40,6 +42,8 @@
     },
     "FOOTER": {
         "CREATOR_LABEL": "Creator",
+        "REPO_LABEL": "Source Code",
+        "REPO_LINK": "View on GitHub",
         "CONTACT_LABEL": "Contact",
         "LICENSE_TEXT": "Licensed under Creative Commons Attribution-ShareAlike 4.0 International."
     },

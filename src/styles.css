@@ -146,6 +146,26 @@ em {
   filter: url(#sketchy);
 }
 
+/* Acknowledgment cards */
+.ack-card {
+  position: relative;
+  border-color: transparent !important;
+}
+
+.ack-card::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border: 2px solid var(--border);
+  border-radius: inherit;
+  pointer-events: none;
+  filter: url(#sketchy);
+}
+
+.ack-card.font-story::after {
+  border-left: 4px solid var(--accent);
+}
+
 /* General reference left-accent bar */
 .general-references {
   position: relative;
