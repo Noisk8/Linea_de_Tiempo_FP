@@ -8,7 +8,7 @@
         "CMD_PALETTE": "Buscar..."
     },
     "HOME": {
-        "EYEBROW": "Línea de tiempo",
+        "EYEBROW": "",
         "TITLE": "Presidentes y fútbol en Colombia",
         "LEAD": "Un recorrido visual que conecta los gobiernos de Colombia con episodios clave del fútbol nacional. Explora cada etapa y descubre cómo el deporte ha reflejado nuestra historia, basándose en el episodio Historias secretas: los presidentes y el fútbol de Alejandro Pino Calad y Wallas.",
         "CTA": "Explorar timeline"
@@ -21,54 +21,27 @@
         "OPEN_DETAIL": "Abrir detalle"
     },
     "ABOUT": {
-        "TITLE": "Inspiración...",
-        "P1_PART1": "Esta visualización recoge, con anexos y contexto adicional, el trabajo periodístico de ",
-        "P1_PART2": " y ",
-        "P1_PART3": " en su programa ",
-        "P1_PART4": ". Su investigación conecta ",
-        "P1_PART5": " con un rigor narrativo que permite leer el fútbol como un ",
-        "P1_PART6": ": un ",
-        "P1_PART7": " donde se cruzan élites, reformas, violencias, proyectos de nación y disputas por el sentido de lo popular.",
-        "P1_B1": "Alejandro Pino Calad",
-        "P1_B2": "Wallas",
-        "P1_I1": "\"Historias secretas\"",
-        "P1_B3": "política, deporte y sociedad",
-        "P1_B4": "espejo de la historia colombiana",
-        "P1_I2": "archivo vivo",
-        "P2_PART1": "Esta lectura no solo ilumina los hechos, también revela las ausencias, los silencios y las jerarquías que han marcado la ",
-        "P2_PART2": ". Por eso este proyecto existe: para extender esa ruta, sumar fuentes, ampliar voces y ofrecer una ",
-        "P2_PART3": " que invite a pensar el deporte más allá de la cancha.",
-        "P2_B1": "memoria deportiva",
-        "P2_B2": "experiencia visual",
-        "P3_PART1": "Nuestro agradecimiento es profundo y explícito: por abrir el archivo, por sostener la memoria y por dar herramientas para pensarla con ",
-        "P3_PART2": ". Esta línea de tiempo es una contribución a la ",
-        "P3_PART3": " del país y un llamado a no separar el relato deportivo de las condiciones ",
-        "P3_PART4": " que lo hicieron posible.",
-        "P3_B1": "mirada crítica",
-        "P3_I1": "memoria histórica deportiva",
-        "P3_B2": "sociales, económicas y políticas",
-        "ACK_TITLE": "Agradecimientos Especiales",
-        "ACK_P1_PART1": "A ",
-        "ACK_P1_PART2": ", ",
-        "ACK_P1_PART3": " y ",
-        "ACK_P1_PART4": ", cuyo riguroso trabajo de investigación e hilo narrativo sentaron las bases para esta experiencia. Su forma de entrelazar la política y el deporte nos retó a pensar nuestra memoria histórica con mayor profundidad.",
-        "ACK_P2_PART1": "Un agradecimiento especial a ",
-        "ACK_P2_PART2": " por liberar la fuente ",
-        "ACK_P2_PART3": ". Al conocer la historia de esta tipografía —rescatada de los históricos carteles urbanos de Buenos Aires— nos sentimos profundamente inspirados. Su esfuerzo por ",
-        "ACK_P2_PART4": " resonó perfectamente con nuestro objetivo histórico, convirtiéndola en la voz tipográfica ideal para este proyecto.",
-        "ACK_P2_B1": "preservar la memoria a través del diseño",
-        "ACK_P2_I1": "Montserrat"
+        "TITLE": "Acerca de este proyecto",
+        "P1": "Todo empezó después de ver un episodio de",
+        "HISTORIAS_SECRETAS": "Historias Secretas: Los Presidentes y el Fútbol",
+        "P1_CONT": "el programa de",
+        "AND": "y",
+        "P1_END": "Ese episodio me abrió los ojos sobre las conexiones profundas entre la política colombiana y el fútbol nacional. Me impactó tanto que decidí crear esta línea de tiempo como un ejercicio personal de visualizar toda la información allí nombrada, organizándola cronológicamente y complementándola con datos y referencias adicionales de mi parte.",
+        "P2": "Este proyecto está hecho con mucho respeto hacia el trabajo periodístico original y con el ánimo de promover el periodismo deportivo con enfoque crítico. Creo firmemente que el fútbol en Colombia no se puede entender sin mirar su contexto político y social, y esta herramienta busca facilitar esa lectura para cualquier persona interesada en nuestra historia.",
+        "ACK_TITLE": "Agradecimientos",
+        "ACK_HISTORIAS": "Mi agradecimiento especial al equipo de",
+        "ACK_HISTORIAS_END": "Su trabajo investigativo fue la semilla de este proyecto. Sin su rigor periodístico y su pasión por contar estas historias, esta línea de tiempo no existiría.",
+        "ACK_FONT_PART1": "La tipografía utilizada es Montserrat, diseñada por",
+        "ACK_FONT_PART2": ", inspirada en la señalética del barrio Montserrat de Buenos Aires. Una fuente que le da carácter y legibilidad a todo el proyecto."
     },
     "REFERENCES": {
         "TITLE": "Referencias",
         "GENERAL": "Referencias Generales"
     },
     "FOOTER": {
-        "MADE_WITH": "Hecho con pasión por la historia del fútbol colombiano.",
-        "BASED_ON": "Basado en",
-        "BY": "de",
-        "AND": "y",
-        "FONT": "Fuente"
+        "CREATOR_LABEL": "Creador",
+        "CONTACT_LABEL": "Contacto",
+        "LICENSE_TEXT": "Licenciado bajo Creative Commons Atribución-CompartirIgual 4.0 Internacional."
     },
     "COMMON": {
         "TOGGLE_DARK": "Cambiar a modo oscuro",

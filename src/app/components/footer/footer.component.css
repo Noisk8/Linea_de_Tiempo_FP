@@ -1,55 +1,136 @@
 .site-footer {
   width: min(1100px, 92vw);
-  margin: 3rem auto 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  margin: 4rem auto 2rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border);
   font-size: 0.9rem;
 }
 
-.footer-content {
+/* Two-column grid */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.footer-col {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.8rem;
-  text-align: center;
+  gap: 0.4rem;
 }
 
-.footer-content p {
-  margin: 0;
+.footer-col:last-child {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.footer-heading {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
   color: var(--muted);
-  font-weight: 500;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
 }
 
-.footer-credits {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.creator-name {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.creator-alias {
+  margin: 0;
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+
+.github-link {
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  color: rgba(106, 98, 88, 0.7);
-  /* Lighter version of --muted */
-  font-size: 0.8rem;
-}
-
-.separator {
-  opacity: 0.5;
-}
-
-.footer-credits a {
+  gap: 0.45rem;
+  margin-top: 0.5rem;
   color: var(--muted);
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+  font-size: 0.85rem;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.footer-credits a:hover {
+.github-link:hover {
+  color: var(--text);
+  transform: translateY(-1px);
+}
+
+.email-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.email-link:hover {
   color: var(--accent);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
+}
+
+/* Bottom license and copyright */
+.footer-bottom {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.license-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+.license-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.copyright {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+  font-size: 0.75rem;
+  opacity: 0.6;
 }
 
 @media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer-col:last-child {
+    align-items: flex-start;
+    text-align: left;
+  }
+
   .footer-credits {
     flex-direction: column;
     gap: 0.2rem;
