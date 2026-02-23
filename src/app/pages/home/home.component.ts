@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { MetaService } from '../../services/meta.service';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, TranslateModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
   animations: [
@@ -45,7 +46,7 @@ import { MetaService } from '../../services/meta.service';
 export class HomeComponent implements OnInit {
   imageUrl = 'pwe.png';
 
-  constructor(private metaService: MetaService) {}
+  constructor(private metaService: MetaService) { }
 
   ngOnInit(): void {
     this.metaService.setDefaultMeta();

@@ -1,13 +1,11 @@
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero-content">
-    <p class="eyebrow" @fadeDown>Linea de tiempo</p>
-    <h2 id="hero-title" @fadeLeft>Presidentes y fútbol en Colombia</h2>
+    <p class="eyebrow" @fadeDown>{{ 'HOME.EYEBROW' | translate }}</p>
+    <h2 id="hero-title" @fadeLeft>{{ 'HOME.TITLE' | translate }}</h2>
     <p class="lead" @fadeIn>
-      Un recorrido visual que conecta los gobiernos de Colombia con episodios clave del futbol nacional.
-      Explora cada etapa y descubre como el deporte ha reflejado nuestra historia, basandose en el episodio
-      Historias secretas: los presidentes y el futbol de Alejandro Pino Calad y Wallas.
+      {{ 'HOME.LEAD' | translate }}
     </p>
-    <a class="cta" routerLink="/timeline" @fadeScale>Explorar timeline</a>
+    <a class="cta" routerLink="/timeline" @fadeScale>{{ 'HOME.CTA' | translate }}</a>
   </div>
   <div class="hero-media" @fadeRight>
     <div class="hero-card">

@@ -1,115 +1,95 @@
 <section class="detail" *ngIf="entry; else notFound" aria-live="polite">
   <div class="detail-header">
     <span class="year">{{ entry.year }}</span>
-    <h2>{{ entry.name }}</h2>
-    <p>{{ entry.shortDescription }}</p>
+    <h2>{{ i18nService.currentLang() === 'en' && entry.name_en ? entry.name_en : entry.name }}</h2>
+    <p>{{ i18nService.currentLang() === 'en' && entry.shortDescription_en ? entry.shortDescription_en :
+      entry.shortDescription }}</p>
   </div>
 
   <div class="detail-body">
     <aside class="detail-portrait-wrap">
-      <button
-        class="image-button"
-        type="button"
-        (click)="openImage(entry.image, entry.name, undefined, entry.name)"
-      >
-        <img 
-          class="detail-portrait" 
-          [src]="entry.image" 
-          [alt]="entry.name"
-          appLazyImage
-          [placeholder]="'/assets/imagenes/logo512.png'"
-        />
+      <button class="image-button" type="button"
+        (click)="openImage(entry.image, entry.name, entry.name_en, undefined, entry.name)">
+        <img class="detail-portrait" [src]="entry.image" [alt]="entry.name" appLazyImage
+          [placeholder]="'/assets/imagenes/logo512.png'" />
       </button>
     </aside>
     <div class="detail-text">
-      @for (paragraph of entry.paragraphs; track paragraph; let i = $index) {
-        <p [innerHTML]="paragraph"></p>
+      @for (paragraph of (i18nService.currentLang() === 'en' && entry.paragraphs_en ? entry.paragraphs_en :
+      entry.paragraphs); track paragraph; let i = $index) {
+      <p [innerHTML]="paragraph"></p>
       }
     </div>
     @if (entry.editorialImage) {
-      <figure class="editorial-cutout">
-        <button
-          class="image-button"
-          type="button"
-          (click)="
+    <figure class="editorial-cutout">
+      <button class="image-button" type="button" (click)="
             openImage(
               entry.editorialImage.url,
               entry.editorialImage.caption,
+              entry.editorialImage.caption_en,
               entry.editorialImage.credit
             )
-          "
-        >
-          <img [src]="entry.editorialImage.url" [alt]="entry.editorialImage.caption" />
+          ">
+        <img [src]="entry.editorialImage.url" [alt]="entry.editorialImage.caption" />
+      </button>
+      <figcaption>
+        {{ i18nService.currentLang() === 'en' && entry.editorialImage.caption_en ? entry.editorialImage.caption_en :
+        entry.editorialImage.caption }}
+        @if (entry.editorialImage.credit) {
+        <span class="credit">{{ 'DETAIL.SOURCE_PREFIX' | translate }} {{ entry.editorialImage.credit }}</span>
+        }
+      </figcaption>
+    </figure>
+    }
+    @if (entry.editorialGallery?.length) {
+    <div class="editorial-gallery">
+      @for (item of entry.editorialGallery; track item.url) {
+      <figure>
+        <button class="image-button" type="button"
+          (click)="openImage(item.url, item.caption, item.caption_en, item.credit)">
+          @if (!isImageLoaded(item.url)) {
+          <div class="skeleton skeleton-image"></div>
+          }
+          <img [src]="item.url" [alt]="item.caption" [style.display]="isImageLoaded(item.url) ? 'block' : 'none'"
+            (load)="onImageLoad(item.url)" />
         </button>
         <figcaption>
-          {{ entry.editorialImage.caption }}
-          @if (entry.editorialImage.credit) {
-            <span class="credit">Fuente: {{ entry.editorialImage.credit }}</span>
+          {{ i18nService.currentLang() === 'en' && item.caption_en ? item.caption_en : item.caption }}
+          @if (item.credit) {
+          <span class="credit">{{ 'DETAIL.SOURCE_PREFIX' | translate }} {{ item.credit }}</span>
           }
         </figcaption>
       </figure>
-    }
-    @if (entry.editorialGallery?.length) {
-      <div class="editorial-gallery">
-        @for (item of entry.editorialGallery; track item.url) {
-          <figure>
-            <button
-              class="image-button"
-              type="button"
-              (click)="openImage(item.url, item.caption, item.credit)"
-            >
-              @if (!isImageLoaded(item.url)) {
-                <div class="skeleton skeleton-image"></div>
-              }
-              <img 
-                [src]="item.url" 
-                [alt]="item.caption"
-                [style.display]="isImageLoaded(item.url) ? 'block' : 'none'"
-                (load)="onImageLoad(item.url)"
-              />
-            </button>
-            <figcaption>
-              {{ item.caption }}
-              @if (item.credit) {
-                <span class="credit">Fuente: {{ item.credit }}</span>
-              }
-            </figcaption>
-          </figure>
-        }
-      </div>
+      }
+    </div>
     }
   </div>
 
-  <div
-    class="image-lightbox"
-    *ngIf="selectedImage"
-    (click)="closeImage()"
-    (keydown.escape)="closeImage()"
-    tabindex="0"
-  >
+  <div class="image-lightbox" *ngIf="selectedImage" (click)="closeImage()" (keydown.escape)="closeImage()" tabindex="0">
     <figure class="image-lightbox-content" (click)="$event.stopPropagation()">
       <button class="image-lightbox-close" type="button" (click)="closeImage()">
-        Cerrar
+        {{ 'DETAIL.CLOSE' | translate }}
       </button>
       <img [src]="selectedImage.url" [alt]="selectedImage.alt" />
       @if (selectedImage.caption || selectedImage.credit) {
-        <figcaption>
-          {{ selectedImage.caption }}
-          @if (selectedImage.credit) {
-            <span class="credit">Fuente: {{ selectedImage.credit }}</span>
-          }
-        </figcaption>
+      <figcaption>
+        {{ i18nService.currentLang() === 'en' && selectedImage.caption_en ? selectedImage.caption_en :
+        selectedImage.caption }}
+        @if (selectedImage.credit) {
+        <span class="credit">{{ 'DETAIL.SOURCE_PREFIX' | translate }} {{ selectedImage.credit }}</span>
+        }
+      </figcaption>
       }
     </figure>
   </div>
 
   <div class="detail-sources" *ngIf="entry.sources.length">
-    <h3>Fuentes</h3>
+    <h3>{{ 'DETAIL.SOURCES' | translate }}</h3>
     <ul>
       @for (source of entry.sources; track source.url) {
-        <li>
-          <a [href]="source.url" target="_blank" rel="noopener">{{ source.label }}</a>
-        </li>
+      <li>
+        <a [href]="source.url" target="_blank" rel="noopener">{{ source.label }}</a>
+      </li>
       }
     </ul>
   </div>
@@ -117,7 +97,7 @@
 
 <ng-template #notFound>
   <section class="detail">
-    <h2>Detalle no encontrado</h2>
-    <p>No existe una entrada para este presidente.</p>
+    <h2>{{ 'DETAIL.NOT_FOUND_TITLE' | translate }}</h2>
+    <p>{{ 'DETAIL.NOT_FOUND_MSG' | translate }}</p>
   </section>
 </ng-template>

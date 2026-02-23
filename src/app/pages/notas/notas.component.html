@@ -1,6 +1,65 @@
-<section class="page">
-  <h2>Inspiracion</h2>
-  <p>Esta visualizacion recoge, con anexos y contexto adicional, el trabajo periodistico de Alejandro Pino Calad y Walles en su programa Historias secretas. Su investigacion conecta politica, deporte y sociedad con un rigor narrativo que permite leer el futbol como un espejo de la historia colombiana: un archivo vivo donde se cruzan elites, reformas, violencias, proyectos de nacion y disputas por el sentido de lo popular. Esta lectura no solo ilumina los hechos, tambien revela las ausencias, los silencios y las jerarquias que han marcado la memoria deportiva. Por eso este proyecto existe: para extender esa ruta, sumar fuentes, ampliar voces y ofrecer una experiencia visual que invite a pensar el deporte mas alla de la cancha. Nuestro agradecimiento es profundo y explicito: por abrir el archivo, por sostener la memoria y por dar herramientas para pensarla con mirada critica. Esta linea de tiempo es una contribucion a la memoria historica deportiva del pais y un llamado a no separar el relato deportivo de las condiciones sociales, economicas y politicas que lo hicieron posible.</p>
-  <p>Este proyecto esta inspirado en el programa de Alejandro Pino Calad.</p>
-  <p>La idea es conectar la historia presidencial con los momentos que marcaron el futbol colombiano.</p>
+<section class="about-page fade-in">
+  <header class="about-header">
+
+    <h1>{{ 'ABOUT.TITLE' | translate }}</h1>
+    <div class="accent-line"></div>
+  </header>
+
+  <div class="about-content">
+    <p>
+      {{ 'ABOUT.P1_PART1' | translate }}
+      <strong>{{ 'ABOUT.P1_B1' | translate }}</strong> {{ 'ABOUT.P1_PART2' | translate }} <strong>{{ 'ABOUT.P1_B2' |
+        translate }}</strong> {{ 'ABOUT.P1_PART3' | translate }}
+      <em>{{ 'ABOUT.P1_I1' | translate }}</em>{{ 'ABOUT.P1_PART4' | translate }} <strong>{{ 'ABOUT.P1_B3' | translate
+        }}</strong>
+      {{ 'ABOUT.P1_PART5' | translate }} <strong>{{ 'ABOUT.P1_B4' | translate }}</strong>:
+      un <em>{{ 'ABOUT.P1_I2' | translate }}</em> {{ 'ABOUT.P1_PART7' | translate }}
+    </p>
+
+    <p>
+      {{ 'ABOUT.P2_PART1' | translate }} <strong>{{ 'ABOUT.P2_B1' | translate }}</strong>. {{ 'ABOUT.P2_PART2' |
+      translate }} <strong>{{ 'ABOUT.P2_B2' | translate }}</strong> {{ 'ABOUT.P2_PART3' | translate }}
+    </p>
+
+    <p>
+      {{ 'ABOUT.P3_PART1' | translate }} <strong>{{ 'ABOUT.P3_B1' | translate }}</strong>. {{ 'ABOUT.P3_PART2' |
+      translate }}
+      <em>{{ 'ABOUT.P3_I1' | translate }}</em> {{ 'ABOUT.P3_PART3' | translate }}
+      <strong>{{ 'ABOUT.P3_B2' | translate }}</strong> {{ 'ABOUT.P3_PART4' | translate }}
+    </p>
+
+  </div>
+
+  <div class="acknowledgments-section">
+    <h2>{{ 'ABOUT.ACK_TITLE' | translate }}</h2>
+    <div class="accent-line-small"></div>
+
+    <div class="ack-card">
+      <div class="ack-content">
+        <p>{{ 'ABOUT.ACK_P1_PART1' | translate }} <strong><a
+              href="https://www.youtube.com/live/-QwjguLdg3o?si=JsIUJS_aAXQ9TY34" target="_blank"
+              rel="noopener">Historias Secretas</a></strong>, <strong><a href="https://x.com/PinoCalad" target="_blank"
+              rel="noopener">Alejandro Pino Calad</a></strong> {{ 'ABOUT.ACK_P1_PART3' | translate }} <strong><a
+              href="https://x.com/SoyWallas" target="_blank" rel="noopener">Wallas</a></strong>, {{ 'ABOUT.ACK_P1_PART4'
+          | translate }}</p>
+      </div>
+    </div>
+
+    <div class="ack-card font-story">
+      <div class="ack-content">
+        <p>{{ 'ABOUT.ACK_P2_PART1' | translate }} <strong><a href="https://www.instagram.com/julietaula/"
+              target="_blank" rel="noopener">Julieta Ulanovsky</a></strong> {{ 'ABOUT.ACK_P2_PART2' | translate }}
+          <em>{{ 'ABOUT.ACK_P2_I1' | translate }}</em>. {{ 'ABOUT.ACK_P2_PART3' | translate }} <strong>{{
+            'ABOUT.ACK_P2_B1' | translate }}</strong> {{ 'ABOUT.ACK_P2_PART4' | translate }}
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="about-footer">
+    <p>Inspirado en el programa de <strong>Alejandro Pino Calad</strong>.</p>
+  </footer>
 </section>
+
+<app-scroll-to-top></app-scroll-to-top>

@@ -1,36 +1,40 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { NgIf } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { TIMELINE_ENTRIES, TimelineEntry } from '../../data/timeline-data';
 import { MetaService } from '../../services/meta.service';
 import { LazyImageDirective } from '../../directives/lazy-image.directive';
+import { TranslateModule } from '@ngx-translate/core';
+import { I18nService } from '../../services/i18n/i18n.service';
 
 @Component({
   selector: 'app-detail',
   standalone: true,
-  imports: [NgIf, LazyImageDirective],
+  imports: [NgIf, LazyImageDirective, TranslateModule],
   templateUrl: './detail.component.html',
   styleUrl: './detail.component.css'
 })
 export class DetailComponent {
+  i18nService = inject(I18nService);
   entry?: TimelineEntry;
   selectedImage?: {
     url: string;
     caption?: string;
+    caption_en?: string;
     credit?: string;
     alt?: string;
   };
   loadedImages: Set<string> = new Set();
 
   constructor(
-    private route: ActivatedRoute, 
+    private route: ActivatedRoute,
     private title: Title,
     private metaService: MetaService
   ) {
     const id = this.route.snapshot.paramMap.get('id');
     this.entry = TIMELINE_ENTRIES.find((item) => item.id === id);
-    
+
     // Establecer el título de la página con el nombre del presidente
     if (this.entry) {
       this.title.setTitle(this.entry.name);
@@ -39,10 +43,11 @@ export class DetailComponent {
     }
   }
 
-  openImage(url: string, caption?: string, credit?: string, alt?: string) {
+  openImage(url: string, caption?: string, caption_en?: string, credit?: string, alt?: string) {
     this.selectedImage = {
       url,
       caption,
+      caption_en,
       credit,
       alt: alt || caption || 'Imagen ampliada'
     };

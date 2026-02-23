@@ -1,16 +1,11 @@
 <section class="timeline">
   <div class="timeline-header">
-    <p class="timeline-kicker">Linea de tiempo</p>
-    <h2>Presidentes y futbol en Colombia</h2>
-    <p class="timeline-intro">Recorre la historia con contexto, imagenes y enlaces de cada periodo.</p>
+    <p class="timeline-kicker">{{ 'TIMELINE.KICKER' | translate }}</p>
+    <h2>{{ 'TIMELINE.TITLE' | translate }}</h2>
+    <p class="timeline-intro">{{ 'TIMELINE.INTRO' | translate }}</p>
     <div class="search-container">
-      <input 
-        type="text" 
-        placeholder="Buscar presidente..." 
-        class="search-input"
-        (input)="onSearchChange($event)"
-        [value]="searchTerm"
-      />
+      <input type="text" [placeholder]="'TIMELINE.SEARCH_PLACEHOLDER' | translate" class="search-input"
+        (input)="onSearchChange($event)" [value]="searchTerm" />
       <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <circle cx="11" cy="11" r="8"></circle>
         <path d="m21 21-4.35-4.35"></path>
@@ -26,30 +21,25 @@
       </ng-template>
 
       <ng-template pTemplate="content" let-entry>
-        <a
-          #timelineCard
-          class="timeline-card"
-          [class.is-loading]="!imageLoaded[entry.id]"
-          [attr.href]="'/presidentes/' + entry.id"
-          target="_blank"
-          rel="noopener"
-        >
+        <a #timelineCard class="timeline-card" [class.is-loading]="!imageLoaded[entry.id]"
+          [attr.href]="'/presidentes/' + entry.id" target="_blank" rel="noopener">
           <div class="timeline-media">
-            <img
-              [src]="entry.image"
-              [alt]="entry.name"
-              loading="lazy"
-              decoding="async"
-              (load)="onImageLoad(entry.id)"
-            />
+            <img [src]="entry.image" [alt]="entry.name" loading="lazy" decoding="async"
+              (load)="onImageLoad(entry.id)" />
           </div>
           <div class="timeline-body">
-            <h3 [innerHTML]="highlightText(entry.name)"></h3>
-            <p [innerHTML]="highlightText(entry.paragraphs[0])"></p>
-            <span class="cta">Abrir detalle</span>
+            <h3
+              [innerHTML]="highlightText(i18nService.currentLang() === 'en' && entry.name_en ? entry.name_en : entry.name)">
+            </h3>
+            <p
+              [innerHTML]="highlightText(i18nService.currentLang() === 'en' && entry.paragraphs_en ? entry.paragraphs_en[0] : entry.paragraphs[0])">
+            </p>
+            <span class="cta">{{ 'TIMELINE.OPEN_DETAIL' | translate }}</span>
           </div>
         </a>
       </ng-template>
     </p-timeline>
   </div>
 </section>
+
+<app-scroll-to-top></app-scroll-to-top>

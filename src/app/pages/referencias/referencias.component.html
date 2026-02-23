@@ -1,14 +1,15 @@
 <section class="page">
-  <h2>Referencias</h2>
-  
+  <h2>{{ 'REFERENCES.TITLE' | translate }}</h2>
+
   <!-- Referencias Generales -->
   <div class="reference-card general-references">
     <div class="reference-header">
-      <h3>Referencias Generales</h3>
+      <h3>{{ 'REFERENCES.GENERAL' | translate }}</h3>
     </div>
     <ul>
       <li>
-        <a href="http://www.cosecharoja.org/polemica-en-colombia-por-la-relacion-entre-el-narco-y-el-futbol" target="_blank" rel="noopener">
+        <a href="http://www.cosecharoja.org/polemica-en-colombia-por-la-relacion-entre-el-narco-y-el-futbol"
+          target="_blank" rel="noopener">
           Polémica en Colombia por la relación entre el narco y el fútbol - Cosecha Roja
         </a>
       </li>
@@ -18,19 +19,21 @@
   <!-- Referencias por Presidente -->
   <div class="reference-groups">
     @for (group of referencesByPresident; track group.name) {
-      <div class="reference-card">
-        <div class="reference-header">
-          <span class="year">{{ group.year }}</span>
-          <h3>{{ group.name }}</h3>
-        </div>
-        <ul>
-          @for (source of group.sources; track source.url) {
-            <li>
-              <a [href]="source.url" target="_blank" rel="noopener">{{ source.label }}</a>
-            </li>
-          }
-        </ul>
+    <div class="reference-card">
+      <div class="reference-header">
+        <span class="year">{{ group.year }}</span>
+        <h3>{{ group.name }}</h3>
       </div>
+      <ul>
+        @for (source of group.sources; track source.url) {
+        <li>
+          <a [href]="source.url" target="_blank" rel="noopener">{{ source.label }}</a>
+        </li>
+        }
+      </ul>
+    </div>
     }
   </div>
 </section>
+
+<app-scroll-to-top></app-scroll-to-top>

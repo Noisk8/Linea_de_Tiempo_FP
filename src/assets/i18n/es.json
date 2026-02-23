@@ -1,0 +1,85 @@
+{
+    "HEADER": {
+        "TITLE": "Presidentes y Futbol en Colombia",
+        "HOME": "Inicio",
+        "TIMELINE": "Timeline",
+        "ABOUT": "Acerca de",
+        "REFERENCES": "Referencias",
+        "CMD_PALETTE": "Buscar..."
+    },
+    "HOME": {
+        "EYEBROW": "Línea de tiempo",
+        "TITLE": "Presidentes y fútbol en Colombia",
+        "LEAD": "Un recorrido visual que conecta los gobiernos de Colombia con episodios clave del fútbol nacional. Explora cada etapa y descubre cómo el deporte ha reflejado nuestra historia, basándose en el episodio Historias secretas: los presidentes y el fútbol de Alejandro Pino Calad y Wallas.",
+        "CTA": "Explorar timeline"
+    },
+    "TIMELINE": {
+        "KICKER": "Linea de tiempo",
+        "TITLE": "Presidentes y futbol en Colombia",
+        "INTRO": "Recorre la historia con contexto, imagenes y enlaces de cada periodo.",
+        "SEARCH_PLACEHOLDER": "Buscar presidente...",
+        "OPEN_DETAIL": "Abrir detalle"
+    },
+    "ABOUT": {
+        "TITLE": "Inspiración...",
+        "P1_PART1": "Esta visualización recoge, con anexos y contexto adicional, el trabajo periodístico de ",
+        "P1_PART2": " y ",
+        "P1_PART3": " en su programa ",
+        "P1_PART4": ". Su investigación conecta ",
+        "P1_PART5": " con un rigor narrativo que permite leer el fútbol como un ",
+        "P1_PART6": ": un ",
+        "P1_PART7": " donde se cruzan élites, reformas, violencias, proyectos de nación y disputas por el sentido de lo popular.",
+        "P1_B1": "Alejandro Pino Calad",
+        "P1_B2": "Wallas",
+        "P1_I1": "\"Historias secretas\"",
+        "P1_B3": "política, deporte y sociedad",
+        "P1_B4": "espejo de la historia colombiana",
+        "P1_I2": "archivo vivo",
+        "P2_PART1": "Esta lectura no solo ilumina los hechos, también revela las ausencias, los silencios y las jerarquías que han marcado la ",
+        "P2_PART2": ". Por eso este proyecto existe: para extender esa ruta, sumar fuentes, ampliar voces y ofrecer una ",
+        "P2_PART3": " que invite a pensar el deporte más allá de la cancha.",
+        "P2_B1": "memoria deportiva",
+        "P2_B2": "experiencia visual",
+        "P3_PART1": "Nuestro agradecimiento es profundo y explícito: por abrir el archivo, por sostener la memoria y por dar herramientas para pensarla con ",
+        "P3_PART2": ". Esta línea de tiempo es una contribución a la ",
+        "P3_PART3": " del país y un llamado a no separar el relato deportivo de las condiciones ",
+        "P3_PART4": " que lo hicieron posible.",
+        "P3_B1": "mirada crítica",
+        "P3_I1": "memoria histórica deportiva",
+        "P3_B2": "sociales, económicas y políticas",
+        "ACK_TITLE": "Agradecimientos Especiales",
+        "ACK_P1_PART1": "A ",
+        "ACK_P1_PART2": ", ",
+        "ACK_P1_PART3": " y ",
+        "ACK_P1_PART4": ", cuyo riguroso trabajo de investigación e hilo narrativo sentaron las bases para esta experiencia. Su forma de entrelazar la política y el deporte nos retó a pensar nuestra memoria histórica con mayor profundidad.",
+        "ACK_P2_PART1": "Un agradecimiento especial a ",
+        "ACK_P2_PART2": " por liberar la fuente ",
+        "ACK_P2_PART3": ". Al conocer la historia de esta tipografía —rescatada de los históricos carteles urbanos de Buenos Aires— nos sentimos profundamente inspirados. Su esfuerzo por ",
+        "ACK_P2_PART4": " resonó perfectamente con nuestro objetivo histórico, convirtiéndola en la voz tipográfica ideal para este proyecto.",
+        "ACK_P2_B1": "preservar la memoria a través del diseño",
+        "ACK_P2_I1": "Montserrat"
+    },
+    "REFERENCES": {
+        "TITLE": "Referencias",
+        "GENERAL": "Referencias Generales"
+    },
+    "FOOTER": {
+        "MADE_WITH": "Hecho con pasión por la historia del fútbol colombiano.",
+        "BASED_ON": "Basado en",
+        "BY": "de",
+        "AND": "y",
+        "FONT": "Fuente"
+    },
+    "COMMON": {
+        "TOGGLE_DARK": "Cambiar a modo oscuro",
+        "TOGGLE_LIGHT": "Cambiar a modo claro",
+        "SCROLL_TOP": "Volver arriba"
+    },
+    "DETAIL": {
+        "CLOSE": "Cerrar",
+        "SOURCE_PREFIX": "Fuente:",
+        "SOURCES": "Fuentes",
+        "NOT_FOUND_TITLE": "Detalle no encontrado",
+        "NOT_FOUND_MSG": "No existe una entrada para este presidente."
+    }
+}

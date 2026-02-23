@@ -3,15 +3,20 @@ import { CommonModule } from '@angular/common';
 import { TimelineModule } from 'primeng/timeline';
 import { TIMELINE_ENTRIES } from '../../data/timeline-data';
 import { Subscription } from 'rxjs';
+import { ScrollToTop } from '../../components/scroll-to-top/scroll-to-top';
+import { TranslateModule } from '@ngx-translate/core';
+import { I18nService } from '../../services/i18n/i18n.service';
+import { inject } from '@angular/core';
 
 @Component({
   selector: 'app-timeline',
   standalone: true,
   templateUrl: './timeline.component.html',
   styleUrl: './timeline.component.css',
-  imports: [CommonModule, TimelineModule]
+  imports: [CommonModule, TimelineModule, ScrollToTop, TranslateModule]
 })
 export class TimelineComponent implements AfterViewInit, OnDestroy {
+  i18nService = inject(I18nService);
   entries = TIMELINE_ENTRIES;
   filteredEntries = TIMELINE_ENTRIES;
   searchTerm = '';
@@ -105,7 +110,11 @@ export class TimelineComponent implements AfterViewInit, OnDestroy {
       });
     };
 
-    this.scrollHandler = () => window.requestAnimationFrame(update);
+    this.scrollHandler = () => {
+      window.requestAnimationFrame(() => {
+        update();
+      });
+    };
     this.resizeHandler = () => window.requestAnimationFrame(update);
 
     window.addEventListener('scroll', this.scrollHandler, { passive: true });
@@ -142,10 +151,13 @@ export class TimelineComponent implements AfterViewInit, OnDestroy {
     if (!this.searchTerm || this.searchTerm.trim() === '') {
       this.filteredEntries = [...this.entries];
     } else {
-      this.filteredEntries = this.entries.filter(entry =>
-        entry.name.toLowerCase().includes(this.searchTerm) ||
-        entry.shortDescription.toLowerCase().includes(this.searchTerm)
-      );
+      const isEn = this.i18nService.currentLang() === 'en';
+      this.filteredEntries = this.entries.filter(entry => {
+        const nameText = isEn && entry.name_en ? entry.name_en : entry.name;
+        const descText = isEn && entry.shortDescription_en ? entry.shortDescription_en : entry.shortDescription;
+        return nameText.toLowerCase().includes(this.searchTerm) ||
+          descText.toLowerCase().includes(this.searchTerm);
+      });
     }
   }
 

@@ -9,9 +9,9 @@
   gap: 3rem;
   align-items: center;
   position: relative;
-  padding-top: 3.5rem;
+  padding-top: 6rem;
   padding-bottom: 5rem;
-  background: linear-gradient(120deg, #f5f1e8, #f6e7d6, #f0d9c6, #f5f1e8);
+  background: linear-gradient(120deg, var(--hero-bg-1, #f5f1e8), var(--hero-bg-2, #f6e7d6), var(--hero-bg-3, #f0d9c6), var(--hero-bg-4, #f5f1e8));
   background-size: 300% 300%;
   animation: gradientShift 15s ease infinite;
 }
@@ -20,7 +20,7 @@
   font-size: clamp(2.1rem, 4.2vw, 3.1rem);
   margin: 0.6rem 0 1.25rem;
   letter-spacing: -0.02em;
-  color: #2d2d2d;
+  color: var(--text);
 }
 
 .eyebrow {
@@ -66,12 +66,14 @@
 .hero-card {
   width: min(100%, 480px);
   padding: 1.4rem;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 3.5rem;
+  background: var(--hero-card-bg, rgba(255, 255, 255, 0.5));
+  border: 1px solid var(--hero-card-border, rgba(255, 255, 255, 0.6));
   backdrop-filter: blur(18px);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.18);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+  /* Ensure image doesn't spill over the radius */
 }
 
 .hero-card:hover {
@@ -82,7 +84,7 @@
 .hero-card img {
   width: 100%;
   display: block;
-  border-radius: 16px;
+  border-radius: 3rem;
   object-fit: cover;
 }
 
@@ -113,9 +115,11 @@
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -126,10 +130,12 @@
     transform: translateY(0);
     opacity: 0.5;
   }
+
   50% {
     transform: translateY(10px);
     opacity: 1;
   }
+
   100% {
     transform: translateY(0);
     opacity: 0.5;

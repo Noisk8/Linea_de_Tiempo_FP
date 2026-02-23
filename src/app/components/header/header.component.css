@@ -1,6 +1,7 @@
 .site-header {
+  display: flex !important;
   width: min(1100px, 92vw);
-  margin: 3rem auto 2rem;
+  margin: 3rem auto 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,22 +14,35 @@
   gap: 1rem;
 }
 
-.brand-mark {
-  font-size: 2.5rem;
+.brand-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  color: var(--text);
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.brand-text h1 {
+.brand-logo-link:hover {
+  opacity: 0.85;
+}
+
+.brand-logo-link:active {
+  transform: scale(0.97);
+}
+
+.brand-icon {
+  color: var(--accent);
+  /* A pop of the primary accent color */
+}
+
+.brand-acronym {
+  font-family: var(--font-main);
+  font-weight: 800;
+  font-size: 1.6rem;
+  letter-spacing: -0.05em;
   margin: 0;
-  font-size: clamp(1.3rem, 1.6vw + 0.9rem, 2.1rem);
-  letter-spacing: -0.03em;
-}
-
-.brand-text p {
-  margin: 0.35rem 0 0;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.7rem;
-  color: var(--muted);
+  color: var(--text);
 }
 
 .nav {
@@ -61,4 +75,119 @@
     flex-wrap: wrap;
     gap: 0.75rem 1.2rem;
   }
+
+  .cmd-trigger .cmd-text,
+  .cmd-trigger kbd {
+    display: none;
+    /* Hide text on mobile for minimalism */
+  }
+
+  .cmd-trigger {
+    padding: 0.5rem;
+    border-radius: 50%;
+  }
+}
+
+.cmd-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  border-radius: 999px;
+  padding: 0.35rem 0.5rem 0.35rem 0.75rem;
+  font-family: var(--font-main);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-left: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.cmd-trigger:hover {
+  background-color: var(--card);
+  color: var(--text);
+  border-color: var(--text);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.cmd-trigger:active {
+  transform: scale(0.97);
+}
+
+.cmd-trigger kbd {
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.15rem 0.35rem;
+  font-size: 0.7rem;
+  font-family: monospace;
+  color: var(--muted);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  margin-left: 0.2rem;
+}
+
+.lang-toggle {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+  margin-left: 0.5rem;
+}
+
+.lang-toggle:hover {
+  background-color: var(--card);
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.lang-toggle:active {
+  transform: scale(0.95);
+}
+
+
+.theme-toggle {
+  background: transparent;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
+  margin-left: 0.5rem;
+}
+
+.theme-toggle:hover {
+  background-color: var(--card);
+  color: var(--accent);
+  transform: scale(1.1);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.theme-toggle svg {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-toggle:hover svg.icon-sun {
+  transform: rotate(45deg);
+}
+
+.theme-toggle:hover svg.icon-moon {
+  transform: rotate(-15deg);
 }
