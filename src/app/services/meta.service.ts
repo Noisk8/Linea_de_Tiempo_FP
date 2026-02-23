@@ -12,7 +12,7 @@ export class MetaService {
   private siteUrl: string;
 
   constructor(
-    private meta: Meta, 
+    private meta: Meta,
     private title: Title,
     @Inject(PLATFORM_ID) private platformId: object
   ) {
@@ -138,7 +138,7 @@ export class MetaService {
           "name": "Presidentes y Fútbol en Colombia",
           "logo": {
             "@type": "ImageObject",
-            "url": `${this.siteUrl}/assets/imagenes/logo512.png`
+            "url": `${this.siteUrl}/imagenes/logo512.png`
           }
         },
         "mainEntityOfPage": {
@@ -159,7 +159,7 @@ export class MetaService {
           "name": "Presidentes y Fútbol en Colombia",
           "logo": {
             "@type": "ImageObject",
-            "url": `${this.siteUrl}/assets/imagenes/logo512.png`
+            "url": `${this.siteUrl}/imagenes/logo512.png`
           }
         }
       };

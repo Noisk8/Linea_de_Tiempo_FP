@@ -33,6 +33,7 @@ body {
   color: var(--text);
   background: var(--background);
   transition: background-color 0.4s ease, color 0.4s ease;
+  overflow-x: hidden;
 }
 
 [data-theme="light"] body,
@@ -71,4 +72,221 @@ strong {
 
 em {
   font-style: italic;
+}
+
+/* ============================================
+   HAND-DRAWN / SKETCHY BORDER SYSTEM
+   Texto: siempre Montserrat limpio.
+   Bordes: distorsionados con filtro SVG via ::after.
+   ============================================ */
+
+/* Imagen del presidente (sin texto) → filtro fuerte directo */
+.detail-portrait {
+  filter: url(#sketchy);
+}
+
+/* ─── Pseudo-element sketchy border mixin ───
+   Uso: el elemento padre tiene position: relative y border: none.
+   El ::after dibuja un borde visible con filter: url(#sketchy).
+   ───────────────────────────────────────── */
+
+/* Search input */
+.search-input {
+  position: relative;
+  border-color: transparent !important;
+}
+
+.search-input::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border: 2px solid var(--border);
+  border-radius: inherit;
+  pointer-events: none;
+  filter: url(#sketchy);
+}
+
+.search-input:focus::after {
+  border-color: var(--accent);
+}
+
+/* Navbar buttons: cmd-trigger, lang-toggle, theme-toggle */
+.cmd-trigger,
+.lang-toggle,
+.theme-toggle {
+  position: relative;
+  border-color: transparent !important;
+}
+
+.cmd-trigger::after,
+.lang-toggle::after,
+.theme-toggle::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border: 1px solid var(--border);
+  border-radius: inherit;
+  pointer-events: none;
+  filter: url(#sketchy);
+}
+
+/* Reference cards */
+.reference-card {
+  position: relative;
+  border-color: transparent !important;
+}
+
+.reference-card::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border: 2px solid var(--accent);
+  border-radius: inherit;
+  pointer-events: none;
+  filter: url(#sketchy);
+}
+
+/* General reference left-accent bar */
+.general-references {
+  position: relative;
+  border-color: transparent !important;
+}
+
+.general-references::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-left: 4px solid var(--accent);
+  pointer-events: none;
+  filter: url(#sketchy);
+}
+
+/* CTA button (Home) */
+.cta {
+  position: relative;
+}
+
+.cta::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border: 2px solid rgba(194, 70, 47, 0.6);
+  border-radius: inherit;
+  pointer-events: none;
+  filter: url(#sketchy);
+}
+
+/* Hero card (Home) */
+.hero-card {
+  position: relative;
+}
+
+.hero-card::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border: 2px solid var(--border);
+  border-radius: inherit;
+  pointer-events: none;
+  filter: url(#sketchy);
+}
+
+/* Footer top separator */
+.site-footer {
+  position: relative;
+  border-color: transparent !important;
+}
+
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  border-top: 2px solid var(--border);
+  pointer-events: none;
+  filter: url(#sketchy);
+}
+
+/* Footer bottom separator */
+.footer-bottom {
+  position: relative;
+  border-color: transparent !important;
+}
+
+.footer-bottom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  border-top: 2px solid var(--border);
+  pointer-events: none;
+  filter: url(#sketchy);
+}
+
+/* Scroll-to-top button */
+.scroll-to-top {
+  position: relative;
+}
+
+.scroll-to-top::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border: 2px solid var(--accent);
+  border-radius: inherit;
+  pointer-events: none;
+  filter: url(#sketchy);
+  transition: border-color 0.3s ease;
+}
+
+/* Nav active underline */
+.nav a.active::after,
+.nav a:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 0;
+  border-bottom: 3px solid var(--accent);
+  pointer-events: none;
+  filter: url(#sketchy);
+}
+
+.nav a {
+  position: relative;
+}
+
+/* License badge */
+.license-link {
+  position: relative;
+  border-color: transparent !important;
+}
+
+.license-link::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border: 1px solid var(--border);
+  border-radius: inherit;
+  pointer-events: none;
+  filter: url(#sketchy);
+}
+
+.license-link:hover::after {
+  border-color: var(--accent);
+}
+
+/* Timeline line (the vertical progress line) */
+.timeline-progress {
+  filter: url(#sketchy);
+}
+
+/* Timeline connector dots */
+:host ::ng-deep .p-timeline-event-connector {
+  filter: url(#sketchy);
 }

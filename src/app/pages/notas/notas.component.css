@@ -2,6 +2,37 @@
   width: min(800px, 92vw);
   margin: 2rem auto 6rem;
   font-family: var(--font-main);
+  position: relative;
+}
+
+.dynamic-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  z-index: 0;
+  background-repeat: repeat;
+  background-size: 500px;
+  background-position: center;
+  opacity: 0.12;
+  pointer-events: none;
+  filter: contrast(1.2) sepia(0.3);
+  transition: opacity 0.5s ease, filter 0.5s ease;
+}
+
+:host-context([data-theme="dark"]) .dynamic-bg {
+  filter: invert(1) hue-rotate(180deg) brightness(1.2) contrast(1.4);
+  opacity: 0.05;
+}
+
+.about-header,
+.about-content,
+.acknowledgments-section,
+.about-footer {
+  position: relative;
+  z-index: 1;
 }
 
 .about-header {

@@ -1,6 +1,6 @@
 {
     "HEADER": {
-        "TITLE": "Presidentes y Futbol en Colombia",
+        "TITLE": "Presidentes y Fútbol en Colombia",
         "HOME": "Inicio",
         "TIMELINE": "Timeline",
         "ABOUT": "Acerca de",
@@ -14,9 +14,9 @@
         "CTA": "Explorar timeline"
     },
     "TIMELINE": {
-        "KICKER": "Linea de tiempo",
-        "TITLE": "Presidentes y futbol en Colombia",
-        "INTRO": "Recorre la historia con contexto, imagenes y enlaces de cada periodo.",
+        "KICKER": "Línea de tiempo",
+        "TITLE": "Presidentes y fútbol en Colombia",
+        "INTRO": "Recorre la historia con contexto, imágenes y enlaces de cada periodo.",
         "SEARCH_PLACEHOLDER": "Buscar presidente...",
         "OPEN_DETAIL": "Abrir detalle"
     },

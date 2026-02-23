@@ -11,9 +11,33 @@
   position: relative;
   padding-top: 6rem;
   padding-bottom: 5rem;
-  background: linear-gradient(120deg, var(--hero-bg-1, #f5f1e8), var(--hero-bg-2, #f6e7d6), var(--hero-bg-3, #f0d9c6), var(--hero-bg-4, #f5f1e8));
-  background-size: 300% 300%;
-  animation: gradientShift 15s ease infinite;
+}
+
+.dynamic-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  z-index: -1;
+  background-repeat: repeat;
+  background-size: 500px;
+  background-position: center;
+  opacity: 0.12;
+  pointer-events: none;
+  filter: contrast(1.2) sepia(0.3);
+  transition: opacity 0.5s ease, filter 0.5s ease;
+}
+
+:host-context([data-theme="dark"]) .dynamic-bg {
+  filter: invert(1) hue-rotate(180deg) brightness(1.2) contrast(1.4);
+  opacity: 0.05;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-content h2 {
@@ -61,15 +85,17 @@
 .hero-media {
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-card {
   width: min(100%, 480px);
   padding: 1.4rem;
   border-radius: 3.5rem;
-  background: var(--hero-card-bg, rgba(255, 255, 255, 0.5));
-  border: 1px solid var(--hero-card-border, rgba(255, 255, 255, 0.6));
-  backdrop-filter: blur(18px);
+  background: var(--hero-card-bg, rgba(255, 255, 255, 0.15));
+  border: 1px solid var(--hero-card-border, rgba(255, 255, 255, 0.4));
+  backdrop-filter: blur(12px);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.18);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   overflow: hidden;
@@ -95,6 +121,8 @@
   transform: translateX(-50%);
   width: 28px;
   height: 44px;
+  position: absolute;
+  z-index: 1;
   border: 2px solid rgba(45, 45, 45, 0.4);
   border-radius: 999px;
   display: flex;

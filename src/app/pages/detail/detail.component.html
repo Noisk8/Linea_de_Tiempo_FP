@@ -1,4 +1,6 @@
 <section class="detail" *ngIf="entry; else notFound" aria-live="polite">
+  <div class="dynamic-bg" [style.background-image]="'url(/imagenes/bg/' + entry.id + '.png)'" [class.bg-loaded]="true">
+  </div>
   <div class="detail-header">
     <span class="year">{{ entry.year }}</span>
     <h2>{{ i18nService.currentLang() === 'en' && entry.name_en ? entry.name_en : entry.name }}</h2>
@@ -11,7 +13,7 @@
       <button class="image-button" type="button"
         (click)="openImage(entry.image, entry.name, entry.name_en, undefined, entry.name)">
         <img class="detail-portrait" [src]="entry.image" [alt]="entry.name" appLazyImage
-          [placeholder]="'/assets/imagenes/logo512.png'" />
+          [placeholder]="'/imagenes/logo512.png'" />
       </button>
     </aside>
     <div class="detail-text" (click)="onTextClick($event)">

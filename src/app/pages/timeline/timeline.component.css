@@ -1,6 +1,35 @@
 .timeline {
   width: min(1100px, 92vw);
   margin: 0 auto 4rem;
+  position: relative;
+}
+
+.dynamic-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  z-index: 0;
+  background-repeat: repeat;
+  background-size: 500px;
+  background-position: center;
+  opacity: 0.12;
+  pointer-events: none;
+  filter: contrast(1.2) sepia(0.3);
+  transition: opacity 0.5s ease, filter 0.5s ease;
+}
+
+:host-context([data-theme="dark"]) .dynamic-bg {
+  filter: invert(1) hue-rotate(180deg) brightness(1.2) contrast(1.4);
+  opacity: 0.05;
+}
+
+.timeline-header,
+.timeline-wrapper {
+  position: relative;
+  z-index: 1;
 }
 
 .timeline-header {
@@ -128,17 +157,26 @@ mark {
   background: var(--card);
   border-radius: 1.5rem;
   overflow: hidden;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
   display: grid;
   grid-template-columns: minmax(180px, 260px) 1fr;
   min-height: 200px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
   width: 100%;
   opacity: 0;
   transform: translateY(18px);
-  transition: transform 0.4s ease, opacity 0.4s ease, box-shadow 0.2s ease;
+  transition: transform 0.4s ease, opacity 0.4s ease, box-shadow 0.3s ease, filter 0.3s ease;
   position: relative;
   z-index: 1;
+  /* Hand-drawn sketch border effect */
+  border: none;
+  box-shadow:
+    0 0 0 2px var(--card),
+    1px 1px 0 2.5px var(--accent),
+    -1px -1px 0 2.5px var(--accent),
+    2px -1px 0 2px var(--accent),
+    -2px 1px 0 2px var(--accent),
+    3px 3px 0 2px rgba(183, 59, 36, 0.25),
+    -3px -3px 0 2px rgba(183, 59, 36, 0.15);
+  filter: url(#sketchy);
 }
 
 .timeline-card.is-loading .timeline-media {
@@ -181,7 +219,15 @@ mark {
 
 .timeline-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.16);
+  box-shadow:
+    0 0 0 2px var(--card),
+    1px 1px 0 3px var(--accent),
+    -1px -1px 0 3px var(--accent),
+    2px -1px 0 2.5px var(--accent),
+    -2px 1px 0 2.5px var(--accent),
+    4px 4px 0 2.5px rgba(183, 59, 36, 0.3),
+    -4px -4px 0 2.5px rgba(183, 59, 36, 0.2),
+    0 20px 44px rgba(0, 0, 0, 0.18);
 }
 
 .timeline-media {
@@ -231,6 +277,9 @@ mark {
   margin-top: auto;
   font-weight: 600;
   color: var(--accent);
+  width: fit-content;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
 }
 
 @media (max-width: 800px) {

@@ -1,14 +1,17 @@
 <!doctype html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <title>Presidentes y Fútbol en Colombia</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Línea de tiempo de presidentes colombianos y episodios clave del fútbol nacional. Un recorrido visual con contexto histórico y social.">
+  <meta name="description"
+    content="Línea de tiempo de presidentes colombianos y episodios clave del fútbol nacional. Un recorrido visual con contexto histórico y social.">
   <meta name="author" content="Presidentes y Fútbol en Colombia">
   <meta property="og:title" content="Presidentes y Fútbol en Colombia">
-  <meta property="og:description" content="Línea de tiempo de presidentes colombianos y episodios clave del fútbol nacional. Un recorrido visual con contexto histórico y social.">
+  <meta property="og:description"
+    content="Línea de tiempo de presidentes colombianos y episodios clave del fútbol nacional. Un recorrido visual con contexto histórico y social.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://presidentes-futbol.netlify.app/pwe.png">
   <meta property="og:image:width" content="1200">
@@ -17,15 +20,34 @@
   <meta property="og:locale" content="es_CO">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Presidentes y Fútbol en Colombia">
-  <meta name="twitter:description" content="Línea de tiempo de presidentes colombianos y episodios clave del fútbol nacional.">
+  <meta name="twitter:description"
+    content="Línea de tiempo de presidentes colombianos y episodios clave del fútbol nacional.">
   <meta name="twitter:image" content="https://presidentes-futbol.netlify.app/pwe.png">
   <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2">
   <link rel="apple-touch-icon" href="/favicon.ico?v=2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
+  <!-- Global SVG filter for hand-drawn sketch border effect -->
+  <svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden;">
+    <defs>
+      <!-- Heavy sketchy filter for image-only elements -->
+      <filter id="sketchy" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="turbulence" baseFrequency="0.03" numOctaves="3" seed="2" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+      <!-- Gentle border-only sketchy filter for text-containing elements -->
+      <filter id="sketchy-border" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="turbulence" baseFrequency="0.04" numOctaves="4" seed="5" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="1" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
   <app-root></app-root>
 </body>
+
 </html>

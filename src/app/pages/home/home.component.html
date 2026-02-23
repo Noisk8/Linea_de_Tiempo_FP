@@ -1,4 +1,6 @@
 <section class="hero" aria-labelledby="hero-title">
+  <div class="dynamic-bg" style="background-image: url('/imagenes/bg/belisario-betancur-1983.png')"
+    [class.bg-loaded]="true"></div>
   <div class="hero-content">
     <p class="eyebrow" @fadeDown>{{ 'HOME.EYEBROW' | translate }}</p>
     <h2 id="hero-title" @fadeLeft>{{ 'HOME.TITLE' | translate }}</h2>
