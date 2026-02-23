@@ -84,7 +84,7 @@
 .hero-card img {
   width: 100%;
   display: block;
-  border-radius: 3rem;
+  border-radius: 2.5rem;
   object-fit: cover;
 }
 
