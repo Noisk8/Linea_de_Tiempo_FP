@@ -184,22 +184,22 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     },
     editorialGallery: [
       {
-        url: "/san-bartolome-claustro.jpg",
-        caption: "Claustro del Colegio Mayor de San Bartolomé a principios del siglo XX. Élite, disciplina e Iglesia.",
-        caption_en: "Cloister of the Colegio Mayor de San Bartolome in the early 20th century. Elite, discipline, and Church.",
-        credit: "Archivo Fotográfico (Asignar)"
+        url: "https://upload.wikimedia.org/wikipedia/commons/c/c5/Colegio_Mayor_San_Bartolom%C3%A9_-_Bogot%C3%A1.jpg",
+        caption: "Claustro del Colegio Mayor de San Bartolomé. Élite, disciplina e Iglesia.",
+        caption_en: "Cloister of the Colegio Mayor de San Bartolome. Elite, discipline, and Church.",
+        credit: "Wikimedia Commons"
       },
       {
-        url: "/calistenia-siglo-xx.jpg",
-        caption: "Jóvenes estudiantes formados durante una clase de calistenia, reflejando el rigor del Decreto 419.",
-        caption_en: "Young students lined up during a calisthenics class, reflecting the rigor of Decree 419.",
-        credit: "Archivo Fotográfico (Asignar)"
+        url: "https://upload.wikimedia.org/wikipedia/commons/9/9f/Swedish_gymnastics_in_the_1890s.jpg",
+        caption: "Jóvenes estudiantes formados durante gimnasia de época, reflejando el rigor del Decreto 419.",
+        caption_en: "Young students lined up during period gymnastics, reflecting the rigor of Decree 419.",
+        credit: "Wikimedia Commons"
       },
       {
-        url: "/guerra-mil-dias-ninos.jpg",
-        caption: "La niñez durante la Guerra de los Mil Días. La gimnasia fungió como herramienta civilizatoria posconflicto.",
-        caption_en: "Childhood during the Thousand Days' War. Gymnastics served as a post-conflict civilizing tool.",
-        credit: "Archivo Fotográfico (Asignar)"
+        url: "https://upload.wikimedia.org/wikipedia/commons/3/36/Ni%C3%B1os_soldados_en_la_Guerra_de_los_Mil_D%C3%ADas.jpg",
+        caption: "La niñez en la Guerra de los Mil Días. La gimnasia fungió como civilizadora posconflicto.",
+        caption_en: "Childhood in the Thousand Days' War. Gymnastics served as a post-conflict civilizer.",
+        credit: "Wikimedia Commons"
       }
     ],
     sources: [
