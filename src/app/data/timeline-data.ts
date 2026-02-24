@@ -182,6 +182,26 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       credit: "Ilustracion editorial",
       caption_en: "Decree 419 (1904): physical education as a state policy."
     },
+    editorialGallery: [
+      {
+        url: "/san-bartolome-claustro.jpg",
+        caption: "Claustro del Colegio Mayor de San Bartolomé a principios del siglo XX. Élite, disciplina e Iglesia.",
+        caption_en: "Cloister of the Colegio Mayor de San Bartolome in the early 20th century. Elite, discipline, and Church.",
+        credit: "Archivo Fotográfico (Asignar)"
+      },
+      {
+        url: "/calistenia-siglo-xx.jpg",
+        caption: "Jóvenes estudiantes formados durante una clase de calistenia, reflejando el rigor del Decreto 419.",
+        caption_en: "Young students lined up during a calisthenics class, reflecting the rigor of Decree 419.",
+        credit: "Archivo Fotográfico (Asignar)"
+      },
+      {
+        url: "/guerra-mil-dias-ninos.jpg",
+        caption: "La niñez durante la Guerra de los Mil Días. La gimnasia fungió como herramienta civilizatoria posconflicto.",
+        caption_en: "Childhood during the Thousand Days' War. Gymnastics served as a post-conflict civilizing tool.",
+        credit: "Archivo Fotográfico (Asignar)"
+      }
+    ],
     sources: [
       {
         label: "Jose Manuel Marroquin (Wikipedia)",
@@ -203,10 +223,11 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     name_en: "Jose Manuel Marroquin",
     shortDescription_en: "Physical education as a state policy.",
     paragraphs_en: [
-      "During the government of Jose Manuel Marroquin, the term <strong>physical education</strong> was established for the first time in the country's history, within a <em>Regeneration</em> context that sought to reorganize the nation.",
+      "During the government of Jose Manuel Marroquin, the term <strong>physical education</strong> was established for the first time in the country's history, within a <em>Regeneration</em> context that sought to reorganize the nation following the devastating Thousand Days' War.",
       "In <strong>1904</strong>, <strong>Decree 419 of July 3</strong> was issued, regulating Law 39 and general teaching. In Chapter V, paragraph 4, physical education was formally defined.<sup>1</sup>",
       "Articles 60 to 63 ordered correct attire, rigorous cleanliness, and natural posture during lessons. Calisthenics and gymnastics became mandatory, and every two weeks, half a day was dedicated to hygienic and recreational walks.",
-      "The model responded to the ideal of \"a sound mind in a sound body\" and took European practices as a reference, particularly British ones, where physical education was understood as a tool for social order.<sup>3</sup>"
+      "The model responded to the ideal of \"a sound mind in a sound body\" and took European practices as a reference, particularly British ones, where physical education was understood as a tool for social order.<sup>3</sup>",
+      "This adoption of gymnastics through legislation was crucial: it formally opened the door to team sports. Religious schools that educated the elite, such as <strong>San Bartolomé</strong> or the <strong>Colegio de la Presentación</strong>, began adopting sports as a strong disciplinary method following the horrors of the Thousand Days' War, leading to the creation of teams and the organization of iconic inter-school tournaments."
     ]
   },
   {
