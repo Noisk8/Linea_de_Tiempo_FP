@@ -145,3 +145,70 @@
     display: none;
   }
 }
+
+/* Floating Buy Me a Coffee Button */
+.bmac-floating-btn {
+  position: absolute;
+  top: -24px;
+  right: 2rem;
+  padding: 0.5rem 1rem;
+  background: var(--card);
+  color: var(--text);
+  border-radius: 999px;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, color 0.3s ease;
+  z-index: 10;
+  border: 1px solid var(--border);
+}
+
+.bmac-floating-btn svg {
+  transform: translateY(1px);
+}
+
+.bmac-floating-btn::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border: 2px solid var(--accent);
+  border-radius: inherit;
+  pointer-events: none;
+  filter: url(#sketchy);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.bmac-floating-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  color: var(--accent);
+}
+
+.bmac-floating-btn:hover::after {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .bmac-floating-btn {
+    top: -45px;
+    right: 50%;
+    transform: translateX(50%);
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .bmac-floating-btn:hover {
+    transform: translateX(50%) translateY(-2px) scale(1.05);
+  }
+
+  .bmac-floating-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+}

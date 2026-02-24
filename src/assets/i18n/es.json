@@ -45,7 +45,8 @@
         "REPO_LABEL": "Código Fuente",
         "REPO_LINK": "Ver en GitHub",
         "CONTACT_LABEL": "Contacto",
-        "LICENSE_TEXT": "Licenciado bajo Creative Commons Atribución-CompartirIgual 4.0 Internacional."
+        "LICENSE_TEXT": "Licenciado bajo Creative Commons Atribución-CompartirIgual 4.0 Internacional.",
+        "BUY_COFFEE_LINK": "Cómprame un café"
     },
     "COMMON": {
         "TOGGLE_DARK": "Cambiar a modo oscuro",

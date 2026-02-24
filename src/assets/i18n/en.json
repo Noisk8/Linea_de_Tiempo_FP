@@ -41,11 +41,12 @@
         "GENERAL": "General References"
     },
     "FOOTER": {
-        "CREATOR_LABEL": "Creator",
+        "CREATOR_LABEL": "By",
         "REPO_LABEL": "Source Code",
         "REPO_LINK": "View on GitHub",
         "CONTACT_LABEL": "Contact",
-        "LICENSE_TEXT": "Licensed under Creative Commons Attribution-ShareAlike 4.0 International."
+        "LICENSE_TEXT": "Licensed under Creative Commons Attribution-ShareAlike 4.0 International.",
+        "BUY_COFFEE_LINK": "Buy me a coffee"
     },
     "COMMON": {
         "TOGGLE_DARK": "Switch to dark mode",
