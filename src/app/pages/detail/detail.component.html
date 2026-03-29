@@ -22,27 +22,27 @@
       <p [innerHTML]="paragraph"></p>
       }
     </div>
-    @if (entry.editorialImage) {
+    @if (entry.editorialImage && entry.editorialImage.length > 0) {
     <figure class="editorial-cutout">
       <button class="image-button" type="button" (click)="
             openImage(
-              entry.editorialImage.url,
-              entry.editorialImage.caption,
-              entry.editorialImage.caption_en,
-              entry.editorialImage.credit
+              entry.editorialImage[0]?.url || '',
+              entry.editorialImage[0]?.caption || '',
+              entry.editorialImage[0]?.caption_en,
+              entry.editorialImage[0]?.credit
             )
           ">
-        <img [src]="entry.editorialImage.url" [alt]="entry.editorialImage.caption" />
+        <img [src]="entry.editorialImage[0]?.url" [alt]="entry.editorialImage[0]?.caption" />
       </button>
       <figcaption>
-        {{ i18nService.currentLang() === 'en' && entry.editorialImage.caption_en ? entry.editorialImage.caption_en :
-        entry.editorialImage.caption }}
-        @if (entry.editorialImage.credit) {
-        <span class="credit">{{ 'DETAIL.SOURCE_PREFIX' | translate }} {{ entry.editorialImage.credit }}</span>
+        {{ i18nService.currentLang() === 'en' && entry.editorialImage[0]?.caption_en ? entry.editorialImage[0]?.caption_en :
+          entry.editorialImage[0]?.caption }}
+        @if (entry.editorialImage[0]?.credit) {
+          <span class="credit">{{ 'DETAIL.SOURCE_PREFIX' | translate }} {{ entry.editorialImage[0]?.credit }}</span>
         }
       </figcaption>
     </figure>
-    }
+  }  
     @if (entry.editorialGallery?.length) {
     <div class="editorial-gallery">
       @for (item of entry.editorialGallery; track item.url) {

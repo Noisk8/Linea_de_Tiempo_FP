@@ -3,6 +3,13 @@ export type TimelineSource = {
   url: string;
 };
 
+export type EditorialImage = {
+  url: string;
+  caption: string;
+  caption_en?: string;
+  credit?: string;
+};
+
 export type TimelineEntry = {
   id: string;
   year: string;
@@ -15,18 +22,8 @@ export type TimelineEntry = {
   image: string;
   paragraphs: string[];
   paragraphs_en?: string[];
-  editorialImage?: {
-    url: string;
-    caption: string;
-    caption_en?: string;
-    credit?: string;
-  };
-  editorialGallery?: {
-    url: string;
-    caption: string;
-    caption_en?: string;
-    credit?: string;
-  }[];
+  editorialImage?: EditorialImage[];
+  editorialGallery?: EditorialImage[];
   editorialImageAfterIndex?: number;
   sources: TimelineSource[];
 };
@@ -39,7 +36,7 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termEndYear: "1894",
     name: "Rafael Nuñez",
     shortDescription: "Regeneración, Constitución de 1886 y la llegada del fútbol.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Rafael_N%C3%BA%C3%B1ez%2C_ca.1885.jpg/640px-Rafael_N%C3%BA%C3%B1ez%2C_ca.1885.jpg",
+    image: "/presidentes/Rafael_Núñez,_ca.1885.jpg",
     paragraphs: [
       "El perfil lo presenta como poeta frustrado: Rafael Núñez fue el último presidente de los Estados Unidos de Colombia y el primero de la República de Colombia; se le atribuye la letra del Himno Nacional<sup>1</sup>.",
       "En la revolución de 1885 se le volteó a los liberales y terminó gobernando con el Partido Conservador; ese giro marca el arranque de la Regeneración y el impulso a la Constitución de 1886<sup>2</sup>.",
@@ -47,12 +44,12 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       "Los trabajadores locales y estibadores observaron estos partidos informales, adaptando el juego. Así, mientras Núñez moldeaba la nación desde la política, el fútbol entraba silenciosamente por los puertos del Caribe, echando raíces entre la clase obrera antes de saltar a las élites bogotanas.",
       "En El Cabrero, frente a su casa en Cartagena, se registra paralelamente un hito del béisbol: el <strong>20 de julio de 1897</strong> se juega por primera vez en la ciudad, mostrando cómo los puertos eran la principal vía de entrada del deporte moderno<sup>5</sup>."
     ],
-    editorialImage: {
+    editorialImage: [{
       url: "https://primertiempo.co/wp-content/uploads/2021/07/Historia-del-beisbol.jpg",
       caption: "La prensa local recuerda el primer partido de béisbol en Cartagena, 1897.",
       credit: "primertiempo.co",
       caption_en: "The local press remembers the first baseball game in Cartagena, 1897."
-    },
+    }],
     editorialGallery: [
       {
         url: "https://upload.wikimedia.org/wikipedia/commons/c/c2/Puerto-a%C3%B1os20.jpg",
@@ -105,7 +102,7 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termEndYear: "1898",
     name: "Miguel Antonio Caro",
     shortDescription: "Primer partido registrado y origen disciplinario del fútbol.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/5/5c/Miguel_Antonio_Caro_2.jpg",
+    image: "/presidentes/Miguel_Antonio_Caro_2.jpg",
     paragraphs: [
       "Miguel Antonio Caro dejo una frase: <strong>Colombia solo puede ser católica</strong> porque de lo contrario caería en la barbarie; la sentencia resume la <strong>hegemonía conservadora</strong> en su forma más dura<sup>1</sup>.",
       "Durante su gobierno se realizó el <strong>primer partido de fútbol</strong> del que hay registro formal en Colombia<sup>2</sup>. Se jugó en <strong>La Sabana de Bogotá (terrenos de la Escuela Militar)</strong>, estableciendo a la capital y al entorno militar como focos de origen comprobado, desmitificando en papel la creencia popular de que ingresó únicamente por los puertos de <strong>Barranquilla o Santa Marta</strong>. <strong>Henry Rowan Lemly</strong> era un coronel gringo obsesionado con los métodos de entrenamiento de las <strong>universidades británicas</strong>, donde nacieron los deportes modernos: reglamentos del <strong>rugby</strong>, del <strong>fútbol</strong>, del <strong>tenis</strong> y del <strong>críquet</strong><sup>3</sup>.",
@@ -132,12 +129,12 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
         url: "https://kr.pinterest.com/pin/653373858440393548/"
       }
     ],
-    editorialImage: {
+    editorialImage: [{
       url: "https://elmalpensante.com/sites/default/files/images/articulos/Primer_partido_nuevas_voces_el_malpensante.png",
       caption: "El primer partido registrado en Colombia, según el relato de El Malpensante.",
       credit: "elmalpensante.com",
       caption_en: "The first registered match in Colombia, according to El Malpensante's story."
-    },
+    }],
     editorialGallery: [
       {
         url: "/Henry.avif",
@@ -168,7 +165,7 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termEndYear: "1904",
     name: "Jose Manuel Marroquin",
     shortDescription: "Educacion fisica como política estatal.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/f/f2/Jos%C3%A9_Manuel_Marroqu%C3%ADn.jpg",
+    image: "/presidentes/José_Manuel_Marroquín.jpg",
     paragraphs: [
       "Durante el gobierno de José Manuel Marroquin se estableció por primera vez en la historia del país el terminó <strong>educación fisica</strong>, en un contexto de <em>Regeneración</em> que buscaba reorganizar la nación en medio y pos de la devastadora Guerra de los Mil Días.",
       "En <strong>1904</strong> se expidió el <strong>Decreto 419 del 3 de julio</strong>, que reglamento la Ley 39 y la ensenanza en general. En su capitulo V, parágrafo 4, se definio formalmente la educación fisica<sup>1</sup>.",
@@ -176,12 +173,12 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       "El modelo respondia al ideal de “mente sana en cuerpo sano” y tomaba como referencia las prácticas europeas, en particular las británicas, donde la educación fisica se entendia como herramienta de orden social<sup>3</sup>.",
       "Esta adopción de la gimnasia a través de la ley fue crucial: abrió formalmente la puerta a los deportes de conjunto. Colegios religiosos que educaban a la élite como el <strong>San Bartolomé</strong> o el <strong>Colegio de la Presentación</strong>, empezaron a adoptar el deporte como un fuerte método disciplinario tras los horrores de la Guerra de los Mil Días, dando pie posteriormente a la creación de equipos y la organización de los emblemáticos torneos intercolegiados."
     ],
-    editorialImage: {
+    editorialImage: [{
       url: "/leyley.png",
       caption: "Decreto 419 (1904): educación fisica como política estatal.",
       credit: "Ilustracion editorial",
       caption_en: "Decree 419 (1904): physical education as a state policy."
-    },
+    }],
     editorialGallery: [
       {
         url: "https://upload.wikimedia.org/wikipedia/commons/c/c5/Colegio_Mayor_San_Bartolom%C3%A9_-_Bogot%C3%A1.jpg",
@@ -237,7 +234,7 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termEndYear: "1914",
     name: "Carlos Eugenio Restrepo",
     shortDescription: "Primer campeonato: Copa Carlos E. Restrepo.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Carlos_Eugenio_Restrepo%2C_1918.jpg",
+    image: "/presidentes/Carlos_Eugenio_Restrepo,_1918.jpg",
     paragraphs: [
       "Desde la presidencia, Carlos Eugenio Restrepo impulso la organizacion de campeonatos deportivos en un contexto donde el fútbol era practicamente una actividad de clubes sociales<sup>1</sup>.",
       "En <strong>1912</strong> se realizó el <strong>primer campeonato de fútbol del país</strong>, la <strong>Copa Carlos E. Restrepo</strong>, considerada la primera competencia estructurada del fútbol colombiano<sup>2</sup>.",
@@ -245,12 +242,14 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       "Durante varios años el Polo Club domino la escena bogotana hasta ser desplazado por clubes emergentes como Bartolino y la Facultad de Medicina de la Universidad Nacional.",
       "El episodio confirma que el fútbol temprano fue un deporte de <em>élites urbanas</em>, articulado a clubes como el Polo Club y el Club Colombia, mientras surgian instituciones regionales que después se convertirian en referentes del fútbol nacional<sup>3</sup>."
     ],
-    editorialImage: {
-      url: "/polofc.jpg",
-      caption: "Polo Club de Bogotá, campeón de la Copa Carlos E. Restrepo (1912).",
-      credit: "Bogota Antigua · Gloria Botero · 28 de noviembre de 2024",
-      caption_en: "Polo Club de Bogota, champion of the Copa Carlos E. Restrepo (1912)."
-    },
+    editorialImage: [
+      {
+        url: "/polofc.jpg",
+        caption: "Polo Club de Bogotá, campeón de la Copa Carlos E. Restrepo (1912).",
+        credit: "Bogota Antigua · Gloria Botero · 28 de noviembre de 2024",
+        caption_en: "Polo Club of Bogota, champion of the Copa Carlos E. Restrepo (1912)."
+      }
+    ],
     editorialGallery: [
       {
         url: "/imagesdv6pf38x.jpg",
@@ -289,18 +288,18 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termEndYear: "1926",
     name: "Pedro Nel Ospina",
     shortDescription: "Ley 80 y descentralización del fútbol.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/2/25/Gen._Pedro_Nel_Ospina%2C_Pres._Colombia_%28LOC%29.jpg",
+    image: "/presidentes/Pedro_Nel_Ospina.jpg",
     paragraphs: [
       "Pedro Nel Ospina, presidente de la década de 1920, aparece retratado con equipos de fútbol de la época, con uniforme de gala, posando con clubes de la alta sociedad en la cancha de <strong>La Merced</strong>, hoy <strong>San Bartolome de La Merced</strong>.",
       "Sin embargo, su periodo también marca la descentralización del deporte, que sale de los exclusivos clubes bogotanos hacia la costa Caribe. El <strong>12 de octubre de 1924</strong> se fundó la <strong>Liga de Fútbol del Atlántico</strong>, la primera liga organizada del país.",
       "En el ámbito institucional, durante su presidencia en <strong>1925</strong> se firma la <strong>Ley 80</strong>, que crea las <em>Comisiones Nacionales de Educacion Fisica</em>, antecedente de Coldeportes y del actual Ministerio del Deporte<sup>2</sup>."
     ],
-    editorialImage: {
+    editorialImage: [{
       url: "/equipos1923.png",
       caption: "Pedro Nel Ospina con equipos de la alta sociedad en La Merced.",
       credit: "Archivo fotográfico",
       caption_en: "Pedro Nel Ospina with high society teams in La Merced."
-    },
+    }],
     sources: [
       {
         label: "Pedro Nel Ospina (Wikipedia)",
@@ -334,7 +333,7 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termEndYear: "1930",
     name: "Miguel Abadia Mendez",
     shortDescription: "Masacre de las bananeras y Juegos Nacionales.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/f/f6/Miguel_Abad%C3%ADa_M%C3%A9ndez.jpg",
+    image: "/presidentes/Miguel_Abadía_Méndez.jpg",
     paragraphs: [
       "Las medidas de educación fisica impulsaron las <strong>primeras Olimpiadas Colombianas</strong>, que después se llamarian <strong>Juegos Nacionales</strong><sup>4</sup>.",
       "Estas competencias se realizaron entre <strong>diciembre de 1928</strong> y <strong>enero de 1929</strong> en Cali, ciudad que se consolida como referente olímpico y, más tarde, sede de los Panamericanos de 1971<sup>3</sup>.",
@@ -342,12 +341,12 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       "Al regresar a Santa Marta, el equipo recibió un homenaje frente al gobernador militar <strong>Cortes Vargas</strong> y alli se pidio un minuto de silencio por las victimas de la <strong>masacre de las bananeras</strong>, un episodio que el propio Cortes Vargas había negado<sup>2</sup>.",
       "La prensa de la época registro que algunos jugadores eran familiares de victimas, y ese clima social y político acelero el fin de la hegemonía conservadora: los liberales regresaron al poder en <strong>1930</strong> con Enrique Olaya Herrera."
     ],
-    editorialImage: {
+    editorialImage: [{
       url: "/abadia.jpeg",
       caption: "Miguel Abadia Méndez en su periodo presidencial.",
       credit: "Archivo fotografico",
       caption_en: "Miguel Abadia Mendez during his presidential term."
-    },
+    }],
     sources: [
       {
         label: "Miguel Abadia Mendez (Wikipedia)",
@@ -383,18 +382,20 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termEndYear: "1934",
     name: "Enrique Olaya Herrera",
     shortDescription: "República Liberal, masificación popular y estadios.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/7/7d/Enrique_Olaya_Herrera_by_Benjam%C3%ADn_de_la_Calle_%281910%29.jpg",
+    image: "/presidentes/Enrique_Olaya_Herrera.jpg",
     paragraphs: [
       "Enrique Olaya Herrera encabeza la <strong>República Liberal</strong> (1930-1945). Diferente a la hegemonía conservadora que asociaba el deporte a la élite y la disciplina militar, los liberales fomentaron el <strong>deporte masivo para la clase obrera</strong> con eventos como las Olimpiadas Nacionales de 1932 y 1935.",
       "Antes de 1930 solo existia un estadio en Colombia: el <strong>Julio Torres</strong>, luego <em>Estadio Moderno</em>, construido en Barranquilla en 1922. El resto de actividades deportivas se realizaban en canchas con tribunas improvisadas y condiciones poco seguras para el público. Con este giro político comienza la <strong>masificación del deporte</strong>.",
       "Bajo Olaya Herrera se levantan escenarios clave: el <strong>Romelio Martinez</strong> (1934)<sup>2,7</sup>, el <strong>Alfonso Lopez</strong> de la Universidad Nacional (1936)<sup>3</sup> y el <strong>Pascual Guerrero</strong> (1937)<sup>4</sup>. Con esta infraestructura se abre la etapa del llamado <em>fútbol marron</em>, aún sin profesionalismo ni campeonato unificado, pero con pagos informales y competiciones locales que dieron origen a muchos de los clubes tradicionales."
     ],
-    editorialImage: {
-      url: "/C6.jpg",
-      caption: "Infraestructura deportiva durante la República Liberal.",
-      credit: "Archivo fotografico",
-      caption_en: "Sports infrastructure during the Liberal Republic."
-    },
+    editorialImage: [
+      {
+        url: "/C6.jpg",
+        caption: "Infraestructura deportiva durante la República Liberal.",
+        credit: "Archivo fotografico",
+        caption_en: "Sports infrastructure during Liberal Republic."
+      }
+    ],
     sources: [
       {
         label: "Enrique Olaya Herrera (Wikipedia)",
@@ -440,19 +441,19 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termEndYear: "1950",
     name: "Mariano Ospina Perez",
     shortDescription: "Bogotazo, Dimayor y fútbol profesional.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Mariano_Ospina_P%C3%A9rez.jpg/640px-Mariano_Ospina_P%C3%A9rez.jpg",
+    image: "/presidentes/Mariano_Ospina_Pérez.jpg",
     paragraphs: [
       "Mariano Ospina Pérez llegó al poder en <strong>1946</strong> tras vencer a <strong>Jorge Eliécer Gaitan</strong> en unas elecciones marcadas por la division liberal. Sumados, <em>Gaitan y Echandia</em> obtenian más votos que Ospina, pero por separado el candidato conservador se impuso y el partido regreso al gobierno<sup>2</sup>.",
       "El asesinato de Gaitan en <strong>1948</strong> desató el <strong>Bogotazo</strong>. La violencia se extendió por el país y en algunas regiones, como Barrancabermeja, los obreros tomaron el control por varias semanas. El episodio marco el inicio de un ciclo de venganzas y persecuciones políticas<sup>3</sup>.",
       "Tras el Bogotazo se impuso toque de queda y se prohibieron reuniones de más de dos personas. Hubo dos excepciones oficiales: <strong>cine</strong> y <strong>fútbol</strong>. En ese contexto, dirigentes como Alfonso Senior (fundador de Millonarios) se acercaron estratégicamente al gobierno conservador para garantizar que el espectáculo deportivo siguiera funcionando. Impulsaron la creación de la <strong>Dimayor</strong> en junio y el inicio del campeonato profesional en agosto de 1948<sup>4</sup>.",
       "El fútbol se consolido como espacio de reunión social en medio de la censura. La prensa, restringida por el <em>censor nacional</em>, encontro en el deporte un tema permitido para cubrir y comentar."
     ],
-    editorialImage: {
+    editorialImage: [{
       url: "/mariano_gaitan.jpeg",
       caption: "Mariano Ospina Pérez y Jorge Eliécer Gaitan en campaña.",
       credit: "Archivo fotografico",
       caption_en: "Mariano Ospina Perez and Jorge Eliecer Gaitan on the campaign trail."
-    },
+    }],
     sources: [
       {
         label: "Mariano Ospina Perez (Wikipedia)",
@@ -487,7 +488,7 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termEndYear: "1953",
     name: "Laureano Gomez",
     shortDescription: "El Dorado y fútbol como espectáculo político.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Laureano_G%C3%B3mez_%28c._1925-1926%29.jpg/640px-Laureano_G%C3%B3mez_%28c._1925-1926%29.jpg",
+    image: "/presidentes/Laureano_Gómez.jpg",
     paragraphs: [
       "Laureano Gómez fue un dirigente conservador de línea dura. Habia sido senador y canciller de Mariano Ospina antes de llegar a la presidencia en <strong>1950</strong><sup>1</sup>.",
       "Su periodo coincide con la era de <em>El Dorado</em>, cuando el fútbol colombiano vive una bonanza marcada por la llegada de figuras como <strong>Adolfo Pedernera</strong> y <strong>Alfredo Di Stefano</strong>. La atención publica se desplaza hacia el espectáculo deportivo en un contexto de violencia política aguda<sup>4</sup>.",
@@ -496,12 +497,12 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       "La normalizacion internacional llega con el <strong>Pacto de Lima (1951)</strong>, que estableció condiciones para cerrar el ciclo y ordenar la devolucion de jugadores. Ese hito ocurre durante el periodo Laureano/Urdaneta<sup>3</sup>.",
       "En medio de <em>La Violencia</em>, el fútbol funcionó como <em>válvula de escape</em>; en 1953 Laureano cae, Rojas Pinilla lo tumba y la superestrella del circo, Di Stefano, se va para Espana<sup>2</sup>."
     ],
-    editorialImage: {
+    editorialImage: [{
       url: "/Millonarios-Campeon-en-1951.jpg",
       caption: "Millonarios campeón en 1951, simbolo de la era de El Dorado.",
       credit: "Archivo fotografico",
       caption_en: "Millonarios champion in 1951, symbol of the El Dorado era."
-    },
+    }],
     sources: [
       {
         label: "Laureano Gomez (Wikipedia)",
@@ -542,7 +543,7 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termEndYear: "1957",
     name: "Gustavo Rojas Pinilla",
     shortDescription: "Fin del Dorado futbolístico, amnistía y televisión.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Gurropin_tras_asumir_la_presidencia_con_un_golpe_de_estado.jpg",
+    image: "/presidentes/Gurropin_tras_asumir_la_presidencia_con_un_golpe_de_estado.jpg",
     paragraphs: [
       "En <strong>1953</strong> el general Gustavo Rojas Pinilla alcanza el poder mediante golpe de Estado, poniendo fin al gobierno conservador de Laureano Gómez<sup>2</sup>.",
       "Ese mismo año termina la época conocida como <strong>\"El Dorado\"</strong> del fútbol colombiano. Tras el Pacto de Lima, los futbolistas que \"piratearon\" debían regresar a sus ligas, o en su defecto, ser transferidos legalmente a Europa, como ocurrió con <strong>Alfredo Di Stefano</strong> recalando en el Real Madrid<sup>4</sup>.",
@@ -550,11 +551,11 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
       "El presidente firmó una amnistía que desmovilizó a unos <strong>3.500 guerrilleros</strong> liberales que se habían alzado tras la muerte de Gaitán.",
       "Durante su dictadura, el fútbol fue promovido desde el Estado. Aunque las estrellas extranjeras se marcharon, se impulsó la construcción de nuevos escenarios y el deporte operó como herramienta clave de cohesión antes del inicio del Frente Nacional."
     ],
-    editorialImage: {
-      url: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Gurropin_tras_asumir_la_presidencia_con_un_golpe_de_estado.jpg",
+    editorialImage: [{
+      url: "/presidentes/Gurropin_tras_asumir_la_presidencia_con_un_golpe_de_estado.jpg",
       caption: "Rojas Pinilla tras asumir la presidencia en 1953.",
       credit: "Wikimedia Commons"
-    },
+    }],
     sources: [
       {
         label: "Gustavo Rojas Pinilla (Wikipedia)",
@@ -594,18 +595,18 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termEndYear: "1962",
     name: "Alberto Lleras Camargo",
     shortDescription: "Primer Mundial y disputa simbólica en la Guerra Fria.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Alberto_Lleras_Camargo%2C_Presidente_da_Col%C3%B4mbia.tif/lossy-page1-640px-Alberto_Lleras_Camargo%2C_Presidente_da_Col%C3%B4mbia.tif.jpg",
+    image: "/presidentes/Alberto_Lleras_Camargo.jpg",
     paragraphs: [
       "La <strong>Seleccion Colombia</strong> clasifica a su primer <strong>Mundial</strong> con <strong>Adolfo Pedernera</strong> como tecnico y figura del <em>Dorado</em><sup>2</sup>.",
       "En la eliminatoria vence a <strong>Peru</strong> y viaja a <strong>Arica</strong>, sede inicialmente asignada al rival y ciudad fronteriza entre <strong>Chile</strong> y <strong>Peru</strong>.",
       "El partido más recordado es el <strong>4-4</strong> contra la <strong>URSS</strong>, campeón de Europa: Colombia le marca cuatro goles a <strong>Lev Yashin</strong>, el mejor arquero del momento. En una época en que la sigla <strong>CCCP</strong> (Union Sovietica) era leida popularmente como <em>Con Colombia Casi Perdemos</em>, la seleccion colombiana estuvo a punto de imponerse en un encuentro que trascendio lo deportivo. En el siguiente partido, <strong>Yugoslavia</strong>, también comunista, nos derrotaria <strong>5-0</strong>, cerrando una participación marcada por el contraste entre la gesta frente a la URSS y la dura realidad contra otro bloque del Este.",
       "En plena <strong>Guerra Fria</strong>, la prensa y las caricaturas convierten el encuentro en un <strong>relato político</strong> de Colombia frente al comunismo, y el Estado se apropia de la hazaña deportiva para reforzar su proyecto."
     ],
-    editorialImage: {
+    editorialImage: [{
       url: "/lleras-urrsss.png",
       caption: "Caricatura sobre el 4-4 con la URSS y la lectura política del partido.",
       credit: "Historias Secretas"
-    },
+    }],
     editorialGallery: [
       {
         url: "/COL-VS-RUSIA.jpeg",
@@ -645,7 +646,7 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termEndYear: "1970",
     name: "Carlos Lleras Restrepo",
     shortDescription: "Coldeportes y modernización deportiva.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Carlos_L._Restrepo.jpg/640px-Carlos_L._Restrepo.jpg",
+    image: "/presidentes/Carlos_L._Restrepo.jpg",
     paragraphs: [
       "En 1968, en pleno <strong>Frente Nacional</strong>, Carlos Lleras Restrepo impulsa la <strong>modernización del Estado</strong> y crea distintos institutos. En ese año nace <strong>Coldeportes</strong>, el <em>Instituto Colombiano del Deporte y la Recreacion</em><sup>2</sup>.",
       "La creación de Coldeportes responde a una necesidad concreta: Colombia había ganado en 1967 la sede de los <strong>Juegos Panamericanos de Cali 1971</strong>, pero la organización deportiva nacional seguía muy rezagada, casi amateur. El instituto se plantea <strong>ordenar el sistema</strong>, brindar presupuesto estatal sostenido y preparar al país para <strong>competir</strong> y <strong>organizar</strong> eventos internacionales<sup>3,5</sup>.",
@@ -707,7 +708,7 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termEndYear: "1986",
     name: "Belisario Betancur",
     shortDescription: "Renuncia al Mundial 86, Rodrigo Lara y el narcofútbol.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Belisario_Betancur_2012.jpg/640px-Belisario_Betancur_2012.jpg",
+    image: "/presidentes/Belisario_Betancur.jpg",
     paragraphs: [
       "En <strong>1974</strong> de la mano de Alfonso Senior, Colombia había ganado en FIFA la sede del <strong>Mundial de 1986</strong>. Pero en <strong>1983</strong> el gobierno de <strong>Belisario Betancur</strong> renuncia a organizarlo. En una dramática <em>locución presidencial</em> por televisión, justifica su histórica decisión argumentando que los <strong>costos desmedidos</strong> exigidos por la FIFA no debían pagarse en un país que requería escuelas y hospitales<sup>2</sup>.",
       "El episodio se convierte en un profundo <strong>debate nacional</strong>: para muchos, fue una vergüenza ser el único país en claudicar ante un Mundial asignado; para otros, una postura loable de dignidad nacional frente a imposiciones y <strong>prioridades internas</strong>.",
@@ -779,7 +780,7 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termEndYear: "1990",
     name: "Virgilio Barco",
     shortDescription: "Narcoterrorismo, clímax de los carteles y gloria internacional.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Virgilio_Barco_Vargas.jpg/640px-Virgilio_Barco_Vargas.jpg",
+    image: "/presidentes/Virgilio_Barco_Vargas.jpg",
     paragraphs: [
       "Virgilio Barco asume la presidencia en el contexto de mayor derramamiento de sangre por causas del <strong>narcoterrorismo</strong> en la historia del país, enfrentándose directamente a los capos tras la ola de magnicidios.",
       "Su mandato atestiguó cómo los carteles escalaron su guerra hacia la sociedad civil y también hacia las canchas de fútbol, dominando los equipos. En <strong>1988</strong>, el árbitro antioqueño <strong>Armando Pérez</strong> fue <strong>secuestrado</strong> durante 20 horas en plenas finales y dejado en libertad con un mensaje macabro de los capos a los referís: \"Si los árbitros siguen parcializados, serán borrados\"<sup>4,5</sup>.",
@@ -850,7 +851,7 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termEndYear: "1994",
     name: "Cesar Gaviria",
     shortDescription: "El 5-0 y condecoraciones a la Seleccion.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/C%C3%A9sar_Gaviria.jpg/640px-C%C3%A9sar_Gaviria.jpg",
+    image: "/presidentes/César_Gaviria.jpg",
     paragraphs: [
       "El asesinato de <strong>Luis Carlos Galan</strong> abre el camino político que lleva a <strong>Cesar Gaviria</strong> a la presidencia.",
       "Su gobierno impulsa la <strong>Constitución de 1991</strong>, con un enfoque <strong>multicultural</strong> y <strong>neoliberal</strong>, pero aún <strong>centralista</strong>.",
@@ -923,7 +924,7 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termEndYear: "1998",
     name: "Ernesto Samper",
     shortDescription: "Proceso 8000, los carteles, Bellini y la caída deportiva.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Ernesto_Samper.jpg/640px-Ernesto_Samper.jpg",
+    image: "/presidentes/Ernesto_Samper.jpg",
     paragraphs: [
       "En <strong>1994</strong>, Ernesto Samper gana las elecciones presidenciales. Su campaña y posterior gobierno quedan totalmente marcados y deslegitimados por las pruebas de <strong>financiación del Cartel de Cali</strong> a su campaña, escándalo judicial que pasó a la historia como el <strong>Proceso 8000</strong><sup>2,4,5</sup>.",
       "Las sombras de la ilegalidad y la crisis institucional permearon el fútbol desde sus más altas esferas. Se comprobó que el Cartel de Cali, que sostenía hegemónicamente al equipo América, ejerció un control desmedido sobre la <strong>Federación Colombiana de Futbol</strong>, instaurando a sus aliados de confianza en la cúpula dirigencial<sup>6,7</sup>.",
@@ -999,7 +1000,7 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termEndYear: "2002",
     name: "Andres Pastrana",
     shortDescription: "Diálogos del Caguán y la conquista solitaria de la Copa América.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Andr%C3%A9s_Pastrana%2C_2009.jpg/640px-Andr%C3%A9s_Pastrana%2C_2009.jpg",
+    image: "/presidentes/Andrés_Pastrana.jpg",
     paragraphs: [
       "El gobierno de <strong>Andres Pastrana</strong> inicia en <strong>1998</strong> erigiendo la búsqueda de la <strong>paz</strong> como su bandera definitiva, lo que decantó en el polémico despeje militar y los frustrados diálogos de paz en el <strong>Caguan</strong> con la guerrilla de las FARC.",
       "Agobiado por una brutal escalada de la guerra en campos y ciudades y la falta de resultados concretos, Pastrana se aferró desesperadamente a un mega evento deportivo para intentar mostrar internacionalmente una imagen de un país viable, exigiendo hasta las últimas consecuencias albergar la <strong>Copa América 2001</strong><sup>2</sup>.",
@@ -1075,7 +1076,7 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termEndYear: "2010",
     name: "Alvaro Uribe Velez",
     shortDescription: "Eventos deportivos y diplomacia futbolera.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/%C3%81lvaro_Uribe_V%C3%A9lez.png/640px-%C3%81lvaro_Uribe_V%C3%A9lez.png",
+    image: "/presidentes/Álvaro_Uribe.jpg",
     paragraphs: [
       "Se recuerdan menos imágenes de <strong>Uribe</strong> metiendose con el fútbol que de <strong>Gaviria</strong>, <strong>Pastrana</strong> o <strong>Belisario</strong>, pero el relato subraya que <strong>Uribe</strong> si tuvo mucho que ver con el deporte.",
       "Durante su gestion se hicieron los <strong>Juegos Bolivarianos 2005</strong><sup>2</sup>, los <strong>Centroamericanos y del Caribe 2006</strong><sup>3</sup> y los <strong>Suramericanos 2010</strong><sup>4</sup>, todos en <strong>Medellín</strong>, con balance exitoso; aún así, parecia que Uribe no tenía nada que ver con el fútbol.",
@@ -1143,7 +1144,7 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termEndYear: "2018",
     name: "Juan Manuel Santos",
     shortDescription: "Mundial Sub-20, la crisis de 'Bolillo' y la era Pékerman.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Juan_Manuel_Santos_and_Lula_%28cropped%29.jpg/640px-Juan_Manuel_Santos_and_Lula_%28cropped%29.jpg",
+    image: "/presidentes/Juan_Manuel_Santos.jpg",
     paragraphs: [
       "El gobierno de <strong>Juan Manuel Santos</strong> coincide con uno de los momentos cumbres y de mayor protagonismo internacional tanto para el país (Firma del Acuerdo de Paz) como para la selección mayor de fútbol (Clasificación a Brasil 2014 y Rusia 2018).",
       "La foto inicial de su relación con la alta dirigencia ocurrió en julio de <strong>2011</strong>. Con Santos en la presidencia, Colombia ofició como anfitriona del <strong>Mundial Juvenil Sub-20</strong>. Las postales de ese año muestran a Santos inaugurando el certamen en la grama de <strong>El Campín</strong> sonriendo junto al intocable <strong>Sepp Blatter</strong> y a <strong>Luis Bedoya</strong> presidendo la Federación; años después, las cabezas de estos dos saltarían internacionalmente al ser cerebros confesos del escándalo global conocido como el <strong>FIFA Gate</strong>.",
@@ -1200,7 +1201,7 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termEndYear: "2022",
     name: "Ivan Duque",
     shortDescription: "Manejo de crisis, Infantino y la pausa institucional.",
-    image: "https://static01.nyt.com/images/2021/08/30/world/30colombia-duque-1-esp-1/30colombia-duque-1-superJumbo.jpg",
+    image: "/presidentes/30colombia-duque-1-superJumbo.jpg",
     paragraphs: [
       "La puesta en escena pública del presidente <strong>Iván Duque</strong> recurrió con inédita y reiterativa frecuencia al uso de las 'cabecitas'. Parecía tener una obsesión mediática por demostrar sus habilidades futbolísticas con un balón en cualquier escenario oficial; ya fuera recibiendo al campeón de la liga, inaugurando una escuela veredal o en un evento corporativo de la FIFA con el Real Madrid.",
       "Para algunos críticos que asocian el peso de ser estadista con mayor sobriedad y menos espectáculos vacíos, esta peculiar obsesión (sumado a su impopular gestión durante el estallido social de 2021) le hizo rivalizar el título nada honroso del mandato menos hábil con antecesores centenarios como Marroquín.",
@@ -1260,7 +1261,7 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     termEndYear: "2026",
     name: "Gustavo Petro",
     shortDescription: "El primer divorcio en 100 años con los dirigentes privados del balón.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/2/22/01_Gustavo_Petro.jpg",
+    image: "/presidentes/Gustavo_Petro.jpg",
     paragraphs: [
       "El relato final de esta centenaria lista lo protagoniza <strong>Gustavo Petro</strong>. El caso del primer presidente progresista del país representa una rareza mayúscula en los esquemas hegemónicos del poder: es el único inquilino de la Casa de Nariño que transita abiertamente un claro divorcio ideológico y relacional con la cúpula de la dirigencia del fútbol de casta privada y empresarial.",
       "Según reportes de periodistas especializados como Alejandro Pino Calad, la fractura llegó a instancias concretas de fricción cuando altas autoridades del fútbol se reunieron secretamente en el <strong>Ministerio del Interior</strong>. Supuestamente, los representantes privados del balón advirtieron al Ejecutivo que si incrementaban la veeduría y el control legal, las dirigencias podrían organizar campañas orquestadas como de 'Fuera Petro' en estadios que paralizan el país televisivamente.",
@@ -1276,6 +1277,12 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
         url: "https://es.wikipedia.org/wiki/Presidencia_de_Gustavo_Petro"
       }
     ],
+    editorialImage: [{
+      url: "/petro-divorcio.jpg",
+      caption: "Gustavo Petro durante la ceremonia de posesión, 2022.",
+      credit: "Casa de Nariño",
+      caption_en: "Gustavo Petro during inauguration ceremony, 2022."
+    }],
     name_en: "Gustavo Petro",
     shortDescription_en: "The first divorce in 100 years from the private masters of football.",
     paragraphs_en: [
