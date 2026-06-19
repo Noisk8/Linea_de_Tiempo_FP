@@ -23,8 +23,8 @@
       </ng-template>
 
       <ng-template pTemplate="content" let-entry>
-        <a #timelineCard class="timeline-card" [class.is-loading]="!imageLoaded[entry.id]"
-          [attr.href]="'/presidentes/' + entry.id" target="_blank" rel="noopener">
+        <a #timelineCard class="timeline-card" [class.is-loading]="!imageLoaded.has(entry.id)"
+          [routerLink]="'/presidentes/' + entry.id">
           <div class="timeline-media">
             <img [src]="entry.image" [alt]="entry.name" loading="lazy" decoding="async"
               (load)="onImageLoad(entry.id)" />
@@ -33,6 +33,7 @@
             <h3
               [innerHTML]="highlightText(i18nService.currentLang() === 'en' && entry.name_en ? entry.name_en : entry.name)">
             </h3>
+            <span class="timeline-year-mobile">{{ entry.termStartYear }}-{{ entry.termEndYear }}</span>
             <p
               [innerHTML]="highlightText(i18nService.currentLang() === 'en' && entry.paragraphs_en ? entry.paragraphs_en[0] : entry.paragraphs[0])">
             </p>

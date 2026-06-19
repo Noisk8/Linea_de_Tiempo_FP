@@ -18,14 +18,16 @@
   opacity: 0.12;
   pointer-events: none;
   filter: contrast(1.2) sepia(0.3);
-  transition: opacity 0.5s ease, filter 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    filter 0.5s ease;
 }
 
-:host-context([data-theme="dark"]) .dynamic-bg {
+:host-context([data-theme='dark']) .dynamic-bg {
   filter: invert(1) hue-rotate(180deg) brightness(1.2) contrast(1.4);
   opacity: 0.05;
 }
-
+/* comentario para timeline-header*/
 .timeline-header,
 .timeline-wrapper {
   position: relative;
@@ -163,7 +165,11 @@ mark {
   width: 100%;
   opacity: 0;
   transform: translateY(18px);
-  transition: transform 0.4s ease, opacity 0.4s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease,
+    box-shadow 0.3s ease,
+    filter 0.3s ease;
   position: relative;
   z-index: 1;
   /* Hand-drawn sketch border effect */
@@ -180,7 +186,12 @@ mark {
 }
 
 .timeline-card.is-loading .timeline-media {
-  background: linear-gradient(110deg, rgba(0, 0, 0, 0.06) 8%, rgba(0, 0, 0, 0.12) 18%, rgba(0, 0, 0, 0.06) 33%);
+  background: linear-gradient(
+    110deg,
+    rgba(0, 0, 0, 0.06) 8%,
+    rgba(0, 0, 0, 0.12) 18%,
+    rgba(0, 0, 0, 0.06) 33%
+  );
   background-size: 200% 100%;
   animation: shimmer 1.2s ease-in-out infinite;
 }
@@ -193,7 +204,12 @@ mark {
 .timeline-card.is-loading .timeline-body p,
 .timeline-card.is-loading .timeline-body .cta {
   color: transparent;
-  background: linear-gradient(110deg, rgba(0, 0, 0, 0.06) 8%, rgba(0, 0, 0, 0.12) 18%, rgba(0, 0, 0, 0.06) 33%);
+  background: linear-gradient(
+    110deg,
+    rgba(0, 0, 0, 0.06) 8%,
+    rgba(0, 0, 0, 0.12) 18%,
+    rgba(0, 0, 0, 0.06) 33%
+  );
   background-size: 200% 100%;
   animation: shimmer 1.2s ease-in-out infinite;
   border-radius: 999px;
@@ -291,3 +307,4 @@ mark {
     height: 220px;
   }
 }
+

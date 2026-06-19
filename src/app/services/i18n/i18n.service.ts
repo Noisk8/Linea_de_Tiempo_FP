@@ -1,16 +1,15 @@
-import { Injectable, signal, inject } from '@angular/core';
+import { Injectable, signal, inject, Inject } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { DOCUMENT } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
 })
 export class I18nService {
   private translateService = inject(TranslateService);
-
-  // Signal to easily react to language changes in components
   currentLang = signal<string>('es');
 
-  constructor() {
+  constructor(@Inject(DOCUMENT) private document: Document) {
     this.initializeLanguage();
   }
 
@@ -23,12 +22,13 @@ export class I18nService {
       this.translateService.use(savedLang);
       this.currentLang.set(savedLang);
     } else {
-      // Check browser language or default to es
       const browserLang = this.translateService.getBrowserLang();
       const langToUse = browserLang?.match(/en|es/) ? browserLang : 'es';
       this.translateService.use(langToUse);
       this.currentLang.set(langToUse);
     }
+
+    this.document.documentElement.lang = this.currentLang();
   }
 
   toggleLanguage(): void {
@@ -36,5 +36,6 @@ export class I18nService {
     this.translateService.use(nextLang);
     this.currentLang.set(nextLang);
     localStorage.setItem('lang', nextLang);
+    this.document.documentElement.lang = nextLang;
   }
 }

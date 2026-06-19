@@ -1,7 +1,8 @@
-import { Component, HostListener, inject } from '@angular/core';
+import { Component, HostListener, OnDestroy, inject, ElementRef, ViewChild } from '@angular/core';
 import { NgIf } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { Subscription } from 'rxjs';
 import { TIMELINE_ENTRIES, TimelineEntry } from '../../data/timeline-data';
 import { MetaService } from '../../services/meta.service';
 import { LazyImageDirective } from '../../directives/lazy-image.directive';
@@ -15,9 +16,11 @@ import { I18nService } from '../../services/i18n/i18n.service';
   templateUrl: './detail.component.html',
   styleUrl: './detail.component.css'
 })
-export class DetailComponent {
+export class DetailComponent implements OnDestroy {
   i18nService = inject(I18nService);
+  private router = inject(Router);
   entry?: TimelineEntry;
+  allEntries = TIMELINE_ENTRIES;
   selectedImage?: {
     url: string;
     caption?: string;
@@ -27,21 +30,55 @@ export class DetailComponent {
   };
   loadedImages: Set<string> = new Set();
   highlightedSources: number[] = [];
+  private paramSub?: Subscription;
+
+  @ViewChild('trackRef') trackRef?: ElementRef<HTMLElement>;
+
+  get currentIndex(): number {
+    if (!this.entry) return -1;
+    return this.allEntries.findIndex(e => e.id === this.entry?.id);
+  }
 
   constructor(
     private route: ActivatedRoute,
     private title: Title,
     private metaService: MetaService
   ) {
-    const id = this.route.snapshot.paramMap.get('id');
-    this.entry = TIMELINE_ENTRIES.find((item) => item.id === id);
+    this.paramSub = this.route.paramMap.subscribe(params => {
+      const id = params.get('id');
+      this.entry = TIMELINE_ENTRIES.find((item) => item.id === id);
+      this.selectedImage = undefined;
 
-    // Establecer el título de la página con el nombre del presidente
-    if (this.entry) {
-      this.title.setTitle(this.entry.name);
-      this.metaService.setPresidentMeta(this.entry);
-      this.metaService.setStructuredData(this.entry);
-    }
+      if (this.entry) {
+        this.title.setTitle(this.entry.name);
+        this.metaService.setPresidentMeta(this.entry);
+        this.metaService.setStructuredData(this.entry);
+      }
+    });
+  }
+
+  goToPresident(id: string): void {
+    if (id === this.entry?.id) return;
+    this.router.navigate(['/presidentes', id]);
+  }
+
+  previousPresident(): void {
+    const idx = this.currentIndex;
+    if (idx > 0) this.goToPresident(this.allEntries[idx - 1].id);
+  }
+
+  nextPresident(): void {
+    const idx = this.currentIndex;
+    if (idx < this.allEntries.length - 1) this.goToPresident(this.allEntries[idx + 1].id);
+  }
+
+  scrollTrack(dir: number): void {
+    if (!this.trackRef) return;
+    this.trackRef.nativeElement.scrollBy({ left: dir * 200, behavior: 'smooth' });
+  }
+
+  ngOnDestroy(): void {
+    this.paramSub?.unsubscribe();
   }
 
   openImage(url: string, caption?: string, caption_en?: string, credit?: string, alt?: string) {
@@ -89,7 +126,7 @@ export class DetailComponent {
         }, 3000);
       }
 
-      // Scroll smoothly to the sources secton
+        // Scroll smoothly to the sources section
       const sourcesElement = document.getElementById('sources');
       if (sourcesElement) {
         sourcesElement.scrollIntoView({ behavior: 'smooth', block: 'center' });

@@ -1,15 +1,10 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { TimelineComponent } from './pages/timeline/timeline.component';
-import { DetailComponent } from './pages/detail/detail.component';
-import { NotasComponent } from './pages/notas/notas.component';
-import { ReferenciasComponent } from './pages/referencias/referencias.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'timeline', component: TimelineComponent },
-  { path: 'presidentes/:id', component: DetailComponent },
-  { path: 'notas', component: NotasComponent },
-  { path: 'referencias', component: ReferenciasComponent },
+  { path: '', loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent) },
+  { path: 'timeline', loadComponent: () => import('./pages/timeline/timeline.component').then(m => m.TimelineComponent) },
+  { path: 'presidentes/:id', loadComponent: () => import('./pages/detail/detail.component').then(m => m.DetailComponent) },
+  { path: 'notas', loadComponent: () => import('./pages/notas/notas.component').then(m => m.NotasComponent) },
+  { path: 'referencias', loadComponent: () => import('./pages/referencias/referencias.component').then(m => m.ReferenciasComponent) },
   { path: '**', redirectTo: '' }
 ];

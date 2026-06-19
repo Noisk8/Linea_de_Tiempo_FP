@@ -1,19 +1,19 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, QueryList, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, QueryList, ViewChildren, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { TimelineModule } from 'primeng/timeline';
 import { TIMELINE_ENTRIES } from '../../data/timeline-data';
 import { Subscription } from 'rxjs';
 import { ScrollToTop } from '../../components/scroll-to-top/scroll-to-top';
 import { TranslateModule } from '@ngx-translate/core';
 import { I18nService } from '../../services/i18n/i18n.service';
-import { inject } from '@angular/core';
 
 @Component({
   selector: 'app-timeline',
   standalone: true,
   templateUrl: './timeline.component.html',
   styleUrl: './timeline.component.css',
-  imports: [CommonModule, TimelineModule, ScrollToTop, TranslateModule]
+  imports: [CommonModule, TimelineModule, ScrollToTop, TranslateModule, RouterModule]
 })
 export class TimelineComponent implements AfterViewInit, OnDestroy {
   i18nService = inject(I18nService);
@@ -21,7 +21,7 @@ export class TimelineComponent implements AfterViewInit, OnDestroy {
   filteredEntries = TIMELINE_ENTRIES;
   searchTerm = '';
   progressPercent = 0;
-  imageLoaded: Record<string, boolean> = {};
+  imageLoaded = new Set<string>();
   @ViewChildren('timelineCard', { read: ElementRef }) cardRefs?: QueryList<ElementRef<HTMLElement>>;
 
   private observer?: IntersectionObserver;
@@ -138,7 +138,7 @@ export class TimelineComponent implements AfterViewInit, OnDestroy {
   }
 
   onImageLoad(entryId: string): void {
-    this.imageLoaded[entryId] = true;
+    this.imageLoaded.add(entryId);
   }
 
   onSearchChange(event: Event): void {

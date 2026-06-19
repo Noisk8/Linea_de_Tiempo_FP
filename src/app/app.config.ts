@@ -4,7 +4,6 @@ import { provideRouter } from '@angular/router';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { provideTranslateService, TranslateLoader } from '@ngx-translate/core';
 import { provideTranslateHttpLoader, TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { MetaService } from './services/meta.service';
 
 import { routes } from './app.routes';
 
@@ -22,7 +21,6 @@ export const appConfig: ApplicationConfig = {
       }
     }),
     provideTranslateHttpLoader({ prefix: '/i18n/' }),
-    MetaService
   ]
 };
 

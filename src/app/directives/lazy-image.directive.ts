@@ -1,34 +1,31 @@
-import { Directive, ElementRef, Input, Renderer2, HostListener, OnDestroy } from '@angular/core';
+import { Directive, ElementRef, Input, Renderer2, HostListener, OnDestroy, OnInit } from '@angular/core';
 
 @Directive({
   selector: '[appLazyImage]',
   standalone: true
 })
-export class LazyImageDirective implements OnDestroy {
-  @Input() src!: string;
+export class LazyImageDirective implements OnInit, OnDestroy {
   @Input() placeholder: string = '';
-  @Input() alt: string = '';
 
+  private imageUrl = '';
   private hasLoaded = false;
   private observer?: IntersectionObserver;
 
   constructor(
-    private el: ElementRef,
+    private el: ElementRef<HTMLImageElement>,
     private renderer: Renderer2
-  ) {
-    // Set placeholder initially
+  ) {}
+
+  ngOnInit(): void {
+    this.imageUrl = this.el.nativeElement.getAttribute('src') || '';
     if (this.placeholder) {
       this.renderer.setAttribute(this.el.nativeElement, 'src', this.placeholder);
     }
-
-    // Create intersection observer
     this.createIntersectionObserver();
   }
 
   ngOnDestroy(): void {
-    if (this.observer) {
-      this.observer.disconnect();
-    }
+    this.observer?.disconnect();
   }
 
   private createIntersectionObserver(): void {
@@ -42,7 +39,7 @@ export class LazyImageDirective implements OnDestroy {
         });
       },
       {
-        rootMargin: '50px' // Start loading 50px before image comes into view
+        rootMargin: '50px'
       }
     );
 
@@ -51,24 +48,22 @@ export class LazyImageDirective implements OnDestroy {
 
   private loadImage(): void {
     const img = new Image();
-    
+
     img.onload = () => {
-      this.renderer.setAttribute(this.el.nativeElement, 'src', this.src);
+      this.renderer.setAttribute(this.el.nativeElement, 'src', this.imageUrl);
       this.renderer.addClass(this.el.nativeElement, 'loaded');
       this.hasLoaded = true;
     };
 
     img.onerror = () => {
-      // Handle error - could show error placeholder
-      console.error('Failed to load image:', this.src);
+      console.error('Failed to load image:', this.imageUrl);
     };
 
-    img.src = this.src;
+    img.src = this.imageUrl;
   }
 
   @HostListener('error')
   onError(): void {
-    // Handle error case
     if (this.placeholder) {
       this.renderer.setAttribute(this.el.nativeElement, 'src', this.placeholder);
     }

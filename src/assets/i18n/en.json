@@ -58,6 +58,9 @@
         "SOURCE_PREFIX": "Source:",
         "SOURCES": "Sources",
         "NOT_FOUND_TITLE": "Detail not found",
-        "NOT_FOUND_MSG": "There is no entry for this president."
+        "NOT_FOUND_MSG": "There is no entry for this president.",
+        "NAV_TITLE": "President Timeline",
+        "NAV_PREV": "Previous",
+        "NAV_NEXT": "Next"
     }
 }

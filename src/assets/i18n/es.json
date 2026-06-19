@@ -58,6 +58,9 @@
         "SOURCE_PREFIX": "Fuente:",
         "SOURCES": "Fuentes",
         "NOT_FOUND_TITLE": "Detalle no encontrado",
-        "NOT_FOUND_MSG": "No existe una entrada para este presidente."
+        "NOT_FOUND_MSG": "No existe una entrada para este presidente.",
+        "NAV_TITLE": "Línea de Presidentes",
+        "NAV_PREV": "Anterior",
+        "NAV_NEXT": "Siguiente"
     }
 }

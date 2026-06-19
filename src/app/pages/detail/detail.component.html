@@ -1,6 +1,36 @@
 <section class="detail" *ngIf="entry; else notFound" aria-live="polite">
   <div class="dynamic-bg" [style.background-image]="'url(/imagenes/bg/' + entry.id + '.png)'" [class.bg-loaded]="true">
   </div>
+  <nav class="president-navigator" *ngIf="entry">
+    <div class="navigator-header">
+      <h3>{{ 'DETAIL.NAV_TITLE' | translate }}</h3>
+      <div class="navigator-arrows">
+        <button class="nav-btn" (click)="scrollTrack(-1)" aria-label="Scroll left">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <button class="nav-btn prev-btn" (click)="previousPresident()" [disabled]="currentIndex === 0" aria-label="{{ 'DETAIL.NAV_PREV' | translate }}">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5m7 7-7-7 7-7"/></svg>
+        </button>
+        <span class="nav-position">{{ currentIndex + 1 }} / {{ allEntries.length }}</span>
+        <button class="nav-btn next-btn" (click)="nextPresident()" [disabled]="currentIndex === allEntries.length - 1" aria-label="{{ 'DETAIL.NAV_NEXT' | translate }}">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+        </button>
+        <button class="nav-btn" (click)="scrollTrack(1)" aria-label="Scroll right">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="navigator-track" #trackRef>
+      <div class="navigator-line"></div>
+      @for (item of allEntries; track item.id; let i = $index) {
+      <button class="navigator-item" [class.active]="i === currentIndex" (click)="goToPresident(item.id)">
+        <span class="navigator-dot"></span>
+        <span class="navigator-years">{{ item.termStartYear }}-{{ item.termEndYear }}</span>
+        <span class="navigator-name">{{ i18nService.currentLang() === 'en' && item.name_en ? item.name_en : item.name }}</span>
+      </button>
+      }
+    </div>
+  </nav>
   <div class="detail-header">
     <span class="year">{{ entry.year }}</span>
     <h2>{{ i18nService.currentLang() === 'en' && entry.name_en ? entry.name_en : entry.name }}</h2>

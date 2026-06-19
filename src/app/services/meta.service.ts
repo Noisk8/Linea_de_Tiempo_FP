@@ -1,7 +1,7 @@
 import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { TimelineEntry } from '../data/timeline-data';
-import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
@@ -14,9 +14,9 @@ export class MetaService {
   constructor(
     private meta: Meta,
     private title: Title,
-    @Inject(PLATFORM_ID) private platformId: object
+    @Inject(PLATFORM_ID) private platformId: object,
+    @Inject(DOCUMENT) private document: Document
   ) {
-    // Configurar URL dinámicamente según entorno
     if (isPlatformBrowser(this.platformId)) {
       this.siteUrl = window.location.origin;
     } else {
@@ -112,8 +112,7 @@ export class MetaService {
   }
 
   setStructuredData(entry?: TimelineEntry): void {
-    // Remove existing structured data
-    const existingScript = document.querySelector('script[type="application/ld+json"]');
+    const existingScript = this.document.querySelector('script[type="application/ld+json"]');
     if (existingScript) {
       existingScript.remove();
     }
@@ -165,10 +164,9 @@ export class MetaService {
       };
     }
 
-    // Add structured data to head
-    const script = document.createElement('script');
+    const script = this.document.createElement('script');
     script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData, null, 2);
-    document.head.appendChild(script);
+    script.textContent = JSON.stringify(structuredData);
+    this.document.head.appendChild(script);
   }
 }
